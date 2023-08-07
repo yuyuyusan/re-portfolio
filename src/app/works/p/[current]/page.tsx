@@ -8,7 +8,7 @@ type Props = {
     current: string;
   };
 };
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async function Page({ params }: Props) {
   const current = parseInt(params.current as string, 10);

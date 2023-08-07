@@ -4,7 +4,7 @@ import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
 
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async function staticPage() {
   const data = await getWorksList({

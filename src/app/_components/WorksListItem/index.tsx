@@ -75,7 +75,7 @@ export default function WorksListItem({ works, onClick = () => {}, isSelect = fa
           onClick={onClick} 
         />
       </Link>
-      <p className="text-xs">{new Date(works.created).toLocaleDateString()}</p>
+      <p className="text-xs" suppressHydrationWarning={true}>{new Date(works.created).toLocaleDateString()}</p>
       <h3>{works.title}</h3>
       <Link href={works.url} target="_blank" rel="noopener noreferrer" className="text-xs">
         {works.url}

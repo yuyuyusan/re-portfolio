@@ -47,7 +47,7 @@ export default async function StaticDetailPage({
           }
         />
       </Link>
-      <p className="text-xl">作成日：{new Date(post.created).toLocaleDateString()}</p>
+      <p className="text-xl" suppressHydrationWarning={true}>作成日：{new Date(post.created).toLocaleDateString()}</p>
       <Link
         href={post.url}
         target="_blank"
