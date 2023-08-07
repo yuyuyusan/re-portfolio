@@ -44,7 +44,7 @@ import Image from 'next/image';
 import { WorksArticle } from '@/app/_libs/microcms/client';
 import { CSSProperties } from 'react';
 import { useEffect } from 'react';
-
+import useClientOnly from '@/app/_hooks/useClientOnly'; // クライアントサイドでのみ実行する
 type Props = {
   works: WorksArticle;
   onClick?: () => void;
@@ -52,20 +52,13 @@ type Props = {
 };
 
 export default function WorksListItem({ works, onClick = () => {}, isSelect = false }: Props) {
+  const isClient = useClientOnly(); 
   useEffect(() => {
-    const handlePopState = () => {
-      if (isSelect) {
-        // ブラウザ戻るボタンで戻ってきたときに isSelect を false にする
-        onClick && onClick(); // onClick ハンドラが指定されていれば実行
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    // コンポーネントがアンマウントされるときにイベントリスナーを解除
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, [isSelect, onClick]);
+    if (isClient && isSelect) {
+      // ブラウザ戻るボタンで戻ってきたときに isSelect を false にする
+      onClick && onClick(); // onClick ハンドラが指定されていれば実行
+    }
+  }, [isClient, isSelect, onClick]);
   return (
     <li key={works.id}>
       <Link href={`/works/${works.id}`} className="card">
