@@ -8,6 +8,7 @@ import { CSSProperties } from 'react';
 
 // キャッシュを利用しない
 export const revalidate = 60;
+
 export async function generateStaticParams() {
   const { contents } = await getWorksList();
   const paths = contents.map((post) => {
@@ -17,7 +18,6 @@ export async function generateStaticParams() {
   });
   return [...paths];
 }
-
 export default async function StaticDetailPage({
   params: { postId },
 }: {
