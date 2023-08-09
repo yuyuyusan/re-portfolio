@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 export default function Navigation() {
   const [isOpen, setOpen] = useState<boolean>(false);

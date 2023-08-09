@@ -1,19 +1,12 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import styles from './index.module.scss';
 
 export default function Footer() {
   return (
-    <footer>
-      <figure>
-        <Image
-          src="/logo.png"
-          alt="logo"
-          width={200}
-          height={200}
-        />  
-      </figure>
-      <p className="copy">
-        &copy; 2023 Yu
-      </p>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <p className={styles.copy}>&copy; 2023 Yu</p>
+      </div>
     </footer>
-  )
+  );
 }

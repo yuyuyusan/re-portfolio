@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './index.module.css';
+import styles from './index.module.scss';
 import { WORKS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
