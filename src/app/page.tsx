@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main className={`py-32 ${styles.homeMain}`}>
       <Header />
-
       <div className={`max-w-2xl mx-auto ${styles.container}`}>
         <div className={`${styles.box} ${styles.box01}`}>
           <a href="/works">
@@ -35,7 +34,6 @@ export default function Home() {
           >
             <span className={styles.jp}>Github</span>
             <Image src="/icon-github.svg" width={60} height={60} alt="" />
-
           </a>
         </div>
         <div className={`${styles.box} ${styles.box05}`}>
@@ -46,7 +44,6 @@ export default function Home() {
           >
             <span className={styles.jp}>Zenn</span>
             <Image src="/icon-zenn.svg" width={100} height={60} alt="" />
-
           </a>
         </div>
         <div className={`${styles.box} ${styles.box06}`}>
@@ -72,7 +69,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-
       <Footer />
     </main>
   );
