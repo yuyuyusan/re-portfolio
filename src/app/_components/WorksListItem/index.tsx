@@ -60,7 +60,12 @@ export default function WorksListItem({
 }: Props) {
   const isClient = useClientOnly();
   const [isHovered, setIsHovered] = useState(false);
-
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   useEffect(() => {
     if (isClient && isSelect) {
       // ブラウザ戻るボタンで戻ってきたときに isSelect を false にする
@@ -70,13 +75,29 @@ export default function WorksListItem({
   return (
     <li key={works.id}>
       <Link href={`/works/${works.id}`} className="card">
-        
-        <figure className={styles.thumbnail}>
+        {works.imagehover ? (
+          <Image
+            src={works.imagehover.url}
+            alt={works.title}
+            width={works.imagehover.width}
+            height={works.imagehover.height}
+            className={`${styles.thumbnailNone} ${
+              isHovered ? styles.hovered : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+        ) : (
           <Image
             src={works.image.url}
             alt={works.title}
             width={works.image.width}
             height={works.image.height}
+            className={`${styles.thumbnailNone} ${
+              isHovered ? styles.hovered : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             style={
               {
                 viewTransitionName: `thumbnail-${works.id}`,
@@ -84,6 +105,23 @@ export default function WorksListItem({
             }
             onClick={onClick}
           />
+        )}
+      <figure>
+        <Image
+          src={works.image.url}
+          alt={works.title}
+          width={works.image.width}
+          height={works.image.height}
+          className={styles.thumbnail}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={
+            {
+              viewTransitionName: `thumbnail-${works.id}`,
+            } as CSSProperties
+          }
+          onClick={onClick}
+        />
         </figure>
       </Link>
       <p className="text-xs" suppressHydrationWarning={true}>
