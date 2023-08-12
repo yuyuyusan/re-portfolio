@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import parse from 'html-react-parser';
 import { getWorksDetail, getWorksList } from '@/app/_libs/microcms/client';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './index.module.scss';
 import { CSSProperties } from 'react';
 
