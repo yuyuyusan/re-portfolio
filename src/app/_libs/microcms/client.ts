@@ -1,5 +1,4 @@
-import { client } from './api';
-// import {client2}from './api';
+import { client, client2 } from './api';
 import { notFound } from 'next/navigation';
 
 import type {
@@ -38,15 +37,15 @@ export type Works = {
   desc: string;
 } & MicroCMSDate;
 
-// // カテゴリーの型定義
-// export type Category = {
-//   name: string;
-// } & MicroCMSContentId &
-//   MicroCMSDate;
+// カテゴリーの型定義
+export type Category = {
+  name: string;
+} & MicroCMSContentId &
+  MicroCMSDate;
 
 export type InfoArticle = Info & MicroCMSDate;
+export type BlogArticle = Blog & MicroCMSDate;
 export type WorksArticle = Works & MicroCMSDate;
-// export type BlogArticle = Blog & MicroCMSDate;
 
 // 雑記一覧を取得する関数
 export const getInfoList = async (queries?: MicroCMSQueries) => {
@@ -71,6 +70,44 @@ export const getInfoDetail = async (
   });
   return detailData;
 };
+
+// ブログ一覧を取得する関数
+export const getBlogList = async (queries?: MicroCMSQueries) => {
+  const listData = await client2
+    .getList<Blog>({
+      endpoint: 'blogs',
+      queries,
+    })
+    .catch(notFound);
+  return listData;
+};
+
+// ブログの詳細を取得
+export const getBlogDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client2.getListDetail<Blog>({
+    endpoint: 'blogs',
+    contentId,
+    queries,
+  });
+  // // データの取得が目視しやすいよう明示的に遅延効果を追加
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+  return detailData;
+};
+
+// ブログ一覧を取得する関数
+export const getCategoryList = async (queries?: MicroCMSQueries) => {
+  const listData = await client2
+    .getList<Blog>({
+      endpoint: 'categories',
+      queries,
+    })
+    .catch(notFound);
+  return listData;
+};
+
 // 実績一覧を取得する関数
 export const getWorksList = async (queries?: MicroCMSQueries) => {
   const listData = await client
@@ -93,42 +130,3 @@ export const getWorksDetail = async (
   });
   return detailData;
 };
-
-
-// // ブログ一覧を取得する関数
-// export const getBlogList = async (queries?: MicroCMSQueries) => {
-//   const listData = await client2
-//     .getList<Blog>({
-//       endpoint: 'blogs',
-//       queries,
-//     })
-//     .catch(notFound);
-//   return listData;
-// };
-
-// // ブログの詳細を取得
-// export const getBlogDetail = async (
-//   contentId: string,
-//   queries?: MicroCMSQueries
-// ) => {
-//   const detailData = await client2.getListDetail<Blog>({
-//     endpoint: 'blogs',
-//     contentId,
-//     queries,
-//   });
-//   // // データの取得が目視しやすいよう明示的に遅延効果を追加
-//   // await new Promise((resolve) => setTimeout(resolve, 3000));
-//   return detailData;
-// };
-
-// // ブログ一覧を取得する関数
-// export const getCategoryList = async (queries?: MicroCMSQueries) => {
-//   const listData = await client2
-//     .getList<Blog>({
-//       endpoint: 'categories',
-//       queries,
-//     })
-//     .catch(notFound);
-//   return listData;
-// };
-
