@@ -16,6 +16,7 @@ export type Blog = {
   eyecatch?: MicroCMSImage;
 } & MicroCMSDate;
 
+
 // 雑記の型定義
 export type Info = {
   id: string;
