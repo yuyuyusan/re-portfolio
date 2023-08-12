@@ -1,75 +1,123 @@
 import Image from 'next/image';
+import styles from './page.module.scss';
+import Link from 'next/link';
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
-import styles from './home.module.scss';
 
 export default function Home() {
   return (
-    <main className={`py-32 ${styles.homeMain}`}>
+    <div className={styles.topBg}>
       <Header />
-      <div className={`max-w-2xl mx-auto ${styles.container}`}>
-        <div className={`${styles.box} ${styles.box01}`}>
-          <a href="/works">
-            <span>Works</span>
-            <Image src="/icon-works.svg" width={120} height={120} alt="" />
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box02}`}>
-          <a href="/skill">
-            <span>Skill</span>
-            <Image src="/icon-skills.svg" width={120} height={120} alt="" />
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box03}`}>
-          <a href="/blog">
-            <span>Notes</span>
-            <Image src="/icon-notes.svg" width={120} height={120} alt="" />
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box04}`}>
-          <a
-            href="https://github.com/yuyuyusan/"
-            target="_blank"
-            rel="norefferer noopenner"
-          >
-            <span className={styles.jp}>Github</span>
-            <Image src="/icon-github.svg" width={60} height={60} alt="" />
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box05}`}>
-          <a
-            href="https://zenn.dev/yuyuyusan"
-            target="_blank"
-            rel="norefferer noopenner"
-          >
-            <span className={styles.jp}>Zenn</span>
-            <Image src="/icon-zenn.svg" width={100} height={60} alt="" />
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box06}`}>
-          <a href="/contact">
-            <span className={styles.jp}>
-              Contact
-              <br />
-              Form
-            </span>
-          </a>
-        </div>
-        <div className={`${styles.box} ${styles.box07}`}>
-          <a
-            href="https://ys-portfolio-c98fe.web.app/"
-            target="_blank"
-            rel="norefferer noopenner"
-          >
-            <span className={styles.jp}>
-              Previous
-              <br />
-              Site
-            </span>
-          </a>
-        </div>
-      </div>
+      <main>
+        <section className={styles.topContainer}>
+          <div className={`${styles.contentsBody}`}>
+            <div className={styles.titleBox}>
+              <h1 className={styles.pageTitle}>Shitsukawa Portfolio</h1>
+            </div>
+            <div className={styles.gridTop}>
+              <div className={`${styles.gridBox} ${styles.gridTop__works}`}>
+                <Link href="/works" className={styles.link}>
+                  <h2 className={styles.titleLarge__en}>Works</h2>
+                  <figure className={`${styles.icon} ${styles.iconWorks}`}>
+                    <Image
+                      src="/icon-works.svg"
+                      width={120}
+                      height={120}
+                      alt=""
+                    />
+                  </figure>
+                </Link>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridTop__about}`}>
+                <Link href="/about" className={styles.link}>
+                  <h2 className={styles.titleLarge__en}>About</h2>
+                  <figure className={`${styles.icon} ${styles.iconAbout}`}>
+                    <Image
+                      src="/icon-skills.svg"
+                      width={120}
+                      height={120}
+                      alt=""
+                    />
+                  </figure>
+                </Link>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridTop__blog}`}>
+                <Link href="/blog" className={styles.link}>
+                  <h2 className={styles.titleLarge__en}>Blog</h2>
+                  <figure className={`${styles.icon} ${styles.iconBlog}`}>
+                    <Image
+                      src="/icon-notes.svg"
+                      width={120}
+                      height={120}
+                      alt=""
+                    />
+                  </figure>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.gridBottom}>
+              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+                <a
+                  href="https://github.com/yuyuyusan/"
+                  target="_blank"
+                  rel="norefferer noopenner"
+                  className={styles.link}
+                >
+                  <figure className={`${styles.icon} ${styles.iconGithub}`}>
+                    <Image
+                      src="/icon-github.svg"
+                      width={60}
+                      height={60}
+                      alt=""
+                    />
+                  </figure>
+                </a>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+                <a
+                  href="https://zenn.dev/yuyuyusan"
+                  target="_blank"
+                  rel="norefferer noopenner"
+                  className={styles.link}
+                >
+                  <figure className={`${styles.icon} ${styles.iconZenn}`}>
+                    <Image
+                      src="/icon-zenn.svg"
+                      width={100}
+                      height={60}
+                      alt=""
+                    />
+                  </figure>
+                </a>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+                <Link href="/contact" className={styles.link}>
+                  <h2 className={styles.titleMid__en}>
+                    Contact
+                    <br />
+                    Form
+                  </h2>
+                </Link>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+                <a
+                  href="https://ys-portfolio-c98fe.web.app/"
+                  target="_blank"
+                  rel="norefferer noopenner"
+                  className={styles.link}
+                >
+                  <h2 className={styles.titleMid__en}>
+                    Previous
+                    <br />
+                    Site
+                  </h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 }

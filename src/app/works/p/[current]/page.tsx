@@ -2,7 +2,7 @@ import { getWorksList } from '@/app/_libs/microcms/client';
 import { WORKS_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
-
+import styles from '../../index.module.scss';
 type Props = {
   params: {
     current: string;
@@ -17,13 +17,13 @@ export default async function Page({ params }: Props) {
     offset: WORKS_LIST_LIMIT * (current - 1),
   });
   return (
-    <div className="max-w-5xl mx-auto">
+    <section className={styles.works}>
       <WorksList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}
         current={current}
         basePath="/works"
       />
-    </div>
+    </section>
   );
 }

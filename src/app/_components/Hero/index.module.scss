@@ -1,0 +1,14 @@
+.heroContainer {
+  height: 240px;
+  display: grid;
+  place-content: center;
+  .title {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    z-index: -11;
+    .main {
+      font-size: 32px;
+      display: block;
+    }
+  }
+}

@@ -1,8 +1,15 @@
-'use client';
+'use client'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './index.module.scss';
+
+const menus = [
+  { label: 'Home', path: '/' },
+  { label: 'Works', path: '/works' },
+  { label: 'About', path: '/about' },
+  { label: 'Blog', path: '/blog' },
+];
 
 export default function Navigation() {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -12,7 +19,6 @@ export default function Navigation() {
 
   return (
     <div>
-      {/* ハンバーガーアイコン */}
       <button
         className={styles.menuButton}
         onClick={isOpen ? closeMenu : openMenu}
@@ -26,23 +32,19 @@ export default function Navigation() {
         />
       </button>
 
-      {/* メニューが開いている場合に表示されるメニュー項目 */}
-      <nav className={isOpen ? styles.menuClosed : styles.menuOpen}>
-        <ul className="flex">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link href="/works">Works</Link>
-          </li>
-          <li>
-            <Link href="/skill">Skill</Link>
-          </li>
-        </ul>
-      </nav>
+      {isOpen && (
+        <nav className={styles.gnav}>
+          <ul className={styles.gnavMain}>
+            {menus.map((menu, index) => (
+              <li key={index} className={styles.gnavMainItem}>
+                <Link href={menu.path} className={styles.gnavMainItem__link}>
+                  {menu.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   );
 }

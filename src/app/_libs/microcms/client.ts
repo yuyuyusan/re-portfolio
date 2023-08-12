@@ -29,11 +29,10 @@ export type Works = {
   id: string;
   title: string;
   image: MicroCMSImage;
-  date: string;
+  imagehover: MicroCMSImage;
   platform: string;
-  url: string;
-  detail: string;
   created: string;
+  url: string;
   desc: string;
 } & MicroCMSDate;
 

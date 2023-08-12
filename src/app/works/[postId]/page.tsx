@@ -33,7 +33,7 @@ export default async function StaticDetailPage({
     <div className="max-w-5xl mx-auto">
       <h2>{time}</h2>
       <h1>{post.title}</h1>
-      <Link href={post.url} target="_blank" rel="noopener noreferrer">
+      <a href={post.url} target="_blank" rel="noopener noreferrer">
         <Image
           src={post.image.url}
           alt=""
@@ -46,16 +46,18 @@ export default async function StaticDetailPage({
             } as CSSProperties
           }
         />
-      </Link>
-      <p className="text-xl" suppressHydrationWarning={true}>作成日：{new Date(post.created).toLocaleDateString()}</p>
-      <Link
+      </a>
+      <p className="text-xl" suppressHydrationWarning={true}>
+        作成日：{new Date(post.created).toLocaleDateString()}
+      </p>
+      <a
         href={post.url}
         target="_blank"
         rel="noopener noreferrer"
         className="text-xs"
       >
         {post.url}
-      </Link>
+      </a>
       <p>PF:{post.platform}</p>
       {post.desc && <div>{parse(post.desc)}</div>}
     </div>

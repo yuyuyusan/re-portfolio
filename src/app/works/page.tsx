@@ -2,7 +2,8 @@ import { getWorksList } from '@/app/_libs/microcms/client';
 import { WORKS_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
-
+import Hero from '@/app/_components/Hero';
+import styles from './index.module.scss';
 
 export const revalidate = 60;
 
@@ -11,12 +12,12 @@ export default async function staticPage() {
     limit: WORKS_LIST_LIMIT,
   });
   return (
-    <div className="max-w-5xl mx-auto">
+    <section className={styles.works}>
       <WorksList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}
         basePath="/works"
       />
-    </div>
+    </section>
   );
 }

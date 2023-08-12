@@ -1,8 +1,8 @@
 import Navigation from '@/app/_components/Navigation'
+import styles from './index.module.scss'
 export default function Header () {
   return (
-    <header>
-      <h1>Shitsukawa</h1>
+    <header className={styles.header}>
       <Navigation />
     </header>
   )
