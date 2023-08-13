@@ -1,43 +1,3 @@
-// import Link from 'next/link';
-// import Image from 'next/image';
-// import { WorksArticle } from '@/app/_libs/microcms/client';
-// import { CSSProperties } from 'react';
-
-// type Props = {
-//   works: WorksArticle;
-// };
-
-// export default function NewsListItem({ works }: Props) {
-
-//   return (
-//     <li key={works.id}>
-//       <Link href={`/works/${works.id}`}>
-//         <Image
-//           src={works.image.url}
-//           alt={works.title}
-//           width={works.image.width}
-//           height={works.image.height}
-//           style={
-//             {
-//               viewTransitionName: `thumbnail-${works.id}`,
-//             } as CSSProperties
-//           }
-//         />
-//       </Link>
-//       <p className="text-xs">{new Date(works.created).toLocaleDateString()}</p>
-//       <h3>{works.title}</h3>
-//       <Link
-//         href={works.url}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="text-xs"
-//       >
-//         {works.url}
-//       </Link>
-//     </li>
-//   );
-// }
-
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -98,12 +58,6 @@ export default function WorksListItem({
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            style={
-              {
-                viewTransitionName: `thumbnail-${works.id}`,
-              } as CSSProperties
-            }
-            onClick={onClick}
           />
         )}
       <figure>
