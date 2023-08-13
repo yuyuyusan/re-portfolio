@@ -1,0 +1,15 @@
+@use 'variables.scss' as *;
+
+.errorPage {
+  @include contentsBody($width: map-get($breakpoint, tab));
+  .title {
+    text-align: center;
+    @include fontEn($size: 24px, $weight: bold);
+    margin-bottom: 40px;
+  }
+  .desc {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 40px;
+  }
+}

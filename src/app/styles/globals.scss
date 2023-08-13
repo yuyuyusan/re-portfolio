@@ -12,13 +12,6 @@
 // }
 
 /* reset */
-$black: #222;
-$sans:'Noto Sans JP', sans-serif;
-$roboto : 'Roboto', sans-serif;
-$pc-m: 1400px;
-$pc-s: 1200px;
-$tab: 960px;
-$sp: 560px;
 
 .font-notojp {
   font-family: 'Noto Sans JP', sans-serif;
@@ -36,7 +29,7 @@ $sp: 560px;
   border-width: 0;
 }
 html {
-  font-family: $sans;
+  @include fontJp;
   line-height: 1.6;
   letter-spacing: 0.1em;
   -webkit-text-size-adjust: 100%;
@@ -251,21 +244,21 @@ img {
 }
 a {
   text-decoration: none;
-  color: $black;
+  color: map-get($colors, black01);
   margin: 0;
   padding: 0;
   vertical-align: baseline;
   background: transparent;
-  -webkit-tap-highlight-color: $black;
+  -webkit-tap-highlight-color: map-get($colors, black01);
 }
 a[href^='tel:'] {
   pointer-events: none;
   cursor: default;
   text-decoration: none;
-}
-@include vp-tab {
-  a[href^='tel:'] {
-    pointer-events: visible;
-    cursor: pointer;
+  @include mq(tab) {
+    a[href^='tel:'] {
+      pointer-events: visible;
+      cursor: pointer;
+    }
   }
 }

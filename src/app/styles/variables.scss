@@ -25,9 +25,47 @@ $vp-pc-s: 960px;
 $vp-tab: 768px;
 $vp-sp: 560px;
 
+$colors: (
+  black01: #111,
+  white01: #fff,
+  navy01: #3667a0,
+  gray01: #d2d2d2,
+);
+
+$ui: (
+  radius: 20px,
+  shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+);
+
+$breakpoint: (
+  pc-m: 1200px,
+  pc-s: 960px,
+  tab: 768px,
+  sp: 560px,
+);
 // -----
 // mixin
 // -----
+@mixin fontJp($size: 16px, $weight: 400) {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+@mixin fontEn($size: 16px, $weight: 400) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+// -----
+// media query
+// -----
+@mixin mq($bp) {
+  $bp-value: map-get($breakpoint, $bp);
+  @media (max-width: $bp-value) {
+    @content;
+  }
+}
+
 @mixin vp-pc-m {
   @media screen and (max-width: ($vp-pc-m)) {
     @content;
@@ -49,7 +87,6 @@ $vp-sp: 560px;
   }
 }
 
-
 @mixin contentsBody($mx: 40px, $width: $vp-tab) {
   width: min(100% - $mx, $width);
   margin: 0 auto;
@@ -57,4 +94,3 @@ $vp-sp: 560px;
     width: min(100% - 40px, $width);
   }
 }
-
