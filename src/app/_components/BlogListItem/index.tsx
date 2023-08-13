@@ -1,5 +1,5 @@
 import { InfoArticle } from '@/app/_libs/microcms/client';
-
+import styles from './index.module.scss';
 type Props = {
   article: InfoArticle;
 };
@@ -8,9 +8,12 @@ export const revalidate = 60;
 
 export default function staticPage({ article }: Props) {
   return (
-    <li key={article.id}>
-      <a href={`/blog/${article.id}`}>
-        <h3>{article.title}</h3>
+    <li key={article.id} className={styles.listItem}>
+      <a href={`/blog/${article.id}`} className={styles.listItemLink}>
+        <p className={styles.listItemLink__date}>
+          {new Date(article.createdAt).toLocaleDateString()}
+        </p>
+        <h3 className={styles.listItemLink__title}>{article.title}</h3>
       </a>
     </li>
   );

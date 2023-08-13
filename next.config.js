@@ -7,7 +7,7 @@ module.exports = {
     domains: ['images.microcms-assets.io'],
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, 'src/app/styles')],
   },
   swcMinify: false,
 };

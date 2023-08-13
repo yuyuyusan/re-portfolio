@@ -1,9 +1,10 @@
+@use 'variables.scss' as *;
 .heroContainer {
   height: 240px;
   display: grid;
   place-content: center;
   .title {
-    font-family: 'Roboto', sans-serif;
+    font-family: $f-roboto;
     position: relative;
     z-index: -11;
     .main {

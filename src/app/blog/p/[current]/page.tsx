@@ -23,6 +23,7 @@ export default async function Page({ params }: Props) {
         totalCount={data.totalCount}
         current={current}
         basePath="/blog"
+        limit={BLOG_LIST_LIMIT}
       />
     </div>
   );

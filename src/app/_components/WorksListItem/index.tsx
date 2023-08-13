@@ -60,13 +60,13 @@ export default function WorksListItem({
             onMouseLeave={handleMouseLeave}
           />
         )}
-        <figure>
+        <figure className={styles.thumbnail}>
           <Image
             src={works.image.url}
             alt={works.title}
             width={works.image.width}
             height={works.image.height}
-            className={styles.thumbnail}
+            className={styles.thumbnailImg}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={

@@ -1,3 +1,4 @@
+@use 'variables.scss' as *;
 .menuOpen {
   display: block;
 }
@@ -7,7 +8,7 @@
 
 .menuButton {
   display: none;
-  @media screen and (max-width: 768px) {
+  @include vp-tab {
     display: block;
     position: fixed;
     top: 20px;
@@ -20,7 +21,7 @@
   padding: 40px 20px;
   width: 100%;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba($c-black01, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +33,7 @@
         margin-bottom: 0;
       }
       .gnavMainItem__link {
-        color: #fff;
+        color: $c-white01;
       }
     }
   }

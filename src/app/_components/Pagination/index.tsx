@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import styles from './index.module.scss';
-import { WORKS_LIST_LIMIT } from '@/app/_constants';
 
 type Props = {
   totalCount: number;
   current?: number;
   basePath?: string;
   q?: string;
+  limit: number;
 };
 
-export default function Pagination({ totalCount, current = 1, basePath = '', q }: Props) {
-  const pages = Array.from({ length: Math.ceil(totalCount / WORKS_LIST_LIMIT) }).map(
+export default function Pagination({ totalCount, current = 1, basePath = '', q , limit}: Props) {
+  const pages = Array.from({ length: Math.ceil(totalCount / limit) }).map(
     (_, i) => i + 1,
   );
   

@@ -1,0 +1,60 @@
+// -----
+// Color
+// -----
+$c-black01: #111;
+$c-white01: #fff;
+$c-navy01: #3667a0;
+$c-gray01: #d2d2d2;
+
+// -----
+// Font
+// -----
+$f-notoSans: 'Noto Sans JP', sans-serif;
+$f-roboto: 'Roboto', sans-serif;
+
+// -----
+// UI
+// -----
+$ui-radius: 20px;
+$ui-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+// -----
+// Viewport Size
+// -----
+$vp-pc-m: 1200px;
+$vp-pc-s: 960px;
+$vp-tab: 768px;
+$vp-sp: 560px;
+
+// -----
+// mixin
+// -----
+@mixin vp-pc-m {
+  @media screen and (max-width: ($vp-pc-m)) {
+    @content;
+  }
+}
+@mixin vp-pc-s {
+  @media screen and (max-width: ($vp-pc-s)) {
+    @content;
+  }
+}
+@mixin vp-tab {
+  @media screen and (max-width: ($vp-tab)) {
+    @content;
+  }
+}
+@mixin vp-sp {
+  @media screen and (max-width: ($vp-sp)) {
+    @content;
+  }
+}
+
+
+@mixin contentsBody($mx: 40px, $width: $vp-tab) {
+  width: min(100% - $mx, $width);
+  margin: 0 auto;
+  @include vp-sp {
+    width: min(100% - 40px, $width);
+  }
+}
+

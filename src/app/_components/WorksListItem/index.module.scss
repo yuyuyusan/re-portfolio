@@ -1,5 +1,7 @@
+@use 'variables.scss' as *;
+
 .hovered {
-  opacity: .5 !important;
+  opacity: .3 !important;
   visibility: visible !important;
   transition: 0.3s;
 }
@@ -19,9 +21,10 @@
 
 .thumbnail {
   margin-bottom: 20px;
-  img {
+  .thumbnailImg {
     aspect-ratio: 3/2;
-    border: 1px solid #000;
+    border-radius: $ui-radius;
+    border: 1px solid $c-black01;
     width: 100%;
     height: 100%;
     object-fit: cover;

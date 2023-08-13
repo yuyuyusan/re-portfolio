@@ -23,6 +23,7 @@ export default async function Page({ params }: Props) {
         totalCount={data.totalCount}
         current={current}
         basePath="/works"
+        limit={WORKS_LIST_LIMIT}
       />
     </section>
   );

@@ -1,4 +1,4 @@
-import './globals.scss';
+import './styles/globals.scss';
 import type { Metadata } from 'next';
 import { Noto_Sans_JP, Roboto } from 'next/font/google';
 import styles from './layout.module.scss';

@@ -1,11 +1,10 @@
+@use 'variables.scss' as *;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 // :root {
-
 // }
-
 // @media (prefers-color-scheme: dark) {
 //   :root {
 // // darkmode
@@ -21,26 +20,6 @@ $pc-s: 1200px;
 $tab: 960px;
 $sp: 560px;
 
-@mixin pc-m {
-  @media screen and (max-width: ($pc-m)) {
-    @content;
-  }
-}
-@mixin pc-s {
-  @media screen and (max-width: ($pc-s)) {
-    @content;
-  }
-}
-@mixin tab {
-  @media screen and (max-width: ($tab)) {
-    @content;
-  }
-}
-@mixin sp {
-  @media screen and (max-width: ($sp)) {
-    @content;
-  }
-}
 .font-notojp {
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -284,7 +263,7 @@ a[href^='tel:'] {
   cursor: default;
   text-decoration: none;
 }
-@include tab {
+@include vp-tab {
   a[href^='tel:'] {
     pointer-events: visible;
     cursor: pointer;

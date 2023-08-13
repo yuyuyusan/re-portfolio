@@ -2,6 +2,7 @@ import InfoList from '../_components/BlogList';
 import { getInfoList } from '../_libs/microcms/client';
 import { BLOG_LIST_LIMIT } from '../_constants';
 import Pagination from '../_components/Pagination';
+import styles from './index.module.scss';
 export const revalidate = 60;
 
 export default async function staticPage() {
@@ -9,12 +10,13 @@ export default async function staticPage() {
     limit: BLOG_LIST_LIMIT,
   });
   return (
-    <div className="max-w-5xl mx-auto">
+    <section className={styles.blog}>
       <InfoList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}
         basePath="/blog"
+        limit={BLOG_LIST_LIMIT}
       />
-    </div>
+    </section>
   );
 }

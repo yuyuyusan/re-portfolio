@@ -1,19 +1,37 @@
+@use 'variables.scss' as *;
 .topBg {
   // background: linear-gradient(-45deg, #ff057c 0%, #7c64d5 45%, #4cc3ff 100%);
   // background: linear-gradient(-45deg, #9be3ff 0%, #4fb5de 10%, #00499a 100%);
-  background: linear-gradient(-45deg, #d2d2d2 0%, #3667a0 100%);
+  background: linear-gradient(-45deg, $c-gray01 0%, $c-navy01 100%);
   min-height: 100vh;
   padding: 100px 0 20px;
+  // background: linear-gradient(
+  //   to bottom,
+  //   #d2d2d2,
+  //   #6f78b4,
+  //   #3667a0
+  // );
+  // background-size: 400% 400%;
+  // animation: AnimationName 20s ease infinite;
 }
-
+@keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
 .contentsBody {
-  width: min(100% - 30px, 780px);
-  margin: 0 auto;
+  @include contentsBody;
 }
 .contentsBody .titleBox {
   margin-bottom: 20px;
   .pageTitle {
-    font-family: 'Roboto', sans-serif;
+    font-family: $f-roboto;
     font-weight: bold;
     font-size: 32px;
   }
@@ -37,10 +55,10 @@
     rgba(255, 255, 255, 0.5) 0%,
     rgba(255, 255, 255, 0.1) 100%
   );
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: $ui-shadow;
   backdrop-filter: blur(10px);
   transition: 0.3s;
-  @media (max-width: 768px) {
+  @include vp-tab {
     padding: 20px;
   }
   &:hover {
@@ -62,13 +80,13 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
   margin-bottom: 30px;
-  @media (max-width: 768px) {
+  @include vp-tab {
     display: block;
     width: min(100% - 80px, 420px);
     margin: 0 auto 20px;
   }
   .gridBox {
-    @media (max-width: 768px) {
+    @include vp-tab {
       margin-bottom: 20px;
       &:last-child {
         margin-bottom: 0;
@@ -79,7 +97,7 @@
 .gridTop__works {
   grid-area: 1 / 1 / 3 / 3;
   aspect-ratio: 1/1;
-  @media (max-width: 768px) {
+  @include vp-tab {
     aspect-ratio: initial;
   }
 }
@@ -98,7 +116,7 @@
   }
 }
 .gridTop .gridBox .link .titleLarge__en {
-  font-family: 'Roboto', sans-serif;
+  font-family: $f-roboto;
   font-weight: bold;
   font-size: clamp(1.5rem, 1.179rem + 1.37vw, 2rem);
   line-height: 1.4;
@@ -122,7 +140,7 @@
   gap: 30px;
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 768px) {
+  @include vp-tab {
     width: min(100% - 80px, 420px);
     margin: 0 auto;
     gap: 20px;
@@ -137,7 +155,7 @@
 .gridBottom__box {
   width: calc((100% - (30px * 3)) / 4);
   aspect-ratio: 1/1;
-  @media (max-width: 768px) {
+  @include vp-tab {
     width: calc((100% - (20px * 1)) / 2);
   }
 }
@@ -145,7 +163,7 @@
 // title
 // -----
 .titleMid__en {
-  font-family: 'Roboto', sans-serif;
+  font-family: $f-roboto;
   font-weight: bold;
   font-size: clamp(1rem, 0.679rem + 1.37vw, 1.5rem);
   line-height: 1.2;

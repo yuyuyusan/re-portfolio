@@ -22,7 +22,6 @@ export type Info = {
   id: string;
   title: string;
   content: string;
-  createdAt: string;
 } & MicroCMSDate;
 
 // 実績の型定義

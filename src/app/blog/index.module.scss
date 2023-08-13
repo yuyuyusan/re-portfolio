@@ -1,0 +1,8 @@
+@use 'variables.scss' as *;
+.blog {
+  @include contentsBody($width: $vp-pc-s);
+}
+
+.jp {
+  display: none;
+}

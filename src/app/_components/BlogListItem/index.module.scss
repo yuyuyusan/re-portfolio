@@ -1,0 +1,16 @@
+@use 'variables.scss' as *;
+
+.listItem .listItemLink {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border-bottom: 1px solid $c-black01;
+  padding: 20px;
+  transition: .3s;
+  @include vp-tab {
+    display: block;
+  }
+  &:hover {
+    box-shadow: $ui-shadow;
+  }
+}
