@@ -13,7 +13,7 @@ export default function About() {
             このサイトは、クリエイティブも意識しつつ、フロントエンドのスキルとユーザー体験をメインに作成したプロフィールサイトです。
           </span>
           <span className={styles.en}>
-            I started my career in the web industry in April 2021 as a coder in
+            {`I started my career in the web industry in April 2021 as a coder in
             a web production company with a complete division of labor.
             Currently, I am also in charge of UI/UX proposals and other designer
             tasks. In the future, I am striving every day to become a UX
@@ -21,7 +21,7 @@ export default function About() {
             feel that this is the work I love the most and consider it my life's
             work because I am able to learn by myself all the time. This is a
             profile site created mainly for front-end skills and user
-            experience, while also keeping creativity in mind.
+            experience, while also keeping creativity in mind.`}
           </span>
         </p>
       </section>
