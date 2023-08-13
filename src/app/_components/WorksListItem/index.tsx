@@ -60,26 +60,29 @@ export default function WorksListItem({
             onMouseLeave={handleMouseLeave}
           />
         )}
-      <figure>
-        <Image
-          src={works.image.url}
-          alt={works.title}
-          width={works.image.width}
-          height={works.image.height}
-          className={styles.thumbnail}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          style={
-            {
-              viewTransitionName: `thumbnail-${works.id}`,
-            } as CSSProperties
-          }
-          onClick={onClick}
-        />
+        <figure>
+          <Image
+            src={works.image.url}
+            alt={works.title}
+            width={works.image.width}
+            height={works.image.height}
+            className={styles.thumbnail}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            style={
+              {
+                viewTransitionName: `thumbnail-${works.id}`,
+              } as CSSProperties
+            }
+            onClick={onClick}
+          />
         </figure>
       </Link>
       <p className="text-xs" suppressHydrationWarning={true}>
-        {new Date(works.created).toLocaleDateString()}
+        {new Date(works.created).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+        })}
       </p>
       <h3>{works.title}</h3>
       <a
