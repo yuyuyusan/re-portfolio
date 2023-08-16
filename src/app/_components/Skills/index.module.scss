@@ -1,1 +1,13 @@
 @use 'variables.scss' as *;
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  .skillBox {
+    width: calc((100% - (30px * 2)) / 3);
+    padding: 20px;
+    @include Glassmor;
+  }
+}

@@ -29,36 +29,40 @@ export default async function StaticDetailPage({
     notFound();
   }
   return (
-    <div className="max-w-5xl mx-auto">
+    <section className={styles.works}>
       <h2>{time}</h2>
-      <h1>{post.title}</h1>
-      <a href={post.url} target="_blank" rel="noopener noreferrer">
-        <Image
-          src={post.image.url}
-          alt=""
-          width={post.image.width}
-          height={post.image.height}
-          className={styles.cat1}
-          style={
-            {
-              viewTransitionName: `thumbnail-${post.id}`,
-            } as CSSProperties
-          }
-        />
-      </a>
-      <p className="text-xl" suppressHydrationWarning={true}>
+      <h2 className={styles.title}>{post.title}</h2>
+      <figure className={styles.thumbnail}>
+        <a href={post.url} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={post.image.url}
+            alt=""
+            width={post.image.width}
+            height={post.image.height}
+            className={styles.cat1}
+            style={
+              {
+                viewTransitionName: `thumbnail-${post.id}`,
+              } as CSSProperties
+            }
+          />
+        </a>
+      </figure>
+      <p className={styles.date} suppressHydrationWarning={true}>
         作成日：{new Date(post.created).toLocaleDateString()}
       </p>
-      <a
-        href={post.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-xs"
-      >
-        {post.url}
-      </a>
-      <p>PF:{post.platform}</p>
+      <div className={styles.linkButton}>
+        <a
+          href={post.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.url}
+        >
+          URL：{post.url}
+        </a>
+      </div>
+      <p className={styles.pf}>PF:{post.platform}</p>
       {post.desc && <div>{parse(post.desc)}</div>}
-    </div>
+    </section>
   );
 }

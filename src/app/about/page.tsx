@@ -1,10 +1,14 @@
 import Skills from '../_components/Skills';
 import styles from './index.module.scss';
+import Image from 'next/image';
 
 export default function About() {
   return (
     <>
       <section className={styles.about}>
+        <figure className={styles.icon}>
+          <Image src="/yu.jpg" alt="icon" width={200} height={200} />
+        </figure>
         <div className={styles.profile}>
           <p className={styles.jp}>
             <span>

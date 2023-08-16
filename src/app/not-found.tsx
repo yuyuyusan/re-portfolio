@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import styles from './not-found.module.scss';
 import Hero from './_components/Hero';
+import Header from './_components/Header';
+import Footer from './_components/Footer';
+import LinkButton from './_components/LinkButton';
 export default function NotFound() {
   return (
     <>
-      <Hero title="404" sub="エラーページ" />
+      <Header />
+      <Hero title="404 Not Found" sub="エラーページ" />
       <section className={styles.errorPage}>
-        <h2 className={styles.title}>Not Found</h2>
         <p className={styles.desc}>
           The page you are looking for cannot be found.
           <br />
@@ -14,10 +17,11 @@ export default function NotFound() {
           <br />
           Please return to the top page with the button below.
         </p>
-        <Link href="/" className={styles.returnButton}>
-          Return Home
-        </Link>
+        <div className={styles.linkButton}>
+          <LinkButton title="Return" href="/" />
+        </div>
       </section>
+      <Footer />
     </>
   );
 }

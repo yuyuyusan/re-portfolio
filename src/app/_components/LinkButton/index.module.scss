@@ -1,0 +1,15 @@
+@use 'variables.scss' as *;
+
+  .linkButton__text{
+    display: inline-block;
+    padding: 10px 40px;
+    background: $c-navy01;
+    color: $c-white01;
+    border-radius: $ui-radius;
+    border: 1px solid $c-navy01;
+    transition: 0.3s;
+    &:hover {
+      color: $c-navy01;
+      background: $c-white01;
+    }
+  }

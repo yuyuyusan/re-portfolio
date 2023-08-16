@@ -1,3 +1,5 @@
+import styles from './index.module.scss';
+
 const softSkills = [
   { name: 'HTML/SCSS', level: 5 },
   { name: 'JavaScript', level: 3 },
@@ -16,22 +18,21 @@ const softSkills = [
   { name: 'MySQL', level: 2 },
 ];
 const hardSkills = [
-  {name:'Photoshop', lebel:2},
-  {name:'Illustrator', lebel:2},
-  {name:'Figma', lebel:2},
-  {name:'Adobe XD', lebel:2},
-  {name:'Premiere Pro', lebel:2},
-  {name:'After Effects', lebel:2},
-  {name:'Lightroom', lebel:2},
+  { name: 'Photoshop', lebel: 2 },
+  { name: 'Illustrator', lebel: 2 },
+  { name: 'Adobe XD', lebel: 2 },
+  { name: 'Figma', lebel: 2 },
+  { name: 'After Effects', lebel: 1 },
+  { name: 'Lightroom', lebel: 1 },
 ];
 
 export default function Skills() {
   return (
-    <div className="skills">
+    <div className={styles.skill}>
       {softSkills.map((skill, index) => (
-        <div className="skill" key={index}>
-          <div className="skill__name">{skill.name}</div>
-          <div className="skill__level">{skill.level}</div>
+        <div className={styles.skillBox} key={index}>
+          <div className={styles.skill__name}>{skill.name}</div>
+          <div className={styles.skill__level}>{skill.level}</div>
         </div>
       ))}
     </div>

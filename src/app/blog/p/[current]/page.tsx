@@ -2,6 +2,7 @@ import { getInfoList } from '@/app/_libs/microcms/client';
 import { BLOG_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import BlogList from '@/app/_components/BlogList';
+import styles from '../../index.module.scss';
 
 type Props = {
   params: {
@@ -17,7 +18,7 @@ export default async function Page({ params }: Props) {
     offset: BLOG_LIST_LIMIT * (current - 1),
   });
   return (
-    <div className="max-w-5xl mx-auto">
+    <section className={styles.blog}>
       <BlogList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}
@@ -25,6 +26,6 @@ export default async function Page({ params }: Props) {
         basePath="/blog"
         limit={BLOG_LIST_LIMIT}
       />
-    </div>
+    </section>
   );
 }

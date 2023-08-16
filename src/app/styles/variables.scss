@@ -15,7 +15,7 @@ $f-roboto: 'Roboto', sans-serif;
 // -----
 // UI
 // -----
-$ui-radius: 20px;
+$ui-radius: 15px;
 $ui-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 // -----
 // Viewport Size
@@ -33,7 +33,7 @@ $colors: (
 );
 
 $ui: (
-  radius: 20px,
+  radius: 15px,
   shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
 );
 
@@ -55,6 +55,21 @@ $breakpoint: (
   font-family: 'Roboto', sans-serif;
   font-size: $size;
   font-weight: $weight;
+}
+@mixin Glassmor {
+  border-radius: map-get($ui, radius);
+  box-shadow: map-get($ui, shadow);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 2552, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  border-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
 }
 // -----
 // media query

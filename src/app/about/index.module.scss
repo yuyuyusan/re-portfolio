@@ -2,11 +2,19 @@
 .about {
   @include contentsBody($width: $vp-pc-s);
 }
+.icon {
+  width: 120px;
+  margin: 0 auto 40px;
+}
 
+.profile {
+  margin-bottom: 80px;
+}
 .jp {
   display: none;
 }
-.jp, .en {
+.jp,
+.en {
   span {
     display: block;
     @include fontEn($size: 18px, $weight: 500);
