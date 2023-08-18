@@ -5,8 +5,9 @@ import { WorksArticle } from '@/app/_libs/microcms/client';
 import { CSSProperties } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import useClientOnly from '@/app/_hooks/useClientOnly'; // クライアントサイドでのみ実行する
+import useClientOnly from '@/app/_hooks/useClientOnly'; 
 import styles from './index.module.scss';
+
 type Props = {
   works: WorksArticle;
   onClick?: () => void;
