@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import parse from 'html-react-parser';
 import { getInfoDetail, getInfoList } from '@/app/_libs/microcms/client';
 
-// キャッシュを利用しない
 export const revalidate = 60;
 export async function generateStaticParams() {
   const { contents } = await getInfoList();

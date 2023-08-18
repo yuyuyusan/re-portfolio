@@ -5,7 +5,6 @@ import Image from 'next/image';
 import styles from './index.module.scss';
 import { CSSProperties } from 'react';
 
-// キャッシュを利用しない
 export const revalidate = 60;
 
 export async function generateStaticParams() {

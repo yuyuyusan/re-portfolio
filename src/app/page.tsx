@@ -3,6 +3,7 @@ import styles from './page.module.scss';
 import Link from 'next/link';
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
+import * as THREE from 'three';
 
 export default function Home() {
   return (

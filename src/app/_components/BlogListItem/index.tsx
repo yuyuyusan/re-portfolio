@@ -4,7 +4,6 @@ type Props = {
   article: InfoArticle;
 };
 
-export const revalidate = 60;
 
 export default function staticPage({ article }: Props) {
   return (
