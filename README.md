@@ -9,7 +9,7 @@ lighthouseでの高得点とユーザビリティ、アクセシビリティを�
 ### 前回作成したPortfolioは改善点があったため、新たに作成
 * NuxtからNextに変更し、HostingをFirebaseからVercelに移行
 * JavaScriptからTypeScriptに移行
-* 更新コンテンツのレンダリングをSSGからCSRに変更
+* 更新コンテンツのレンダリングをISRに変更
 * 各更新コンテンツのendpointに合わせて表示数変更できるページネーションを追加
 * transition APIでシームレスなページ遷移を実装
 * 404ページの追加
