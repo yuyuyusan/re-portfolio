@@ -1,11 +1,9 @@
-## Name
+# New Portfolio
 
-New Portfolio
-
-## Detail
-### テーマ
+## Theme
 lighthouseでの高得点とユーザビリティ、アクセシビリティを意識
 
+## Features
 ### 前回作成したPortfolioは改善点があったため、新たに作成
 * NuxtからNextに変更し、HostingをFirebaseからVercelに移行
 * JavaScriptからTypeScriptに移行
@@ -68,12 +66,6 @@ Design
             └── p
                 └── [current]
 </pre>
-
-## DEMO
-
-
-## Features
-
 
 ## Installation
 
