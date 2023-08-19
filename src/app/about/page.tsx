@@ -1,3 +1,4 @@
+import ExperienceList from '../_components/ExperienceList';
 import Skills from '../_components/Skills';
 import styles from './index.module.scss';
 import Image from 'next/image';
@@ -5,7 +6,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <>
-      <section className={styles.about}>
+      <section className={`${styles.about} ${styles.aboutSkill}`}>
         <figure className={styles.icon}>
           <Image src="/yu.jpg" alt="icon" width={200} height={200} />
         </figure>
@@ -38,6 +39,10 @@ export default function About() {
         <div className={styles.skills}>
           <Skills />
         </div>
+      </section>
+      <section className={`${styles.about} ${styles.aboutExperience}`}>
+        <h2 className={styles.title}>Experience</h2>
+        <ExperienceList />
       </section>
     </>
   );

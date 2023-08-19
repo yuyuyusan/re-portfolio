@@ -1,0 +1,55 @@
+@use 'variables.scss' as *;
+.blog {
+  @include contentsBody($width: map-get($breakpoint, pc-s));
+}
+
+.jp {
+  display: none;
+}
+
+// -----
+// blogDetail
+// -----
+.blogDetail {
+  .title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .date {
+    @include fontEn($weight: 500);
+    margin-bottom: 20px;
+    display: block;
+    text-align: right;
+  }
+  .contents {
+    margin-bottom: 100px;
+    p {
+      line-height: 2;
+      letter-spacing: 0.1em;
+    }
+    a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid map-get($colors, navy01);
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: map-get($colors, navy01);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+  }
+  .linkButton {
+    text-align: center;
+  }
+}

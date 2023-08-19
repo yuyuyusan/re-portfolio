@@ -1,25 +1,33 @@
 @use 'variables.scss' as *;
-.container {
+
+.pagenation {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  margin-top: 24px;
-}
-.list {
-  margin: 0 4px;
-}
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background: $c-gray01;
-  border-radius: 2px;
-}
-.current {
-  font-weight: bold;
-  background: $c-navy01;
-  color: $c-white01;
+  margin-top: 60px;
+  gap: 10px;
+  .pagenationItem {
+    .num {
+      display: grid;
+      place-content: center;
+      width: 36px;
+      height: 36px;
+      border: 2px solid map-get($colors, navy01);
+      border-radius: 2px;
+      @include fontEn($weight: 500);
+      &:hover {
+        background: map-get($colors, navy01-transparent);
+      }
+    }
+    .current {
+      font-weight: bold;
+      background: $c-navy01;
+      color: $c-white01;
+      border: none;
+      &:hover {
+        background: $c-navy01;
+        color: $c-white01;
+      }
+    }
+  }
 }

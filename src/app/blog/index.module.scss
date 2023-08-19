@@ -1,8 +1,0 @@
-@use 'variables.scss' as *;
-.blog {
-  @include contentsBody($width: map-get($breakpoint, pc-s));
-}
-
-.jp {
-  display: none;
-}

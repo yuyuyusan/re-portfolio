@@ -8,6 +8,9 @@
 
 .menuButton {
   display: none;
+  padding: 5px;
+  border: none;
+  background: map-get( $colors, navy01 );
   @include vp-tab {
     display: block;
     position: fixed;

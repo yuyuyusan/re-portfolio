@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import parse from 'html-react-parser';
 import { getInfoDetail, getInfoList } from '@/app/_libs/microcms/client';
+import styles from '../index.module.scss';
+import LinkButton from '@/app/_components/LinkButton';
 
 export const revalidate = 60;
 export async function generateStaticParams() {
@@ -19,16 +21,23 @@ export default async function StaticDetailPage({
   params: { postId: string };
 }) {
   const post = await getInfoDetail(postId);
-  // ページの生成された時間を取得
   const time = new Date().toLocaleString();
   if (!post) {
     notFound();
   }
   return (
-    <div className="max-w-5xl mx-auto">
-      <h2>{post.title}</h2>
-      <p>{new Date(post.createdAt).toLocaleDateString()}</p>
-      <div>{parse(post.content)}</div>
-    </div>
+    <section className={`${styles.blog} ${styles.blogDetail}`}>
+      <h2 className={styles.title}>{post.title}</h2>
+      <time
+        className={styles.date}
+        dateTime={`${new Date(post.createdAt).toLocaleDateString()}`}
+      >
+        {new Date(post.createdAt).toLocaleDateString()}
+      </time>
+      <div className={styles.contents}>{parse(post.content)}</div>
+      <div className={styles.linkButton}>
+        <LinkButton title="Notes一覧へ" href="/notes" />
+      </div>
+    </section>
   );
 }

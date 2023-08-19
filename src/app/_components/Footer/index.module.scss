@@ -1,10 +1,13 @@
 @use 'variables.scss' as *;
 .footer {
-  padding: 60px 0 10px;
+  margin-top: 80px;
+  padding: 10px 0;
+  background: map-get($colors, navy01);
   .container {
     text-align: center;
     .copy {
       font-size: 10px;
+      color: map-get($colors, white01);
     }
   }
 }

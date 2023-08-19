@@ -5,6 +5,8 @@ import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
 import * as THREE from 'three';
 
+
+
 export default function Home() {
   return (
     <div className={styles.topBg}>
@@ -17,7 +19,11 @@ export default function Home() {
             </div>
             <div className={styles.gridTop}>
               <div className={`${styles.gridBox} ${styles.gridTop__works}`}>
-                <Link href="/works" className={styles.link}>
+                <Link
+                  href="/works"
+                  className={styles.link}
+                  aria-label="実績一覧へ"
+                >
                   <h2 className={styles.titleLarge__en}>Works</h2>
                   <figure className={`${styles.icon} ${styles.iconWorks}`}>
                     <Image
@@ -30,7 +36,11 @@ export default function Home() {
                 </Link>
               </div>
               <div className={`${styles.gridBox} ${styles.gridTop__about}`}>
-                <Link href="/about" className={styles.link}>
+                <Link
+                  href="/about"
+                  className={styles.link}
+                  aria-label="自己紹介ページへ"
+                >
                   <h2 className={styles.titleLarge__en}>About</h2>
                   <figure className={`${styles.icon} ${styles.iconAbout}`}>
                     <Image
@@ -43,8 +53,12 @@ export default function Home() {
                 </Link>
               </div>
               <div className={`${styles.gridBox} ${styles.gridTop__blog}`}>
-                <Link href="/blog" className={styles.link}>
-                  <h2 className={styles.titleLarge__en}>Blog</h2>
+                <Link
+                  href="/notes"
+                  className={styles.link}
+                  aria-label="ブログ一覧へ"
+                >
+                  <h2 className={styles.titleLarge__en}>Notes</h2>
                   <figure className={`${styles.icon} ${styles.iconBlog}`}>
                     <Image
                       src="/icon-notes.svg"
@@ -63,13 +77,14 @@ export default function Home() {
                   target="_blank"
                   rel="norefferer noopenner"
                   className={styles.link}
+                  aria-label="Githubへ"
                 >
                   <figure className={`${styles.icon} ${styles.iconGithub}`}>
                     <Image
                       src="/icon-github.svg"
                       width={60}
                       height={60}
-                      alt=""
+                      alt="Github"
                     />
                   </figure>
                 </a>
@@ -80,6 +95,7 @@ export default function Home() {
                   target="_blank"
                   rel="norefferer noopenner"
                   className={styles.link}
+                  aria-label="Zennへ"
                 >
                   <figure className={`${styles.icon} ${styles.iconZenn}`}>
                     <Image
@@ -106,6 +122,7 @@ export default function Home() {
                   target="_blank"
                   rel="norefferer noopenner"
                   className={styles.link}
+                  aria-label="旧サイトへ"
                 >
                   <h2 className={styles.titleMid__en}>
                     Previous

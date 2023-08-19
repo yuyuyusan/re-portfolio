@@ -1,6 +1,10 @@
 @use 'variables.scss' as *;
 .about {
   @include contentsBody($width: $vp-pc-s);
+  margin-bottom: 100px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .icon {
   width: 120px;
@@ -22,5 +26,12 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.aboutExperience {
+  .title {
+    margin-bottom: 20px;
+    @include fontEn($size: 24px, $weight: 500);
   }
 }

@@ -23,7 +23,7 @@ export default async function Page({ params }: Props) {
       <Pagination
         totalCount={data.totalCount}
         current={current}
-        basePath="/blog"
+        basePath="/notes"
         limit={BLOG_LIST_LIMIT}
       />
     </section>

@@ -22,6 +22,7 @@ export default function Navigation() {
       <button
         className={styles.menuButton}
         onClick={isOpen ? closeMenu : openMenu}
+        aria-label={`${isOpen ? '閉じる' : 'メニュー'}ボタン`}
       >
         <Image
           src={isOpen ? '/close.svg' : '/menu.svg'}

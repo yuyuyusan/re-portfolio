@@ -23,19 +23,19 @@ export default async function StaticDetailPage({
 }) {
   const post = await getWorksDetail(postId);
   // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
-  if (!post) {
-    notFound();
-  }
+  // const time = new Date().toLocaleString();
+  // if (!post) {
+  //   notFound();
+  // }
   return (
     <section className={styles.works}>
-      <h2>{time}</h2>
+      {/* <h2>{time}</h2> */}
       <h2 className={styles.title}>{post.title}</h2>
       <figure className={styles.thumbnail}>
-        <a href={post.url} target="_blank" rel="noopener noreferrer">
+        <a href={post.url} target="_blank" rel="noopener noreferrer" aria-label={`${post.title}のページへ`}>
           <Image
             src={post.image.url}
-            alt=""
+            alt={post.title}
             width={post.image.width}
             height={post.image.height}
             className={styles.cat1}
@@ -47,15 +47,16 @@ export default async function StaticDetailPage({
           />
         </a>
       </figure>
-      <p className={styles.date} suppressHydrationWarning={true}>
+      <time dateTime={`${new Date(post.created).toLocaleDateString()}`} className={styles.date} suppressHydrationWarning={true}>
         作成日：{new Date(post.created).toLocaleDateString()}
-      </p>
+      </time>
       <div className={styles.linkButton}>
         <a
           href={post.url}
+          className={styles.url}
+          aria-label={`${post.title}のページへ`}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.url}
         >
           URL：{post.url}
         </a>

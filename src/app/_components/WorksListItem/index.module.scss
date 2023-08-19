@@ -1,7 +1,7 @@
 @use 'variables.scss' as *;
 
 .hovered {
-  opacity: .3 !important;
+  opacity: 0.3 !important;
   visibility: visible !important;
   transition: 0.3s;
 }
@@ -28,5 +28,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.cardItem {
+  .title {
+    @include fontJp($size: 18px, $weight: 500);
+    margin-bottom: 10px;
+  }
+  .date {
+    @include fontEn($size: 14px, $weight: 400);
+    color: $c-black01;
+  }
+  .url {
+    display: inline-block;
+    @include fontEn($size: 10px, $weight: 400);
+    color: $c-black01;
+    margin-top: 10px;
   }
 }

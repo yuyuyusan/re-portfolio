@@ -5,7 +5,7 @@ import { WorksArticle } from '@/app/_libs/microcms/client';
 import { CSSProperties } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import useClientOnly from '@/app/_hooks/useClientOnly'; 
+import useClientOnly from '@/app/_hooks/useClientOnly';
 import styles from './index.module.scss';
 
 type Props = {
@@ -34,8 +34,12 @@ export default function WorksListItem({
     }
   }, [isClient, isSelect, onClick]);
   return (
-    <li key={works.id}>
-      <Link href={`/works/${works.id}`} className="card">
+    <li key={works.id} className={styles.cardItem}>
+      <Link
+        href={`/works/${works.id}`}
+        className={styles.link}
+        area-label={`${works.title}の詳細ページに飛ぶ`}
+      >
         {works.imagehover ? (
           <Image
             src={works.imagehover.url}
@@ -79,18 +83,25 @@ export default function WorksListItem({
           />
         </figure>
       </Link>
-      <p className="text-xs" suppressHydrationWarning={true}>
+      <time
+        dateTime={`${new Date(works.created).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'long',
+        })}`}
+        className={styles.date}
+        suppressHydrationWarning={true}
+      >
         {new Date(works.created).toLocaleDateString('ja-JP', {
           year: 'numeric',
           month: 'long',
         })}
-      </p>
+      </time>
       <h3>{works.title}</h3>
       <a
         href={works.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-xs"
+        className={styles.url}
       >
         {works.url}
       </a>

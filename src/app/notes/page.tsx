@@ -14,7 +14,7 @@ export default async function staticPage() {
       <InfoList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}
-        basePath="/blog"
+        basePath="/notes"
         limit={BLOG_LIST_LIMIT}
       />
     </section>

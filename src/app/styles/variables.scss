@@ -5,6 +5,7 @@ $c-black01: #111;
 $c-white01: #fff;
 $c-navy01: #3667a0;
 $c-gray01: #d2d2d2;
+$c-red01: #d5525f;
 
 // -----
 // Font
@@ -27,9 +28,11 @@ $vp-sp: 560px;
 
 $colors: (
   black01: #111,
+  gray01: #d2d2d2,
   white01: #fff,
   navy01: #3667a0,
-  gray01: #d2d2d2,
+  navy01-transparent: rgba(54, 103, 160, 0.3),
+  red01:#d5525f,
 );
 
 $ui: (

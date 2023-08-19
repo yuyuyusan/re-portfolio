@@ -1,19 +1,20 @@
 import { InfoArticle } from '@/app/_libs/microcms/client';
 import styles from './index.module.scss';
+import Link from 'next/link';
+
 type Props = {
   article: InfoArticle;
 };
 
-
 export default function staticPage({ article }: Props) {
   return (
     <li key={article.id} className={styles.listItem}>
-      <a href={`/blog/${article.id}`} className={styles.listItemLink}>
-        <p className={styles.listItemLink__date}>
+      <Link href={`/notes/${article.id}`} className={styles.listItemLink} aria-label={`${article.title}の詳細ページへ`}>
+        <time dateTime={`${new Date(article.createdAt).toLocaleDateString()}`} className={styles.listItemLink__date}>
           {new Date(article.createdAt).toLocaleDateString()}
-        </p>
+        </time>
         <h3 className={styles.listItemLink__title}>{article.title}</h3>
-      </a>
+      </Link>
     </li>
   );
 }

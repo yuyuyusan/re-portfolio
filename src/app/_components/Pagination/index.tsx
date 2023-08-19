@@ -15,15 +15,15 @@ export default function Pagination({ totalCount, current = 1, basePath = '', q ,
   );
   
   return (
-    <ul className={styles.container}>
+    <ul className={styles.pagenation}>
       {pages.map((p) => (
-        <li className={styles.list} key={p}>
+        <li className={styles.pagenationItem} key={p}>
           {current !== p ? (
-            <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')} className={styles.item}>
+            <Link href={`${basePath}/p/${p}` + (q ? `?q=${q}` : '')} className={styles.num}>
               {p}
             </Link>
           ) : (
-            <span className={`${styles.item} ${styles.current}`}>{p}</span>
+            <span className={`${styles.num} ${styles.current}`}>{p}</span>
           )}
         </li>
       ))}
