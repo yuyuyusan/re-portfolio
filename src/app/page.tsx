@@ -1,17 +1,33 @@
+'use client';
+import React from 'react';
 import Image from 'next/image';
 import styles from './page.module.scss';
 import Link from 'next/link';
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
 import * as THREE from 'three';
-
-
-
+import TSParticles from 'react-tsparticles';
 export default function Home() {
   return (
     <div className={styles.topBg}>
       <Header />
       <main>
+        <TSParticles
+          id="tsparticles"
+          options={{
+            particles: {
+              number: {
+                value: 50,
+              },
+              color: {
+                value: '#ffffff',
+              },
+              shape: {
+                type: 'circle',
+              },
+            },
+          }}
+        />
         <section className={styles.topContainer}>
           <div className={`${styles.contentsBody}`}>
             <div className={styles.titleBox}>
