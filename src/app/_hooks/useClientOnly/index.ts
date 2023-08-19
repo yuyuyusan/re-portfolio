@@ -1,7 +1,7 @@
 // src/app/_hooks/useClientOnly.ts
 import { useEffect } from 'react';
 
-const useClientOnly = () => {
+export default function useClientOnly() {
   const isClient = typeof window !== 'undefined';
 
   useEffect(() => {
@@ -12,5 +12,3 @@ const useClientOnly = () => {
 
   return isClient;
 };
-
-export default useClientOnly;

@@ -26,7 +26,7 @@ export default async function StaticDetailPage({
     notFound();
   }
   return (
-    <section className={`${styles.blog} ${styles.blogDetail}`}>
+    <section className={`${styles.container} ${styles.blogDetail}`}>
       <h2 className={styles.title}>{post.title}</h2>
       <time
         className={styles.date}

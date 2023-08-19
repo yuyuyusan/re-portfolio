@@ -18,7 +18,7 @@ export default async function Page({ params }: Props) {
     offset: BLOG_LIST_LIMIT * (current - 1),
   });
   return (
-    <section className={styles.blog}>
+    <section className={styles.container}>
       <BlogList articles={data.contents} />
       <Pagination
         totalCount={data.totalCount}

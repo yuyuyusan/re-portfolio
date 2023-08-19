@@ -1,0 +1,16 @@
+@use 'variables.scss' as *;
+
+.container {
+  @include contentsBody($width: map-get($breakpoint, pc-s));
+}
+
+.list {
+  margin-bottom: 60px;
+}
+
+.linkButton {
+  text-align: center;
+  .link {
+    border-bottom: 1px solid map-get($colors, navy01);
+  }
+}

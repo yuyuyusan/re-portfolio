@@ -1,5 +1,5 @@
 @use 'variables.scss' as *;
-.blog {
+.container {
   @include contentsBody($width: map-get($breakpoint, pc-s));
 }
 

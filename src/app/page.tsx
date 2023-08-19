@@ -13,7 +13,6 @@ export default function Home() {
   const particlesInit = async (main: Engine) => {
     await loadFull(main);
   };
-  
   return (
     <div className={styles.topBg}>
       <Header />
