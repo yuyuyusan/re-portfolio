@@ -6,7 +6,7 @@ export default async function staticPage() {
   return (
     <>
       <section className={`${styles.container}`}>
-        <p className={styles.linkButton}>in preparation. Please wait.</p>
+        <p className={styles.desc}>in preparation. Please wait.</p>
         <div className={styles.linkButton}>
           <LinkButton title="Return" href="/" />
         </div>
