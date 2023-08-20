@@ -86,7 +86,7 @@ export default function WorksListItem({
       <time
         dateTime={`${new Date(works.created).toLocaleDateString('ja-JP', {
           year: 'numeric',
-          month: 'long',
+          month: 'numeric',
         })}`}
         className={styles.date}
         suppressHydrationWarning={true}

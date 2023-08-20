@@ -52,7 +52,10 @@ export default async function StaticDetailPage({
         </figure>
         <div className={styles.info}>
           <time
-            dateTime={`${new Date(post.created).toLocaleDateString()}`}
+            dateTime={`${new Date(post.created).toLocaleDateString('ja-JP', {
+              year: 'numeric',
+              month: 'numeric',
+            })}`}
             className={styles.date}
             suppressHydrationWarning={true}
           >
@@ -67,7 +70,7 @@ export default async function StaticDetailPage({
           {post.url && (
             <div className={styles.linkText}>
               <div className={styles.commonIcon}>
-              <IconLink title="IconLink" className={styles.iconImg} />
+                <IconLink title="IconLink" className={styles.iconImg} />
               </div>
               <a
                 href={post.url}

@@ -30,9 +30,17 @@ export default async function StaticDetailPage({
       <h2 className={styles.title}>{post.title}</h2>
       <time
         className={styles.date}
-        dateTime={`${new Date(post.createdAt).toLocaleDateString()}`}
+        dateTime={`${new Date(post.createdAt).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+        })}`}
       >
-        {new Date(post.createdAt).toLocaleDateString()}
+        {new Date(post.createdAt).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+        })}
       </time>
       <div className={styles.contents}>{parse(post.content)}</div>
       <div className={styles.linkButton}>
