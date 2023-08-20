@@ -93,7 +93,7 @@ export default function WorksListItem({
       >
         {new Date(works.created).toLocaleDateString('ja-JP', {
           year: 'numeric',
-          month: 'long',
+          month: 'numeric',
         })}
       </time>
       <h3>{works.title}</h3>

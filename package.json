@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "bundle-analyzer": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^13.4.19",
     "@types/node": "20.4.7",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
@@ -18,13 +20,12 @@
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "feed": "^4.2.2",
-    "gsap": "^3.12.2",
     "html-react-parser": "^4.2.0",
     "microcms-js-sdk": "^2.5.0",
     "next": "^13.4.19",
     "postcss": "8.4.27",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "react-tsparticles": "^2.12.2",
     "rss-parser": "^3.13.0",
     "tailwindcss": "3.3.3",
@@ -33,6 +34,7 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/noisejs": "^0.0.28",
     "@types/three": "^0.155.0",
     "@types/xml2js": "^0.4.11",

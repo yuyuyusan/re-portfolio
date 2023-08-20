@@ -34,6 +34,7 @@ export type Works = {
   created: string;
   url: string;
   desc: string;
+  stack: string[];
 } & MicroCMSDate;
 
 // カテゴリーの型定義

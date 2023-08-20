@@ -5,14 +5,14 @@ const career = [
     title: '職業訓練校 PC・スマホサイト デザイン科 入稿',
     period: '2020/4 - 2020/9',
     description: [
-      '主にHTML/CSS/jQueryとデザインツールのPhotoshop/XDを用いたコーディングを勉強しました。',
+      '主にHTML/CSS/jQueryとデザインツールのPhotoshop/XDを用いたWebサイト制作を勉強しました。',
     ],
   },
   {
     title: 'オペレーター',
     period: '2021/1 - 2021/2',
     description: [
-      '既存WebサイトをMicrosoftSherePointを用いて移行更新を業務をしました。',
+      '既存WebサイトをMicrosoft SherePointを用いて移行更新の業務をしました。',
     ],
   },
   {

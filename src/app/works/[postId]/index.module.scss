@@ -1,3 +1,4 @@
+@use 'variables.scss' as *;
 
 .title {
   font-size: 24px;
@@ -6,13 +7,60 @@
 
 .thumbnail {
   margin: 0 auto 60px;
+  .thumbnailImg {
+    border-radius: 15px;
+    box-shadow: map-get($ui, shadow);
+  }
 }
-.date {
-  margin-bottom: 20px;
+.commonIcon {
+  width: 14px;
+  .iconImg {
+    fill: map-get($colors, navy01);
+  }
+}
+.info {
+  margin-bottom: 40px;
+  .date {
+    display: inline-block;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include fontEn($size: 14px, $weight: 500);
+  }
+  .linkText {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .url {
+      @include fontEn($size: 14px, $weight: 500);
+    }
+  }
+  .pf {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include fontJp($size: 14px, $weight: 500);
+  }
+  .tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    .tagListItem {
+      display: inline-block;
+      padding: 4px 10px;
+      background: map-get($colors, navy01-transparent);
+      border-radius: 4px;
+      @include fontEn($size: 12px, $weight: 500);
+    }
+  }
+}
+.detail {
+  margin-bottom: 80px;
+  line-height: 2;
 }
 .linkButton {
-  margin-bottom: 20px;
-}
-.pf {
-  margin-bottom: 20px;
+  text-align: center;
 }

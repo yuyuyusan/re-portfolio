@@ -88,3 +88,4 @@ npm ci
 * アクセシビリティAAのチェック
 * CMSの無料APIが3つまでなので新たにAPIを作成し、category作成
 * SCSSのmap-get関数などコードの統一
+* Performanceの改善 _next/static/chunks/
