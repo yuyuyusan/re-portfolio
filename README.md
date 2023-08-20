@@ -82,10 +82,10 @@ npm ci
 
 ## Feature Plans
 
-* Topのテキストをparticleで表現
+* Topのテキストのparticleで表現
 * RSSでZennの記事を取得して表示したので、Notesページに表示してSuspenseでタブ切り替え
 * 機能はSuspense以外実現できたのでTOP以外のUIを調整
 * アクセシビリティAAのチェック
 * CMSの無料APIが3つまでなので新たにAPIを作成し、category作成
 * SCSSのmap-get関数などコードの統一
-* Performanceの改善 _next/static/chunks/
+* Performanceの改善 tsparticleを軽くする
