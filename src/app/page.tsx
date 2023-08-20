@@ -13,9 +13,9 @@ export default function Home() {
     <div className={styles.topBg}>
       <Header />
       <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <ParticleBg />
-      </Suspense>
+      </Suspense> */}
         <section className={styles.topContainer}>
           <div className={`${styles.contentsBody}`}>
             <div className={styles.titleBox}>
