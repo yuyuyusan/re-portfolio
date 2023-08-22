@@ -54,6 +54,7 @@ export default async function StaticDetailPage({
               />
             )}
           </a>
+          
         </figure>
         <div className={styles.info}>
           <time
