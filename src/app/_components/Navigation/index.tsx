@@ -8,7 +8,7 @@ const menus = [
   { label: 'Home', path: '/' },
   { label: 'Works', path: '/works' },
   { label: 'About', path: '/about' },
-  { label: 'Blog', path: '/blog' },
+  { label: 'Notes', path: '/notes' },
 ];
 
 export default function Navigation() {
