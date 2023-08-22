@@ -2,7 +2,7 @@
 
 ## Theme
 
-lighthouseでの高得点とユーザビリティ、アクセシビリティを意識
+lighthouseでの高得点とアクセシビリティを意識しつつも、インタラクティブなポートフォリオ
 
 ## Features
 
@@ -89,3 +89,4 @@ npm ci
 * CMSの無料APIが3つまでなので新たにAPIを作成し、category作成
 * SCSSのmap-get関数などコードの統一
 * Performanceの改善 tsparticleを軽くする
+* DarkMode対応

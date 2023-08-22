@@ -28,7 +28,7 @@ export default function WorksList({ articles }: Props) {
     return <p>記事がありません。</p>;
   }
   return (
-    <ul className={`${styles.worksList} grid flex-wrap grid-cols-3 gap-x-7 gap-y-20 justify-center`}>
+    <ul className={`${styles.worksList}`}>
       {articles.map((article) => (
         <WorksListItem
           key={article.id}

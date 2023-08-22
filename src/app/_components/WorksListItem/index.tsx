@@ -66,21 +66,40 @@ export default function WorksListItem({
           />
         )}
         <figure className={styles.thumbnail}>
-          <Image
-            src={works.image.url}
-            alt={works.title}
-            width={works.image.width}
-            height={works.image.height}
-            className={styles.thumbnailImg}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            style={
-              {
-                viewTransitionName: `thumbnail-${works.id}`,
-              } as CSSProperties
-            }
-            onClick={onClick}
-          />
+          {works.mockup && (
+            <Image
+              src={works.mockup.url}
+              alt={works.title}
+              width={works.mockup.width}
+              height={works.mockup.height}
+              className={styles.thumbnailImg}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={
+                {
+                  viewTransitionName: `thumbnail-${works.id}`,
+                } as CSSProperties
+              }
+              onClick={onClick}
+            />
+          ) || (
+            <Image
+              src={works.image.url}
+              alt={works.title}
+              width={works.image.width}
+              height={works.image.height}
+              className={styles.thumbnailImg}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={
+                {
+                  viewTransitionName: `thumbnail-${works.id}`,
+                } as CSSProperties
+              }
+              onClick={onClick}
+            />
+          )}
+
         </figure>
       </Link>
       <time

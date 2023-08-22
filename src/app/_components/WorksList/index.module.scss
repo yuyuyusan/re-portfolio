@@ -1,1 +1,13 @@
 @use 'variables.scss' as *;
+
+.worksList {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  @include mq(tab) {
+    gap: 30px;
+    @include mq(sp) {
+      gap: 20px;
+    }
+  }
+}

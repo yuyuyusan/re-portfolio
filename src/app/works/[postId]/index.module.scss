@@ -57,6 +57,15 @@
     }
   }
 }
+  .mockupImg {
+    width: 100%;
+  }
+  .mockupImg {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: map-get($ui, shadow);
+  }
 .detail {
   margin-bottom: 80px;
   line-height: 2;

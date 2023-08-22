@@ -29,6 +29,7 @@ export type Works = {
   id: string;
   title: string;
   image: MicroCMSImage;
+  mockup: MicroCMSImage;
   imagehover: MicroCMSImage;
   platform: string;
   created: string;

@@ -36,18 +36,23 @@ export default async function StaticDetailPage({
             rel="noopener noreferrer"
             aria-label={`${post.title}のページへ`}
           >
-            <Image
-              src={post.image.url}
-              alt={post.title}
-              width={post.image.width}
-              height={post.image.height}
-              className={styles.thumbnailImg}
-              style={
-                {
-                  viewTransitionName: `thumbnail-${post.id}`,
-                } as CSSProperties
-              }
-            />
+            {(post.mockup && (
+              <Image
+                src={post.mockup.url}
+                alt={post.title}
+                width={post.mockup.width}
+                height={post.mockup.height}
+                className={styles.mockupImg}
+              />
+            )) || (
+              <Image
+                src={post.image.url}
+                alt={post.title}
+                width={post.image.width}
+                height={post.image.height}
+                className={styles.mockupImg}
+              />
+            )}
           </a>
         </figure>
         <div className={styles.info}>
@@ -98,6 +103,25 @@ export default async function StaticDetailPage({
             ))}
           </div>
         </div>
+        {/* <figure className={styles.mockup}>
+          {(post.mockup && (
+            <Image
+              src={post.mockup.url}
+              alt={post.title}
+              width={post.mockup.width}
+              height={post.mockup.height}
+              className={styles.mockupImg}
+            />
+          )) || (
+            <Image
+              src={post.image.url}
+              alt={post.title}
+              width={post.image.width}
+              height={post.image.height}
+              className={styles.mockupImg}
+            />
+          )}
+        </figure> */}
         {post.desc && <div className={styles.detail}>{parse(post.desc)}</div>}
         <div className={styles.linkButton}>
           <LinkButton href="/works" title="一覧へ戻る" />
