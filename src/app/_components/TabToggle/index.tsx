@@ -20,12 +20,12 @@ export default function TabToggle({
   };
   return (
     <>
-    <div className={styles.tabList}>
-      <button onClick={handleTabToggle} className={styles.tabButton}>
-        <span>{activeTab ? closeText : openText}</span>
-      </button>
-    </div>
-      <div className={`${styles.tabPanel} ${activeTab ? 'active' : ''}`}>
+      <div className={styles.tabList}>
+        <button onClick={handleTabToggle} className={styles.tabButton} aria-label={activeTab ? closeText : openText}>
+          <span>{activeTab ? closeText : openText}</span>
+        </button>
+      </div>
+      <div className={`${styles.tabPanel} ${activeTab ? 'js-active' : 'no'}`}>
         {activeTab ? children : initialData}
       </div>
     </>

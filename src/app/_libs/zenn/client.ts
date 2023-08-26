@@ -11,6 +11,7 @@ export const getZennRssFeed = async () => {
         title: item.title ?? '',
         date: item.pubDate ? dayjs(item.pubDate).format('YYYY-MM-DD') : '',
         slug: item.link ?? 'https://zenn.dev/yuyuyusan',
+        enclosure: item.enclosure ?? '',
       })),
       totalCount: feed.items.length,
     },

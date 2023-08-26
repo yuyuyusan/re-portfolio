@@ -19,7 +19,7 @@ export default function Home() {
         <section className={styles.topContainer}>
           <div className={`${styles.contentsBody}`}>
             <div className={styles.titleBox}>
-              <h1 className={styles.pageTitle}>Shitsukawa Portfolio</h1>
+              <h1 className={styles.pageTitle}>Yu Portfolio</h1>
             </div>
             <div className={styles.gridTop}>
               <div className={`${styles.gridBox} ${styles.gridTop__works}`}>
