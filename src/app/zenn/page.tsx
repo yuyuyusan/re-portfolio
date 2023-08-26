@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import ZennList from '../_components/ZennList';
+import ZennList from '@/app/_components/ZennList';
 export const revalidate = 60;
 
 export default async function staticPage() {

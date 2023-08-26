@@ -2,7 +2,6 @@ import parse from 'html-react-parser';
 import { getWorksDetail, getWorksList } from '@/app/_libs/microcms/client';
 import Image from 'next/image';
 import styles from './index.module.scss';
-import { CSSProperties } from 'react';
 import LinkButton from '@/app/_components/LinkButton';
 import IconCalendar from '@/app/_components/icons/calendar.svg';
 import IconLink from '@/app/_components/icons/link.svg';
@@ -54,7 +53,6 @@ export default async function StaticDetailPage({
               />
             )}
           </a>
-          
         </figure>
         <div className={styles.info}>
           <time

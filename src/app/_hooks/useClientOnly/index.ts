@@ -1,4 +1,3 @@
-// src/app/_hooks/useClientOnly.ts
 import { useEffect } from 'react';
 
 export default function useClientOnly() {

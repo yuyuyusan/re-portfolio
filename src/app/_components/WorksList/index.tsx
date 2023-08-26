@@ -2,15 +2,16 @@
 import { WorksArticle } from '@/app/_libs/microcms/client';
 import WorksListItem from '../WorksListItem';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import styles from './index.module.scss';
+
+
 type Props = {
   articles?: WorksArticle[];
 };
 
 export default function WorksList({ articles }: Props) {
   const [isSelect, setIsSelect] = useState(false);
-  const router = useRouter();
+
 
   function handleClickCard() {
     try {

@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import styles from './page.module.scss';
 import Link from 'next/link';
+import { Suspense } from 'react';
+import styles from '@/app/page.module.scss';
 import Header from '@/app/_components/Header';
 import Footer from '@/app/_components/Footer';
 import ParticleBg from '@/app/_components/ParticleBg';
-import { Suspense } from 'react';
-
+import Loding from '@/app/loading';
 
 export default function Home() {
 
@@ -13,7 +13,7 @@ export default function Home() {
     <div className={styles.topBg}>
       <Header />
       <main>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loding />}>
         <ParticleBg />
       </Suspense>
         <section className={styles.topContainer}>

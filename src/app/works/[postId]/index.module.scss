@@ -2,7 +2,7 @@
 
 .title {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .thumbnail {
@@ -19,7 +19,7 @@
   }
 }
 .info {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   .date {
     display: inline-block;
     margin-bottom: 5px;
@@ -57,18 +57,71 @@
     }
   }
 }
-  .mockupImg {
-    width: 100%;
-  }
-  .mockupImg {
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: map-get($ui, shadow);
-  }
+.mockupImg {
+  width: 100%;
+}
+.mockupImg {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: map-get($ui, shadow);
+}
 .detail {
   margin-bottom: 80px;
   line-height: 2;
+  h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    padding: 10px 20px;
+    background: map-get($colors, navy01-transparent);
+    border-radius: 5px;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding-left: 12px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 100%;
+      background: map-get($colors, navy01);
+      border-radius: 10px;
+    }
+  }
+  ul {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: map-get($colors, navy01);
+        position: absolute;
+        top: 14px;
+        left: 4px;
+      }
+    }
+  }
+  p {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .linkButton {

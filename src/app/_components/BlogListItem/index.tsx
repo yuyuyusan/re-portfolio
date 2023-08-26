@@ -1,6 +1,6 @@
-import { InfoArticle } from '@/app/_libs/microcms/client';
-import styles from './index.module.scss';
 import Link from 'next/link';
+import styles from './index.module.scss';
+import { InfoArticle } from '@/app/_libs/microcms/client';
 
 type Props = {
   article: InfoArticle;

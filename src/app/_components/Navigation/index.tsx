@@ -12,16 +12,17 @@ const menus = [
 ];
 
 export default function Navigation() {
-  const [isOpen, setOpen] = useState<boolean>(false);
+  const [isOpen ,setOpen]= useState<boolean>(false);
 
-  const openMenu = () => setOpen(true);
-  const closeMenu = () => setOpen(false);
+  const handleClick = () => {
+    setOpen(!isOpen);
+  }
 
   return (
     <div>
       <button
         className={styles.menuButton}
-        onClick={isOpen ? closeMenu : openMenu}
+        onClick={handleClick}
         aria-label={`${isOpen ? '閉じる' : 'メニュー'}ボタン`}
       >
         <Image

@@ -1,7 +1,7 @@
-import './styles/globals.scss';
 import type { Metadata } from 'next';
 import { Noto_Sans_JP, Roboto } from 'next/font/google';
-import styles from './layout.module.scss';
+import '@/app/styles/globals.scss';
+import styles from '@/app/layout.module.scss';
 
 const notojp = Noto_Sans_JP({
   weight: ['400', '500', '700', '900'],

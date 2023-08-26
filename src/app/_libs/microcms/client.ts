@@ -93,8 +93,6 @@ export const getBlogDetail = async (
     contentId,
     queries,
   });
-  // // データの取得が目視しやすいよう明示的に遅延効果を追加
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
   return detailData;
 };
 
@@ -111,14 +109,22 @@ export const getCategoryList = async (queries?: MicroCMSQueries) => {
 
 // 実績一覧を取得する関数
 export const getWorksList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Works>({
+  const listData = await client.getList<Works>({
       endpoint: 'works',
       queries,
     })
     .catch(notFound);
   return listData;
 };
+// export const getWorksList = async (queries?: MicroCMSQueries) => {
+//   const listData = await client
+//     .getList<Works>({
+//       endpoint: 'works',
+//       queries,
+//     })
+//     .catch(notFound);
+//   return listData;
+// };
 // 実績の詳細を取得
 export const getWorksDetail = async (
   contentId: string,

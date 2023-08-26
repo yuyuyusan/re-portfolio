@@ -1,9 +1,8 @@
-import Link from 'next/link';
-import styles from './not-found.module.scss';
-import Hero from './_components/Hero';
-import Header from './_components/Header';
-import Footer from './_components/Footer';
-import LinkButton from './_components/LinkButton';
+import styles from '@/app/not-found.module.scss';
+import Hero from '@/app/_components/Hero';
+import Header from '@/app/_components/Header';
+import Footer from '@/app/_components/Footer';
+import LinkButton from '@/app/_components/LinkButton';
 export default function NotFound() {
   return (
     <>

@@ -1,0 +1,45 @@
+@use 'variables.scss' as *;
+
+.loading {
+  background: linear-gradient(
+    -45deg,
+    map-get($colors, navy01) 0%,
+    map-get($colors, gray01) 100%
+  );
+}
+
+.spinnerBox {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+.circleBorder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: map-get($colors, red01);
+  background: linear-gradient(
+    0deg,
+    rgba(63, 249, 220, 0.1) 33%,
+    map-get($colors, red01) 100%
+  );
+  animation: spin 0.8s linear 0s infinite;
+}
+
+.circleCore {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

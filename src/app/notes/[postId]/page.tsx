@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import parse from 'html-react-parser';
 import { getInfoDetail, getInfoList } from '@/app/_libs/microcms/client';
-import styles from '../index.module.scss';
 import LinkButton from '@/app/_components/LinkButton';
+import styles from '../index.module.scss';
 
 export const revalidate = 60;
 export async function generateStaticParams() {

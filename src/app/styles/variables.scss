@@ -29,10 +29,12 @@ $vp-sp: 560px;
 $colors: (
   black01: #111,
   gray01: #d2d2d2,
+  gray01-transparent: rgba(210, 210, 210, 0.5),
   white01: #fff,
   navy01: #3667a0,
   navy01-transparent: rgba(54, 103, 160, 0.3),
   red01:#d5525f,
+  red01-transparent: rgba(213, 82, 95, 0.3),
 );
 
 $ui: (

@@ -1,0 +1,14 @@
+@use 'variables.scss' as *;
+
+.tabList {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  width: min(100%, 560px);
+  margin: 0 auto 40px;
+  .tabButton {
+    padding: 10px 30px;
+    @include fontEn($size: 20px, $weight: bold);
+  }
+}
