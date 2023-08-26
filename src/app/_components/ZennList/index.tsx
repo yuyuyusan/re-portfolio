@@ -1,5 +1,7 @@
 import styles from './index.module.scss';
 import { getZennRssFeed } from '@/app/_libs/zenn/client';
+import Image from 'next/image';
+
 export const revalidate = 60;
 
 export default async function staticPage() {
@@ -15,12 +17,14 @@ export default async function staticPage() {
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                area-label={`${post.title}の記事へ`}
               >
-                <img
+                <Image
                   src={post.enclosure.url}
                   alt={post.title}
                   width={600}
                   height={315}
+                  loading="eager"
                 />
                 {/* <h3 className={styles.title}>{post.title}</h3>
               <time className={styles.date} dateTime={post.date}>

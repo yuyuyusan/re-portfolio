@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const path = require('path'); 
-const nextConfig = {}
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -8,7 +7,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   images: {
-    domains: ['images.microcms-assets.io'],
+    domains: ['images.microcms-assets.io', 'res.cloudinary.com'],
+
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/app/styles')],
