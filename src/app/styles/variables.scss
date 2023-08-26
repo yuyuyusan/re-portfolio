@@ -108,10 +108,10 @@ $breakpoint: (
   }
 }
 
-@mixin contentsBody($mx: 40px, $width: $vp-tab) {
+@mixin contentsBody($mx: 32px, $width: $vp-tab) {
   width: min(100% - $mx, $width);
   margin: 0 auto;
   @include vp-sp {
-    width: min(100% - 40px, $width);
+    width: min(100% - 32px, $width);
   }
 }

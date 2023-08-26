@@ -41,6 +41,9 @@
   width: calc((100% - (40px * 1)) / 2);
   @include mq(tab) {
     margin-bottom: 50px;
+    @include mq(sp) {
+      width: 100%;
+    }
   }
   &:last-child {
     margin-bottom: 0;

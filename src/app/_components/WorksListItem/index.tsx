@@ -66,7 +66,7 @@ export default function WorksListItem({
           />
         )}
         <figure className={styles.thumbnail}>
-          {works.mockup && (
+          {(works.mockup && (
             <Image
               src={works.mockup.url}
               alt={works.title}
@@ -82,7 +82,7 @@ export default function WorksListItem({
               }
               onClick={onClick}
             />
-          ) || (
+          )) || (
             <Image
               src={works.image.url}
               alt={works.title}
@@ -99,7 +99,6 @@ export default function WorksListItem({
               onClick={onClick}
             />
           )}
-
         </figure>
       </Link>
       <time
@@ -116,14 +115,16 @@ export default function WorksListItem({
         })}
       </time>
       <h3>{works.title}</h3>
-      <a
-        href={works.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.url}
-      >
-        {works.url}
-      </a>
+      {works.url && (
+        <a
+          href={works.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.url}
+        >
+          {works.url}
+        </a>
+      )}
     </li>
   );
 }

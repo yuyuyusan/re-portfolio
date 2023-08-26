@@ -2,6 +2,7 @@
 import TSParticles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
+import styles from './index.module.scss';
 
 export default function ParticleBg() {
   const particlesInit = async (main: Engine) => {
@@ -11,6 +12,7 @@ export default function ParticleBg() {
     <TSParticles
       init={particlesInit}
       id="tsparticles"
+      className={styles.particlesBg}
       options={{
         autoPlay: true,
         background: {
