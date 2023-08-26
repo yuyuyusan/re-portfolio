@@ -35,6 +35,7 @@ export default function Home() {
                       width={120}
                       height={120}
                       alt=""
+                      loading="eager"
                     />
                   </figure>
                 </Link>
@@ -52,6 +53,7 @@ export default function Home() {
                       width={120}
                       height={120}
                       alt=""
+                      loading="eager"
                     />
                   </figure>
                 </Link>
@@ -69,6 +71,7 @@ export default function Home() {
                       width={120}
                       height={120}
                       alt=""
+                      loading="eager"
                     />
                   </figure>
                 </Link>
@@ -89,6 +92,7 @@ export default function Home() {
                       width={60}
                       height={60}
                       alt="Github"
+                      loading="eager"
                     />
                   </figure>
                 </a>
@@ -107,6 +111,7 @@ export default function Home() {
                       width={100}
                       height={60}
                       alt=""
+                      loading="eager"
                     />
                   </figure>
                 </a>

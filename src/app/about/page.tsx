@@ -21,7 +21,13 @@ export default function About() {
     <>
       <section className={`${styles.about} ${styles.aboutSkill}`}>
         <figure className={styles.icon}>
-          <Image src="/yu.jpg" alt="icon" width={200} height={200} />
+          <Image
+            src="/yu.jpg"
+            alt="icon"
+            width={200}
+            height={200}
+            loading="eager"
+          />
         </figure>
         <div className={styles.profile}>
           <dl className={styles.def}>
