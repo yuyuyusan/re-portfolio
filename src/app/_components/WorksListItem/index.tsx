@@ -28,8 +28,7 @@ export default function WorksListItem({
   };
   useEffect(() => {
     if (isClient && isSelect) {
-      // ブラウザ戻るボタンで戻ってきたときに isSelect を false にする
-      onClick && onClick(); // onClick ハンドラが指定されていれば実行
+      onClick && onClick(); 
     }
   }, [isClient, isSelect, onClick]);
   return (

@@ -2,7 +2,10 @@
 
 .zennBg {
   padding: 100px 0;
-  border-image-source: linear-gradient(map-get($colors, lightGray01),map-get($colors, lightGray01));
+  border-image-source: linear-gradient(
+    map-get($colors, lightGray01),
+    map-get($colors, lightGray01)
+  );
   border-image-slice: 0 fill;
   border-image-outset: 0 100vw;
 }
@@ -28,12 +31,22 @@
   }
   .link {
     display: block;
-    .title {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    .date {
-      @include fontEn($weight: 500);
+    height: 100%;
+    border: 1px solid map-get($colors, navy01);
+    .inner {
+      padding: 20px;
+      .title {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .date {
+        width: fit-content;
+        margin: 0 auto;
+        display: block;
+        @include fontEn($size: 12px, $weight: 400);
+        text-align: center;
+      }
     }
   }
 }

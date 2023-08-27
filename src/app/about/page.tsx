@@ -48,7 +48,7 @@ export default function About() {
                 engineer who can educate others.`}
               </dd> */}
             </div>
-            <div className={styles.defInner}>
+            {/* <div className={styles.defInner}>
               <dt className={styles.defTitle}>行動指針</dt>
               <dd className={styles.defDesc}>
                 1やるなら2やる
@@ -65,7 +65,7 @@ export default function About() {
                 なろうと思ってなれるものじゃない、だがなろうと思わなければなれない
                 <span className={styles.quote}>[恋物語 (西尾維新)]</span>
               </dd>
-            </div>
+            </div> */}
           </dl>
         </div>
         <div className={styles.skills}>

@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-const softSkills = [
+const languageSkills = [
   { name: 'HTML/SCSS', level: 5 },
   { name: 'JavaScript', level: 4 },
   { name: 'TypeScript', level: 2 },
@@ -8,24 +8,26 @@ const softSkills = [
   { name: 'Vue', level: 2 },
   { name: 'Nuxt.js', level: 1 },
   { name: 'Astro', level: 3 },
+  { name: 'Node.js', level: 3 },
+  { name: 'Express', level: 2 },
+];
+const softSkills = [
   { name: 'Tailwind CSS', level: 3 },
   { name: 'Webpack', level: 3 },
   { name: 'Vite', level: 2 },
-  { name: 'Firebase', level: 3 },
-  { name: 'Node.js', level: 3 },
-  { name: 'Express', level: 2 },
+  { name: 'Vercel', level: 3 },
+  { name: 'Firebase', level: 2 },
   { name: 'MongoDB', level: 2 },
   { name: 'MySQL', level: 1 },
+  { name: 'Storybook', level: 1 },
 ];
 const designSkills = [
+  { name: 'Figma', level: 3 },
+  { name: 'Adobe XD', level: 3 },
   { name: 'Photoshop', level: 3 },
   { name: 'Illustrator', level: 2 },
-  { name: 'Adobe XD', level: 3 },
-  { name: 'Figma', level: 3 },
   { name: 'After Effects', level: 1 },
-  { name: 'VRoid Studio', level: 1 },
   { name: 'Lightroom', level: 1 },
-  { name: 'Storybook', level: 1 },
 ];
 interface Skill {
   name: string;
@@ -81,6 +83,7 @@ function SkillList({ skills, title }: SkillListProps) {
 export default function Skills() {
   return (
     <>
+      <SkillList skills={languageSkills} title="Language Skill" />
       <SkillList skills={softSkills} title="Soft Skill" />
       <SkillList skills={designSkills} title="Design Skill" />
     </>

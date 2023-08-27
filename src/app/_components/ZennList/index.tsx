@@ -19,17 +19,32 @@ export default async function staticPage() {
                 rel="noopener noreferrer"
                 area-label={`${post.title}の記事へ`}
               >
-                <Image
-                  src={post.enclosure.url}
-                  alt={post.title}
-                  width={600}
-                  height={315}
-                  loading="eager"
-                />
-                {/* <h3 className={styles.title}>{post.title}</h3>
-              <time className={styles.date} dateTime={post.date}>
-              {post.date}
-            </time> */}
+                <figure className={styles.thumb}>
+                  <Image
+                    src={post.enclosure.url}
+                    alt={post.title}
+                    width={600}
+                    height={315}
+                    loading="eager"
+                  />
+                </figure>
+                <div className={styles.inner}>
+                  <h3 className={styles.title}>{post.title}</h3>
+                  <time
+                    className={styles.date}
+                    dateTime={new Date(post.date).toLocaleDateString('ja-JP', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric',
+                    })}
+                  >
+                    {`${new Date(post.date).toLocaleDateString('ja-JP', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric',
+                    })}`}
+                  </time>
+                </div>
               </a>
             </li>
           ))}
