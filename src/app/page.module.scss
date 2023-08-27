@@ -1,8 +1,6 @@
 @use 'variables.scss' as *;
 
 .topBg {
-  // background: linear-gradient(-45deg, #ff057c 0%, #7c64d5 45%, #4cc3ff 100%);
-  // background: linear-gradient(-45deg, #9be3ff 0%, #4fb5de 10%, #00499a 100%);
   background: linear-gradient(
     -45deg,
     map-get($colors, navy01) 0%,
@@ -10,14 +8,6 @@
   );
   min-height: 100vh;
   padding: 100px 0 20px;
-  // background: linear-gradient(
-  //   to bottom,
-  //   #d2d2d2,
-  //   #6f78b4,
-  //   #3667a0
-  // );
-  // background-size: 400% 400%;
-  // animation: AnimationName 20s ease infinite;
 }
 @keyframes AnimationName {
   0% {
@@ -100,6 +90,9 @@
   .link {
     display: flex;
     align-items: center;
+    @include mq(tab) {
+      min-height: 120px;
+    }
   }
 }
 .gridTop__blog {
@@ -107,6 +100,9 @@
   .link {
     display: flex;
     align-items: center;
+    @include mq(tab) {
+      min-height: 120px;
+    }
   }
 }
 .gridTop .gridBox .link .titleLarge__en {

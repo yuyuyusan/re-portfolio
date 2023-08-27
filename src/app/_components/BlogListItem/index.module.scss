@@ -4,7 +4,7 @@
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  border-bottom: 1px solid $c-black01;
+  border-bottom: 1px solid map-get($colors, gray01);
   padding: 20px;
   transition: .3s;
   @include vp-tab {

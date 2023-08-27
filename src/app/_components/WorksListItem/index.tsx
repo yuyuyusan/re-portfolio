@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { WorksArticle } from '@/app/_libs/microcms/client';
 import useClientOnly from '@/app/_hooks/useClientOnly';
 import styles from './index.module.scss';
-
 type Props = {
   works: WorksArticle;
   onClick?: () => void;
@@ -66,39 +65,39 @@ export default function WorksListItem({
           />
         )}
         <figure className={styles.thumbnail}>
-          {(works.mockup && (
-            <Image
-              src={works.mockup.url}
-              alt={works.title}
-              width={works.mockup.width}
-              height={works.mockup.height}
-              className={styles.thumbnailImg}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={
-                {
-                  viewTransitionName: `thumbnail-${works.id}`,
-                } as CSSProperties
-              }
-              onClick={onClick}
-            />
-          )) || (
-            <Image
-              src={works.image.url}
-              alt={works.title}
-              width={works.image.width}
-              height={works.image.height}
-              className={styles.thumbnailImg}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              style={
-                {
-                  viewTransitionName: `thumbnail-${works.id}`,
-                } as CSSProperties
-              }
-              onClick={onClick}
-            />
-          )}
+            {(works.mockup && (
+              <Image
+                src={works.mockup.url}
+                alt={works.title}
+                width={works.mockup.width}
+                height={works.mockup.height}
+                className={styles.thumbnailImg}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={
+                  {
+                    viewTransitionName: `thumbnail-${works.id}`,
+                  } as CSSProperties
+                }
+                onClick={onClick}
+              />
+            )) || (
+              <Image
+                src={works.image.url}
+                alt={works.title}
+                width={works.image.width}
+                height={works.image.height}
+                className={styles.thumbnailImg}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={
+                  {
+                    viewTransitionName: `thumbnail-${works.id}`,
+                  } as CSSProperties
+                }
+                onClick={onClick}
+              />
+            )}
         </figure>
       </Link>
       <time

@@ -213,7 +213,7 @@ export default function ParticleBg() {
             },
           },
           color: {
-            value: '#ffffff',
+            value: '#111',
             animation: {
               h: {
                 count: 0,
@@ -358,15 +358,15 @@ export default function ParticleBg() {
             fill: true,
             options: {
               character: {
-                value: ['y', 'u', 'p', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o'],
-                font: 'Verdana',
+                value: ['S','h','i','t','s','u','k', 'a', 'w', 'a', 'Y', 'u', 's', 'h', 'i'],
+                font: 'Roboto',
                 style: '',
                 weight: 'bold',
                 fill: true,
               },
               char: {
-                value: ['y', 'u', 'p', 'o', 'r', 't', 'f', 'o', 'l', 'i', 'o'],
-                font: 'Verdana',
+                value: ['S','h','i','t','s','u','k', 'a', 'w', 'a', 'Y', 'u', 's', 'h', 'i'],
+                font: 'Roboto',
                 style: '',
                 weight: 'bold',
                 fill: true,
@@ -396,7 +396,7 @@ export default function ParticleBg() {
           stroke: {
             width: 1,
             color: {
-              value: '#ffffff',
+              value: '#111',
               animation: {
                 h: {
                   count: 0,
