@@ -19,17 +19,15 @@ export default function About() {
         <div className={styles.profile}>
           <dl className={styles.def}>
             <div className={styles.defInner}>
-              <dt className={styles.defTitle}>紹介</dt>
+              <dt className={styles.defTitle}>About Me</dt>
               <dd className={`${styles.defDesc} ${styles.jp}`}>
                 2021年4月からWeb制作会社でコーダーとしてWeb業界でキャリアをスタート。
                 <br />
-                完全分業ですが、現在は、UI/UX提案などデザイナーの業務も担当することもあります。
+                仕事は完全分業で行っていますが、現在は、UI/UX提案などデザイナーの業務も担当することもあります。
                 <br />
                 私の強みは、自主性を持って行動ができ、新しいものやトレンドに興味があり、知識欲が高いです。そのため自己学習が継続でき、自己解決能力も高いです。
                 <br />
-                今後は、UI/UXの領域も並行して学習し、教育ができるUXエンジニアを目指し日々奮闘中です。
-                <br />
-                この仕事は、ライフワークと考えています。
+                今後は、UI/UXの分野にも興味を持ち、同時に学習を進めています。そして教育ができるUXエンジニアを目指し日々奮闘中です。
               </dd>
               {/* <dd className={`${styles.defDesc} ${styles.en}`}>
                 {`I started my career in the web industry as a coder in a web
