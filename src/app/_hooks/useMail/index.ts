@@ -5,7 +5,7 @@ export default function useMail() {
   const [message, setMessage] = useState('');
 
   const send = async () => {
-    await fetch('../_libs/mail/api', {
+    await fetch('http://localhost:3000/contact/api', {
       method: 'POST',
       body: `
 名前

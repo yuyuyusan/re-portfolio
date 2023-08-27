@@ -1,17 +1,15 @@
-'use client';
 import styles from './index.module.scss';
-import useMail  from '@/app/_hooks/useMail';
+import LinkButton from '@/app/_components/LinkButton';
 
-
-export default function Mail() {
-  const { setName, setMessage, send } = useMail();
-
+export default async function staticPage() {
   return (
-    <div className={styles.contact}>
-      <input type="text" onChange={(e) => setName(e.target.value)} />
-      <textarea onChange={(e) => setMessage(e.target.value)} />
-      <button type="button" onClick={send}>Send</button>
-    </div>
+    <>
+      <section className={`${styles.container}`}>
+        <p className={styles.desc}>in preparation. Please wait.</p>
+        <div className={styles.linkButton}>
+          <LinkButton title="Return" href="/" />
+        </div>
+      </section>
+    </>
   );
 }
-
