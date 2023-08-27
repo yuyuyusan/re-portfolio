@@ -32,7 +32,9 @@
   .link {
     display: block;
     height: 100%;
+    border-radius: map-get($ui, radius);
     border: 1px solid map-get($colors, navy01);
+    overflow: hidden;
     .inner {
       padding: 20px;
       .title {

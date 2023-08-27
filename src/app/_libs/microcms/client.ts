@@ -20,6 +20,7 @@ export type Blog = {
 // 雑記の型定義
 export type Info = {
   id: string;
+  emoji: string;
   title: string;
   content: string;
 } & MicroCMSDate;
