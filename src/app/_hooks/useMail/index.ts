@@ -4,7 +4,7 @@ export default function useMail() {
   const [message, setMessage] = useState('');
 
   const send = async () => {
-    await fetch('http://localhost:3000/api/mail', {
+    await fetch('https://s-yu-portfolio.vercel.app/api/mail', {
       method: 'POST',
       body: `
 名前
