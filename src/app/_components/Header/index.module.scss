@@ -20,7 +20,7 @@
     width: 70px;
     height: 70px;
     @include fontEn($size: 14px, $weight: bold);
-    @include Glassmor;
+    @include glassmor;
     display: grid;
     place-content: center;
     transition: 0.3s;

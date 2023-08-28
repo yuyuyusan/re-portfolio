@@ -6,6 +6,7 @@ import LinkButton from '@/app/_components/LinkButton';
 import IconCalendar from '@/app/_components/icons/calendar.svg';
 import IconLink from '@/app/_components/icons/link.svg';
 import IconPlat from '@/app/_components/icons/plat.svg';
+import IconCode from '@/app/_components/icons/code.svg';
 
 export const revalidate = 60;
 
@@ -66,6 +67,7 @@ export default async function StaticDetailPage({
             <div className={styles.commonIcon}>
               <IconCalendar title="IconCalendar" className={styles.iconImg} />
             </div>
+            リリース日：
             {new Date(post.created).toLocaleDateString('ja-JP', {
               year: 'numeric',
               month: 'numeric',
@@ -92,14 +94,23 @@ export default async function StaticDetailPage({
             <div className={styles.commonIcon}>
               <IconPlat title="IconPlat" className={styles.iconImg} />
             </div>
+            分類：
             {post.platform}
           </p>
-          <div className={styles.tagList}>
-            {post.stack.map((tag) => (
-              <span key={tag} className={styles.tagListItem}>
-                {tag}
-              </span>
-            ))}
+          <div className={styles.stackBox}>
+            <p className={styles.stack}>
+              <div className={styles.commonIcon}>
+                <IconCode title="IconCode" className={styles.iconImg} />
+              </div>
+              使用技術
+            </p>
+            <div className={styles.tagList}>
+              {post.stack.map((tag) => (
+                <span key={tag} className={styles.tagListItem}>
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
         {/* <figure className={styles.mockup}>

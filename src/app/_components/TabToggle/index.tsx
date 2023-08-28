@@ -26,7 +26,7 @@ export default function TabToggle({
         </button>
       </div>
       <div className={`${styles.tabPanel} ${activeTab ? 'js-active' : 'no'}`}>
-        {activeTab ? children : initialData}
+        {activeTab ? initialData : children}
       </div>
     </>
   );

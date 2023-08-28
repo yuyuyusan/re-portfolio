@@ -22,7 +22,7 @@
   .skillItem {
     width: calc((100% - (30px * 4)) / 5);
     padding: 20px;
-    @include Glassmor;
+    @include glassmor;
     @include mq(tab) {
       width: calc((100% - (20px * 2)) / 3);
     }

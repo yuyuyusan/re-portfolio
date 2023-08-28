@@ -1,3 +1,4 @@
-// .body {
-//   background: #d1d9e6;
-// }
+@use 'variables.scss' as *;
+.body {
+  background: map-get($colors, gray01);
+}

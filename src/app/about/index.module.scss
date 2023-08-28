@@ -20,7 +20,7 @@
 }
 .def .defInner {
   margin-bottom: 40px;
-  @include Glassmor;
+  @include glassmor;
   padding: 40px;
   @include mq(sp) {
     padding: 40px 20px;
