@@ -82,6 +82,26 @@ $breakpoint: (
   border: 0.0625rem solid #d1d9e6;
   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
 }
+
+@mixin linkButton {
+  a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 0;
+    min-width: 180px;
+    text-align: center;
+    border-radius: 15px;
+    background: map-get($colors, navy01);
+    color: map-get($colors, white01);
+    transition: .3s;
+    border: 1px solid map-get($colors, navy01);
+    &:hover {
+      background: map-get($colors, white01);
+      color: map-get($colors, navy01);
+    }
+  }
+}
 // -----
 // media query
 // -----

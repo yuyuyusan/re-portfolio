@@ -122,17 +122,19 @@ export default async function StaticDetailPage({
           )}
         </figure> */}
         {post.desc && <div className={styles.detail}>{parse(post.desc)}</div>}
-        <div className={styles.linkButton}>
-          <a
-            href={post.url}
-            className={styles.url}
-            aria-label={`${post.title}のページへ`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Site
-          </a>
-        </div>
+        {post.url && (
+          <div className={styles.linkButton}>
+            <a
+              href={post.url}
+              className={styles.url}
+              aria-label={`${post.title}のページへ`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Site
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );
