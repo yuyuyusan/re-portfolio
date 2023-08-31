@@ -27,11 +27,10 @@ export default function staticPage({ article }: Props) {
       >
         {(article.emoji && (
           <span className={styles.emoji}>{article.emoji}</span>
-        )) || <span className={styles.emoji}>😢</span>}
+        )) || <span className={styles.emoji}>😐</span>}
         <h3 className={styles.title}>
           <span>{article.title}</span>
         </h3>
-        {/* 経過時間を表示 */}
         <time dateTime={`${createdAt.toISOString()}`} className={styles.date}>
           {yearsAgo > 0
             ? `${yearsAgo} years ago`

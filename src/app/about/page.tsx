@@ -21,15 +21,15 @@ export default function About() {
             <div className={styles.defInner}>
               <dt className={styles.defTitle}>About Me</dt>
               <dd className={`${styles.defDesc} ${styles.jp}`}>
-                2021年4月からWeb制作会社でコーダーとしてWeb業界でキャリアをスタート。
+                2021年4月から、Web制作会社でコーダーとしてWeb業界でのキャリアをスタートしました。
                 <br />
-                仕事は完全分業で行っていますが、現在は、UI/UX提案などデザイナーの業務も担当することもあります。
+                仕事は完全分業で行っており、現在はUI/UXの提案など、デザイナーの業務も担当することがあります。
                 <br />
-                私の強みは、自主性を持って行動ができ、新しいものやトレンドに興味があり、知識欲が高いです。そのため自己学習が継続できています。
+                私の強みは自主性を持って行動できることであり、新しいものやトレンドに興味を持ち、知識欲が旺盛です。
                 <br />
-                現在は、UI/UXの分野にも興味を持ち、同時に学習を進めています。そして教育ができるUXエンジニアを目指し日々奮闘中です。
+                そのため、自己学習を続けることができています。現在はUI/UXの分野にも興味を抱き、同時に学習を進めています。そして、教育ができるUXエンジニアを目指して日々奮闘しています。
                 <br />
-                好きなフォントはRobotoとDINE。
+                好きなフォントはRobotoとDINです。
               </dd>
               {/* <dd className={`${styles.defDesc} ${styles.en}`}>
                 {`I started my career in the web industry as a coder in a web
