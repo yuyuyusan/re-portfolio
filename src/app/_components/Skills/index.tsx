@@ -46,7 +46,7 @@ function SkillCircle({ num }: { num: number }) {
     const gradientStart = 0;
     const gradientEnd = (level / 5) * 100;
     return {
-      backgroundImage: `conic-gradient(#d5525f ${gradientStart}% ${gradientEnd}%, #d2d2d2 ${gradientEnd}% 100%)`,
+      backgroundImage: `conic-gradient(#3667a0 ${gradientStart}% ${gradientEnd}%, #d2d2d2 ${gradientEnd}% 100%)`,
     };
   };
   let levelText;

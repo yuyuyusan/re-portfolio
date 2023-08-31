@@ -31,7 +31,7 @@
   .defTitle {
     width: fit-content;
     margin-bottom: 10px;
-    border-bottom: 2px solid map-get($colors, red01);
+    border-bottom: 2px solid map-get($colors, navy01);
     @include fontEn($size: 24px, $weight: bold);
     @include mq(sp) {
       @include fontEn($size: 20px, $weight: bold);
