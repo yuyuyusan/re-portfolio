@@ -1,6 +1,7 @@
 import styles from './index.module.scss';
 const languageSkills = [
   { name: 'HTML/SCSS', level: 5 },
+  { name: 'PHP', level: 3 },
   { name: 'JavaScript', level: 4 },
   { name: 'TypeScript', level: 2 },
   { name: 'React', level: 2 },
