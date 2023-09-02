@@ -1,11 +1,12 @@
 @use 'variables.scss' as *;
 
 .topBg {
-  background: linear-gradient(
-    -45deg,
-    map-get($colors, navy01) 0%,
-    map-get($colors, gray01) 100%
-  );
+  // background: linear-gradient(
+  //   -45deg,
+  //   map-get($colors, navy01) 0%,
+  //   map-get($colors, gray01) 100%
+  // );
+  background: #1a1e2e;
   min-height: 100vh;
   padding: 100px 0 20px;
 }
@@ -29,6 +30,7 @@
     @include fontJp;
     font-weight: bold;
     font-size: 32px;
+    color: map-get($colors, white01);
   }
 }
 
@@ -42,6 +44,7 @@
   padding: 30px;
   @include glassmor;
   transition: 0.3s;
+  color: map-get($colors, white01);
   @include mq(tab) {
     padding: 20px;
   }
@@ -75,6 +78,13 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    .link{
+      background: linear-gradient(
+        45deg,
+        map-get($colors, gray01) 0%,
+        map-get($colors, navy01) 100%
+      );
     }
   }
 }
@@ -136,17 +146,30 @@
     gap: 20px;
   }
   .gridBox {
+    width: calc((100% - (30px * 3)) / 4);
+    aspect-ratio: 1/1;
+    @include mq(tab) {
+      width: calc((100% - (20px * 1)) / 2);
+    }
     .link {
       display: flex;
       align-items: center;
     }
   }
 }
-.gridBottom__box {
-  width: calc((100% - (30px * 3)) / 4);
-  aspect-ratio: 1/1;
-  @include mq(tab) {
-    width: calc((100% - (20px * 1)) / 2);
+.gridBottom__github {
+  .link {
+    background: linear-gradient(125deg,#fff,#c3cbff 60%,#af99ff);
+  }
+}
+.gridBottom__zenn {
+  .link {
+    background: linear-gradient(125deg, #fff, #b8d3ff 70%, #8fceff);
+  }
+}
+.gridBottom__prev {
+  .link {
+    background: linear-gradient(125deg, #dce6ff, #5a87ff 70%, #5a87ff);
   }
 }
 // -----

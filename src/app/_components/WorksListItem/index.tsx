@@ -28,7 +28,7 @@ export default function WorksListItem({
   };
   useEffect(() => {
     if (isClient && isSelect) {
-      onClick && onClick(); 
+      onClick && onClick();
     }
   }, [isClient, isSelect, onClick]);
   return (
@@ -64,39 +64,39 @@ export default function WorksListItem({
           />
         )}
         <figure className={styles.thumbnail}>
-            {(works.mockup && (
-              <Image
-                src={works.mockup.url}
-                alt={works.title}
-                width={works.mockup.width}
-                height={works.mockup.height}
-                className={styles.thumbnailImg}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                style={
-                  {
-                    viewTransitionName: `thumbnail-${works.id}`,
-                  } as CSSProperties
-                }
-                onClick={onClick}
-              />
-            )) || (
-              <Image
-                src={works.image.url}
-                alt={works.title}
-                width={works.image.width}
-                height={works.image.height}
-                className={styles.thumbnailImg}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                style={
-                  {
-                    viewTransitionName: `thumbnail-${works.id}`,
-                  } as CSSProperties
-                }
-                onClick={onClick}
-              />
-            )}
+          {(works.mockup && (
+            <Image
+              src={works.mockup.url}
+              alt={works.title}
+              width={works.mockup.width}
+              height={works.mockup.height}
+              className={styles.thumbnailImg}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={
+                {
+                  viewTransitionName: `thumbnail-${works.id}`,
+                } as CSSProperties
+              }
+              onClick={onClick}
+            />
+          )) || (
+            <Image
+              src={works.image.url}
+              alt={works.title}
+              width={works.image.width}
+              height={works.image.height}
+              className={styles.thumbnailImg}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={
+                {
+                  viewTransitionName: `thumbnail-${works.id}`,
+                } as CSSProperties
+              }
+              onClick={onClick}
+            />
+          )}
         </figure>
       </Link>
       <time
@@ -118,6 +118,7 @@ export default function WorksListItem({
           href={works.url}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`${works.title}のページへ`}
           className={styles.url}
         >
           {works.url}

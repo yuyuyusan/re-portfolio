@@ -24,6 +24,7 @@
     display: grid;
     place-content: center;
     transition: 0.3s;
+    color: map-get($colors, white01);
     &:hover {
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
     }

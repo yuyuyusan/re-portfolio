@@ -213,7 +213,7 @@ export default function ParticleBg() {
             },
           },
           color: {
-            value: '#111',
+            value: '#fff',
             animation: {
               h: {
                 count: 0,
@@ -396,7 +396,7 @@ export default function ParticleBg() {
           stroke: {
             width: 1,
             color: {
-              value: '#111',
+              value: '#fff',
               animation: {
                 h: {
                   count: 0,

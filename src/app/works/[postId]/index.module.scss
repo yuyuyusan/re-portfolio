@@ -12,11 +12,9 @@
     box-shadow: map-get($ui, shadow);
   }
 }
-.commonIcon {
-  width: 14px;
-  .iconImg {
-    fill: map-get($colors, navy01);
-  }
+.iconImg {
+  width: 16px;
+  fill: map-get($colors, navy01);
 }
 .info {
   margin-bottom: 80px;
@@ -42,14 +40,14 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    @include fontJp($size: 14px, $weight: bold);
+    @include fontJp($size: 14px, $weight: 500);
   }
   .stack {
     display: flex;
     margin-bottom: 5px;
     align-items: center;
     gap: 15px;
-    @include fontJp($size: 14px, $weight: bold);
+    @include fontJp($size: 14px, $weight: 500);
   }
   .tagList {
     display: flex;
@@ -64,10 +62,8 @@
     }
   }
 }
-.mockupImg {
+.thumbnailImg {
   width: 100%;
-}
-.mockupImg {
   aspect-ratio: 3/2;
   object-fit: cover;
   border-radius: 15px;

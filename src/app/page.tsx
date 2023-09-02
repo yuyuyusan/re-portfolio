@@ -78,7 +78,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.gridBottom}>
-              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+              <div className={`${styles.gridBox} ${styles.gridBottom__github}`}>
                 <a
                   href="https://github.com/yuyuyusan/"
                   target="_blank"
@@ -97,7 +97,7 @@ export default function Home() {
                   </figure>
                 </a>
               </div>
-              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+              <div className={`${styles.gridBox} ${styles.gridBottom__zenn}`}>
                 <a
                   href="https://zenn.dev/yuyuyusan"
                   target="_blank"
@@ -116,7 +116,7 @@ export default function Home() {
                   </figure>
                 </a>
               </div>
-              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+              <div className={`${styles.gridBox} ${styles.gridBottom__contact}`}>
                 <Link href="/contact" className={styles.link}>
                   <h2 className={styles.titleMid__en}>
                     Contact
@@ -125,7 +125,7 @@ export default function Home() {
                   </h2>
                 </Link>
               </div>
-              <div className={`${styles.gridBox} ${styles.gridBottom__box}`}>
+              <div className={`${styles.gridBox} ${styles.gridBottom__prev}`}>
                 <a
                   href="https://ys-portfolio-c98fe.web.app/"
                   target="_blank"

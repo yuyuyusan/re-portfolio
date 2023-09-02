@@ -4,6 +4,16 @@
   opacity: 0.3 !important;
   visibility: visible !important;
   transition: 0.3s;
+  animation: scale 0.3s ease-in-out;
+  z-index: 1;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .thumbnailNone {
