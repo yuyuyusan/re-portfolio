@@ -2,10 +2,10 @@ import parse from 'html-react-parser';
 import { getWorksDetail, getWorksList } from '@/app/_libs/microcms/client';
 import Image from 'next/image';
 import styles from './index.module.scss';
-import IconCalendar from '@/app/_components/Icons/calendar.svg';
-import IconLink from '@/app/_components/Icons/link.svg';
-import IconPlat from '@/app/_components/Icons/plat.svg';
-import IconCode from '@/app/_components/Icons/code.svg';
+import IconCalendar from '@/app/_components/icons/calendar.svg';
+import IconLink from '@/app/_components/icons/link.svg';
+import IconPlat from '@/app/_components/icons/plat.svg';
+import IconCode from '@/app/_components/icons/code.svg';
 export const revalidate = 60;
 
 export async function generateStaticParams() {
