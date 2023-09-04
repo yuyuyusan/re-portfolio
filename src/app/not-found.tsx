@@ -10,14 +10,17 @@ export default function NotFound() {
       <Hero title="404 Not Found" sub="エラーページ" />
       <section className={styles.errorPage}>
         <p className={styles.desc}>
-          The page you are looking for cannot be found.
+          We are sorry, we could not find the page you were looking for.
           <br />
-          is temporarily inaccessible, or It may have been moved or deleted.
+          The page you were looking for could not be found.
           <br />
-          Please return to the top page with the button below.
+          It may have been deleted or the URL you entered may be incorrect.
+          <br />
+          Please use the menu bar at the top of the page to find the page you
+          are looking for.
         </p>
         <div className={styles.linkButton}>
-          <LinkButton title="Return" href="/" />
+          <LinkButton title="Return to Top" href="/" />
         </div>
       </section>
       <Footer />

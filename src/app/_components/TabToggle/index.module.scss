@@ -9,9 +9,27 @@
   margin: 0 auto 40px;
   .tabButton {
     padding: 15px 40px;
-    border-radius: 5px;
-    @include fontEn($size: 20px, $weight: bold);
-    letter-spacing: .1em;
-    border:2px solid map-get($colors, navy01);
+    letter-spacing: 0.1em;
+    border-radius: $ui-radius;
+    background: linear-gradient(
+      45deg,
+      map-get($colors, orange01),
+      map-get($colors, orange02) 100%
+    );
+    border: none;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      inset: 2px;
+      position: absolute;
+      border-radius: $ui-radius;
+      background: map-get($colors, navy02);
+    }
+    .jp {
+      @include fontEn($size: 18px, $weight: 500);
+      position: relative;
+      z-index: 1;
+    }
   }
 }

@@ -12,7 +12,7 @@ export default function RootLayout({
     <>
       <Header />
       <main className={styles.worksMain}>
-        <Hero title="Works" sub="制作実績" />
+        <Hero title="WORKS" sub="制作実績" />
         {children}
       </main>
       <Footer />

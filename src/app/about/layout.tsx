@@ -12,7 +12,7 @@ export default function RootLayout({
     <>
       <Header />
       <main className={styles.aboutMain}>
-        <Hero title="About" sub="私について" />
+        <Hero title="ABOUT" sub="私について" />
         {children}
       </main>
       <Footer />

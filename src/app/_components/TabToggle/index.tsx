@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss';
 
-interface TabToggleProps {
+type TabToggleProps = {
   openText: string;
   closeText: string;
   children?: React.ReactNode;
@@ -22,7 +22,7 @@ export default function TabToggle({
     <>
       <div className={styles.tabList}>
         <button onClick={handleTabToggle} className={styles.tabButton} aria-label={activeTab ? closeText : openText}>
-          <span>{activeTab ? closeText : openText}</span>
+          <span className={styles.jp}>{activeTab ? closeText : openText}</span>
         </button>
       </div>
       <div className={`${styles.tabPanel} ${activeTab ? 'js-active' : 'no'}`}>

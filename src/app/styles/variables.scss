@@ -27,14 +27,18 @@ $vp-sp: 560px;
 
 $colors: (
   black01: #111,
+  black02: #1a1e2e,
   gray01: #f4f4f4,
   gray01-transparent: rgba(210, 210, 210, 0.5),
   lightGray01: #f1f5f9,
   white01: #fff,
   navy01: #3667a0,
   navy01-transparent: rgba(54, 103, 160, 0.3),
+  navy02: #2b3047,
   red01: #d5525f,
   red01-transparent: rgba(213, 82, 95, 0.3),
+  orange01: #ffbc47,
+  orange02: #ff7c4c,
 );
 
 $ui: (
@@ -80,7 +84,7 @@ $breakpoint: (
   border-radius: 20px;
   background: map-get($colors, gray01);
   box-shadow: 6px 6px 12px map-get($colors, navy01-transparent),
-  -6px -6px 12px #fff;
+    -6px -6px 12px #fff;
   position: relative;
   overflow: hidden;
   &::before {
@@ -91,7 +95,12 @@ $breakpoint: (
     height: 100%;
     top: 0;
     left: -100%;
-    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 75%);
+    background-image: linear-gradient(
+      130deg,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 75%
+    );
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }

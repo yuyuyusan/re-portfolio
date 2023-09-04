@@ -7,11 +7,7 @@ import TabToggle from '@/app/_components/TabToggle';
 import styles from './index.module.scss';
 
 export const revalidate = 60;
-const initialData = (
-  <>
-    <ZennList />
-  </>
-);
+const initialData = <ZennList />;
 
 export default async function staticPage() {
   const data = await getInfoList({
@@ -22,8 +18,8 @@ export default async function staticPage() {
     <>
       <section className={`${styles.container} ${styles.notes}`}>
         <TabToggle
-          openText="MicroCMSの記事一覧へ"
-          closeText="Zennの記事一覧へ"
+          openText="Tweet Jump to list"
+          closeText="Zenn Jump to list"
           initialData={initialData}
         >
           <InfoList articles={data.contents} />

@@ -3,8 +3,8 @@
 .zennBg {
   padding: 100px 0;
   border-image-source: linear-gradient(
-    map-get($colors, lightGray01),
-    map-get($colors, lightGray01)
+    map-get($colors, black02),
+    map-get($colors, black02)
   );
   border-image-slice: 0 fill;
   border-image-outset: 0 100vw;
@@ -33,8 +33,9 @@
     display: block;
     height: 100%;
     border-radius: map-get($ui, radius);
-    border: 1px solid map-get($colors, navy01);
+    background: map-get($colors, navy02);
     overflow: hidden;
+    color: map-get($colors, white01);
     .inner {
       padding: 20px;
       .title {

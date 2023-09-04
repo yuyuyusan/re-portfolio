@@ -12,7 +12,7 @@ export default function RootLayout({
     <>
       <Header />
       <main className={styles.blogMain}>
-        <Hero title="Preparation" sub="準備中" />
+        <Hero title="Ready now..." sub="準備中" />
         {children}
       </main>
       <Footer />

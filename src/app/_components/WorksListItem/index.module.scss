@@ -28,6 +28,7 @@
   visibility: hidden;
   object-fit: contain;
   z-index: -1;
+  background: map-get($colors, white01);
 }
 .thumbnail {
   margin-bottom: 20px;
@@ -41,8 +42,10 @@
     object-fit: cover;
     transition: 0.3s;
     border-radius: $ui-radius;
+    filter: grayscale(70%);
     &:hover {
       transform: scale(1.05, 1.05);
+      filter: grayscale(0%);
     }
   }
 }
@@ -64,12 +67,11 @@
   }
   .date {
     @include fontEn($size: 14px, $weight: 400);
-    color: $c-black01;
   }
   .url {
     display: inline-block;
     @include fontEn($size: 10px, $weight: 400);
-    color: $c-black01;
     margin-top: 10px;
+    color: map-get($colors, white01);
   }
 }

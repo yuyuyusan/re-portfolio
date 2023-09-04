@@ -1,5 +1,10 @@
 import styles from './index.module.scss';
-const languageSkills = [
+
+type Skills = {
+  name: string;
+  level: number;
+};
+const languageSkills: Skills[] = [
   { name: 'HTML/SCSS', level: 5 },
   { name: 'PHP', level: 3 },
   { name: 'JavaScript', level: 4 },
@@ -8,38 +13,42 @@ const languageSkills = [
   { name: 'Next.js', level: 2 },
   { name: 'Vue', level: 2 },
   { name: 'Nuxt.js', level: 1 },
+  { name: 'Liquid', level: 3 },
   { name: 'Astro', level: 3 },
   { name: 'Node.js', level: 3 },
   { name: 'Express', level: 2 },
+  { name: 'EJS', level: 3 },
 ];
-const softSkills = [
-  { name: 'Tailwind CSS', level: 3 },
+const softSkills: Skills[] = [
   { name: 'Webpack', level: 3 },
-  { name: 'Vite', level: 2 },
+  { name: 'Vite', level: 3 },
   { name: 'Vercel', level: 3 },
-  { name: 'Firebase', level: 2 },
+  { name: 'Firebase', level: 3 },
   { name: 'MongoDB', level: 2 },
   { name: 'MySQL', level: 1 },
   { name: 'Storybook', level: 1 },
 ];
-const designSkills = [
+const toolSkills: Skills[] = [
+  { name: 'WordPress', level: 5 },
+  { name: 'OWLet', level: 5 },
+  { name: 'MicroCMS', level: 3 },
+  { name: 'Shopify', level: 3 },
   { name: 'Figma', level: 3 },
-  { name: 'Adobe XD', level: 3 },
+  { name: 'XD', level: 3 },
   { name: 'Photoshop', level: 3 },
   { name: 'Illustrator', level: 2 },
   { name: 'After Effects', level: 1 },
   { name: 'Lightroom', level: 1 },
 ];
-interface Skill {
+type Skill = {
   name: string;
   level: number;
-}
+};
 
-interface SkillListProps {
+type SkillListProps = {
   skills: Skill[];
   title: string;
-}
-
+};
 
 function SkillCircle({ num }: { num: number }) {
   const getGradientStyle = (level: number) => {
@@ -64,7 +73,6 @@ function SkillCircle({ num }: { num: number }) {
   );
 }
 
-
 function SkillList({ skills, title }: SkillListProps) {
   return (
     <div className={styles.skillBox}>
@@ -86,7 +94,7 @@ export default function Skills() {
     <>
       <SkillList skills={languageSkills} title="Language Skill" />
       <SkillList skills={softSkills} title="Soft Skill" />
-      <SkillList skills={designSkills} title="Design Skill" />
+      <SkillList skills={toolSkills} title="Tool Skill" />
     </>
   );
 }

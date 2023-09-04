@@ -4,7 +4,7 @@
   display: grid;
   place-content: center;
   .title {
-    font-family: $f-roboto;
+    @include fontEn($size: 24px, $weight: bold);
     position: relative;
     z-index: -11;
     .main {

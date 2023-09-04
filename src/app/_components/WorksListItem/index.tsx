@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { WorksArticle } from '@/app/_libs/microcms/client';
 import useClientOnly from '@/app/_hooks/useClientOnly';
 import styles from './index.module.scss';
+
 type Props = {
   works: WorksArticle;
   onClick?: () => void;
@@ -36,7 +37,7 @@ export default function WorksListItem({
       <Link
         href={`/works/${works.id}`}
         className={styles.link}
-        area-label={`${works.title}の詳細ページに飛ぶ`}
+        aria-label={`${works.title}の詳細ページに飛ぶ`}
       >
         {works.imagehover ? (
           <Image

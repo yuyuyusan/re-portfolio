@@ -1,13 +1,9 @@
 @use 'variables.scss' as *;
 
-.loading {
-  background: linear-gradient(
-    -45deg,
-    map-get($colors, navy01) 0%,
-    map-get($colors, gray01) 100%
-  );
-}
 
+.loadingContainer {
+  position: relative;
+}
 .spinnerBox {
   width: 100px;
   height: 100px;
@@ -22,11 +18,7 @@
   height: 100%;
   border-radius: 50%;
   background: map-get($colors, red01);
-  background: linear-gradient(
-    0deg,
-    rgba(63, 249, 220, 0.1) 33%,
-    map-get($colors, red01) 100%
-  );
+  background: linear-gradient(0deg, map-get($colors, orange01) 33%, map-get($colors, orange02) 100%);
   animation: spin 0.8s linear 0s infinite;
 }
 
@@ -41,5 +33,29 @@
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+
+.textBox {
+  display: flex;
+  gap: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .circleText {
+    font-size: 24px;
+    animation: bounce 1s infinite;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

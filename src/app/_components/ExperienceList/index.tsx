@@ -1,6 +1,12 @@
 import styles from './index.module.scss';
 
-const career = [
+type CareerFlow = {
+  title: string;
+  period: string;
+  description: string[];
+}
+
+const career: CareerFlow[] = [
   {
     title: '職業訓練校 PC・スマホサイト デザイン科 入校',
     period: '2020/4 - 2020/9',
@@ -19,9 +25,8 @@ const career = [
     title: 'Web制作会社 コーダー→マークアップエンジニア',
     period: '2021/4 - 現在',
     description: [
-      // '入社時からコーディング担当が1人です。',
       'HTML/CSS/JavaScript/PHPを使用したコーディングをメインに行っています。現在は。UI/UXの提案やデザインの修正などの業務も担当することがあります。',
-      'PHPのSmartyで開発されたローコードCMSのWebサイト制作が主な業務になります。WordPress、LP制作も行っており、LP制作はAstroをメインで使用しています。',
+      'PHPのSmartyで開発されたローコードCMSのWebサイト制作が主な業務になります。WordPress、LP制作も行っており、LP制作はAstroを使用するようになりました。',
     ],
   },
 ];
@@ -38,9 +43,7 @@ export default function ExperienceList() {
               <ul className={styles.desc}>
                 {career.description.map((desc, index) => (
                   <li className={styles.descItem} key={index}>
-                    <span className={styles.descText}>
-                      {desc}
-                    </span>
+                    <span className={styles.descText}>{desc}</span>
                   </li>
                 ))}
               </ul>

@@ -21,6 +21,7 @@
 .def .defInner {
   margin-bottom: 40px;
   @include glassmor;
+  background: #2b3047;
   padding: 40px;
   @include mq(sp) {
     padding: 40px 20px;

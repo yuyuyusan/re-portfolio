@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <section className={`${styles.about} ${styles.aboutSkill}`}>
-        <figure className={styles.icon}>
+        {/* <figure className={styles.icon}>
           <Image
             src="/yu.png"
             alt="icon"
@@ -15,7 +15,7 @@ export default function About() {
             height={200}
             loading="eager"
           />
-        </figure>
+        </figure> */}
         <div className={styles.profile}>
           <dl className={styles.def}>
             <div className={styles.defInner}>
@@ -68,6 +68,9 @@ export default function About() {
         </div>
         <div className={styles.skills}>
           <Skills />
+          <p className={styles.skillsNotes}>
+            スキルの目安は、「1: 軽く使用した程度」、「2:開発をしているが使用しているがもう少し習熟が必要」、「3:実務で使用できる」、「4:応用ができる」、「5:教育ができる」です。
+          </p>
         </div>
       </section>
       <section className={`${styles.about} ${styles.aboutExperience}`}>

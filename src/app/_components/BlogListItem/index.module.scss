@@ -14,7 +14,9 @@
   padding: 20px;
   // @include neumorphism;
   @include glassmor;
+  background: #2b3047;
   transition: .3s;
+  color: map-get($colors, white01);
   &:hover {
     box-shadow: map-get($ui, shadow);
   }

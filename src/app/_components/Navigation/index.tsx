@@ -1,22 +1,27 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './index.module.scss';
 
-const menus = [
-  { label: 'Home', path: '/' },
-  { label: 'Works', path: '/works' },
-  { label: 'About', path: '/about' },
-  { label: 'Notes', path: '/notes' },
+type GnaviList = {
+  label: string;
+  path: string;
+};
+
+const menus: GnaviList[] = [
+  { label: 'HOME', path: '/' },
+  { label: 'WORKS', path: '/works' },
+  { label: 'ABOUT', path: '/about' },
+  { label: 'NOTES', path: '/notes' },
 ];
 
 export default function Navigation() {
-  const [isOpen ,setOpen]= useState<boolean>(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   const handleClick = () => {
     setOpen(!isOpen);
-  }
+  };
 
   return (
     <div>

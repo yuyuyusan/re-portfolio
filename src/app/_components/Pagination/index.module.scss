@@ -15,6 +15,7 @@
       border: 2px solid map-get($colors, navy01);
       border-radius: 2px;
       @include fontEn($weight: 500);
+      color: map-get($colors, white01);
       &:hover {
         background: map-get($colors, navy01-transparent);
       }

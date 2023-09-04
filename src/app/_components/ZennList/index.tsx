@@ -6,6 +6,25 @@ export const revalidate = 60;
 
 export default async function staticPage() {
   const zennFeed = await getZennRssFeed();
+
+  const formatDate = (date:string) => {
+    const now = new Date();
+    const postDate = new Date(date);
+    const timeDifference = now.getTime() - postDate.getTime();
+    const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const monthsAgo = Math.floor(daysAgo / 30);
+    const yearsAgo = Math.floor(daysAgo / 365);
+
+    if (yearsAgo > 0) {
+      return yearsAgo === 1 ? '1 year ago' : `${yearsAgo} years ago`;
+    } else if (monthsAgo > 0) {
+      return monthsAgo === 1 ? '1 month ago' : `${monthsAgo} months ago`;
+    } else if (daysAgo > 0) {
+      return daysAgo === 1 ? '1 day ago' : `${daysAgo} days ago`;
+    } else {
+      return 'Today';
+    }
+  };
   return (
     <>
       <div className={styles.zennBg}>
@@ -17,7 +36,7 @@ export default async function staticPage() {
                 className={styles.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                area-label={`${post.title}の記事へ`}
+                aria-label={`${post.title}の記事へ`}
               >
                 <figure className={styles.thumb}>
                   <Image
@@ -30,19 +49,8 @@ export default async function staticPage() {
                 </figure>
                 <div className={styles.inner}>
                   <h3 className={styles.title}>{post.title}</h3>
-                  <time
-                    className={styles.date}
-                    dateTime={new Date(post.date).toLocaleDateString('ja-JP', {
-                      year: 'numeric',
-                      month: 'numeric',
-                      day: 'numeric',
-                    })}
-                  >
-                    {`${new Date(post.date).toLocaleDateString('ja-JP', {
-                      year: 'numeric',
-                      month: 'numeric',
-                      day: 'numeric',
-                    })}`}
+                  <time className={styles.date} dateTime={post.date}>
+                    {formatDate(post.date)}
                   </time>
                 </div>
               </a>

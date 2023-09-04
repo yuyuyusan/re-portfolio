@@ -18,8 +18,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | SHITSUKAWA',
-  description: 'SHITSUKAWAのポートフォリオサイトです。',
+  title: 'Portfolio | Yu',
+  description: 'Yuのポートフォリオサイトです。',
 };
 
 export default function RootLayout({

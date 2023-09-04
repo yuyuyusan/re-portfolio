@@ -1,12 +1,15 @@
 @use 'variables.scss' as *;
 .container {
-  @include contentsBody($width: map-get($breakpoint, pc-s));
+  @include contentsBody($width: map-get($breakpoint, tab));
+  min-height: 50vh;
+  display: grid;
+  place-content: center;
 }
 
 .desc {
-  margin-bottom: 60px;
   text-align: center;
-  @include fontEn($size: 24px, $weight: 500);
+  line-height: 2.4;
+  margin-bottom: 100px;
 }
 .linkButton {
   text-align: center;

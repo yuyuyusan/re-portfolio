@@ -112,7 +112,7 @@ export default async function StaticDetailPage({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Site
+                <span className={styles.jp}>View Website</span>
               </a>
             </div>
           )}

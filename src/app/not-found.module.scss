@@ -2,6 +2,9 @@
 
 .errorPage {
   @include contentsBody($width: map-get($breakpoint, tab));
+  min-height: 50vh;
+  display: grid;
+  place-content: center;
   .title {
     text-align: center;
     @include fontEn($size: 24px, $weight: bold);
@@ -9,7 +12,7 @@
   }
   .desc {
     text-align: center;
-    line-height: 2;
+    line-height: 2.4;
     margin-bottom: 100px;
   }
 }
