@@ -1,0 +1,38 @@
+@use 'variables.scss' as *;
+
+.goodButtonWrap {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+.goodButton {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  border: none;
+}
+.goodButtonContents {
+  display: grid;
+  place-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: map-get($ui, radius);
+  border: 1px solid map-get($colors, gray01);
+  .goodButtonContents__emoji {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 60px;
+    line-height: 1;
+  }
+  .goodButtonContents__text {
+    font-size: 14px;
+    display: block;
+  }
+}
+.goodButtonCount {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 10px;
+  @include fontEn(16px);
+  color: map-get($colors, gray01);
+}

@@ -23,6 +23,7 @@ export type Info = {
   emoji: string;
   title: string;
   content: string;
+  goodButton: number
 } & MicroCMSDate;
 
 // 実績の型定義
@@ -72,6 +73,8 @@ export const getInfoDetail = async (
   });
   return detailData;
 };
+
+
 
 // ブログ一覧を取得する関数
 export const getBlogList = async (queries?: MicroCMSQueries) => {

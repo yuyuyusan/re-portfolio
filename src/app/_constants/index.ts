@@ -5,4 +5,4 @@ export const WORKS_LIST_LIMIT = 6;
 export const TOP_WORKS_LIMIT = 3;
 
 
-export const BLOG_LIST_LIMIT = 12;
+export const BLOG_LIST_LIMIT = 18;

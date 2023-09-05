@@ -1,5 +1,69 @@
 @use 'variables.scss' as *;
 
-.container {
-  @include contentsBody($width: map-get($breakpoint, tab));
+
+// -----
+// blogDetail
+// -----
+.blogDetail {
+  width: min(100% - 40px, map-get($breakpoint, tab));
+  margin: 0 auto;
+  .emoji {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 20px;
+    font-size: 100px;
+    text-align: center;
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+  .date {
+    @include fontEn($weight: 500);
+    margin-bottom: 20px;
+    display: block;
+    text-align: right;
+  }
+  .contents {
+    margin-bottom: 100px;
+    p {
+      line-height: 2;
+      letter-spacing: 0.1em;
+    }
+    img {
+      margin: 0 auto 30px;
+    }
+    a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid map-get($colors, lightGray01);
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: map-get($colors, navy01);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+  }
+  .linkButton {
+    text-align: center;
+  }
+}
+
+.goodButton {
+  margin-bottom: 60px;
+}
+.linkButton {
+  text-align: center;
 }
