@@ -1,6 +1,7 @@
 import { client, client2 } from './api';
 import { notFound } from 'next/navigation';
 
+
 import type {
   MicroCMSQueries,
   MicroCMSImage,
@@ -50,6 +51,7 @@ export type InfoArticle = Info & MicroCMSDate;
 export type BlogArticle = Blog & MicroCMSDate;
 export type WorksArticle = Works & MicroCMSDate;
 
+
 // 雑記一覧を取得する関数
 export const getInfoList = async (queries?: MicroCMSQueries) => {
   const listData = await client
@@ -70,9 +72,24 @@ export const getInfoDetail = async (
     endpoint: 'info',
     contentId,
     queries,
+    
   });
   return detailData;
 };
+
+// 雑記の詳細をいいねボタンで編集
+export const updateInfoArticle = async (
+  contentId: string,
+) => {
+  const detailData = await client.update<Info>({
+    endpoint: 'info',
+    contentId,
+    content: {
+      title: 'test',
+    },
+  });
+  return detailData;
+};  
 
 
 

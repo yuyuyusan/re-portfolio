@@ -51,7 +51,7 @@ export default async function StaticDetailPage({
         <GoodButton article={post} />
       </div>
       <div className={styles.linkButton}>
-        <LinkButton title="Notes一覧へ" href="/notes" />
+        <LinkButton title="Notes Jump to list" href="/notes" />
       </div>
     </section>
   );

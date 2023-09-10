@@ -33,6 +33,7 @@
     gap: 15px;
     .url {
       @include fontEn($size: 14px, $weight: 500);
+      color: map-get($colors, white01);
     }
   }
   .pf {

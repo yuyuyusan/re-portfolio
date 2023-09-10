@@ -18,8 +18,8 @@ export default async function staticPage() {
     <>
       <section className={`${styles.container} ${styles.notes}`}>
         <TabToggle
-          openText="Tweet Jump to list"
-          closeText="Zenn Jump to list"
+          openText="Zenn Jump to list"
+          closeText="Tweet Jump to list"
           initialData={initialData}
         >
           <InfoList articles={data.contents} />

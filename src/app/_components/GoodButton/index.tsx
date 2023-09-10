@@ -2,6 +2,8 @@
 import styles from './index.module.scss';
 import { useState, useEffect } from 'react';
 import { InfoArticle } from '@/app/_libs/microcms/client';
+import { updateInfoArticle } from '@/app/_libs/microcms/client';
+
 
 type Props = {
   article: InfoArticle;
@@ -34,6 +36,7 @@ export default function GoodButton({ article }: Props) {
         return;
       }
       if (likes >= 2) {
+        console.log('いいねの上限に達しました。');
         return;
       }
       setGood(good + 1);

@@ -39,6 +39,8 @@
       padding-bottom: 2px;
       border-bottom: 1px solid map-get($colors, lightGray01);
       position: relative;
+      color: map-get($colors, white01);
+      border-bottom: 1px solid map-get($colors, white01);
       &::after {
         content: '';
         display: block;
