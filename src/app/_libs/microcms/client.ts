@@ -72,7 +72,6 @@ export const getInfoDetail = async (
     endpoint: 'info',
     contentId,
     queries,
-    
   });
   return detailData;
 };

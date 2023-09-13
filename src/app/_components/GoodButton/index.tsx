@@ -43,12 +43,12 @@ export default function GoodButton({ article }: Props) {
       setCanLike(false);
       localStorage.setItem(`like_${article.id}`, (likes + 1).toString());
       const response = await fetch(
-        `https://yushi.microcms.io/api/v1/info/${article.id}`,
+        `https://${process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN}.microcms.io/api/v1/info/${article.id}`,
         {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
-            'X-MICROCMS-API-KEY': 'feb17f48f7204c99b8dd40af725e95d2311b',
+            'X-MICROCMS-API-KEY': process.env.NEXT_PUBLIC_MICROCMS_API_KEY || '',
           },
           body: JSON.stringify({
             goodButton: good + 1,
