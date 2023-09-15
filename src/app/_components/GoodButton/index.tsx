@@ -36,7 +36,7 @@ export default function GoodButton({ article }: Props) {
         return;
       }
       if (likes >= 2) {
-        console.log('いいねの上限に達しました。');
+        console.log('いいねの上限になりました。');
         return;
       }
       setGood(good + 1);
