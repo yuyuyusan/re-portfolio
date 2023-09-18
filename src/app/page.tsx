@@ -8,7 +8,6 @@ import ParticleBg from '@/app/_components/ParticleBg';
 import Loding from '@/app/loading';
 
 export default function Home() {
-
   return (
     <div className={styles.topBg}>
       <Header />
