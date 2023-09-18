@@ -24,7 +24,7 @@ export default function Home() {
             <div className={styles.gridTop}>
               <div className={`${styles.gridBox} ${styles.gridTop__works}`}>
                 <Link
-                  href="/works"
+                  href="/works/"
                   className={styles.link}
                   aria-label="実績一覧へ"
                 >
@@ -42,7 +42,7 @@ export default function Home() {
               </div>
               <div className={`${styles.gridBox} ${styles.gridTop__about}`}>
                 <Link
-                  href="/about"
+                  href="/about/"
                   className={styles.link}
                   aria-label="自己紹介ページへ"
                 >
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
               <div className={`${styles.gridBox} ${styles.gridTop__blog}`}>
                 <Link
-                  href="/notes"
+                  href="/notes/"
                   className={styles.link}
                   aria-label="ブログ一覧へ"
                 >
@@ -117,7 +117,7 @@ export default function Home() {
                 </a>
               </div>
               <div className={`${styles.gridBox} ${styles.gridBottom__contact}`}>
-                <Link href="/contact" className={styles.link}>
+                <Link href="/contact/" className={styles.link}>
                   <h2 className={styles.titleMid__en}>
                     Contact
                     <br />

@@ -1,16 +1,61 @@
 @use 'variables.scss' as *;
 .container {
   @include contentsBody($width: map-get($breakpoint, tab));
-  min-height: 50vh;
-  display: grid;
-  place-content: center;
 }
 
-.desc {
-  text-align: center;
-  line-height: 2.4;
-  margin-bottom: 100px;
+.form {
+  width: 100%;
 }
-.linkButton {
+.formContainer {
+  margin-bottom: 60px;
+}
+.formField {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid map-get($colors, gray01-transparent);
+  &:last-child {
+    border: none;
+    margin-bottom: 0;
+  }
+}
+.formLegend {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.formRequire {
+  display: inline-block;
+  margin-inline-start: 10px;
+  font-size: 12px;
+  color: map-get($colors, red01);
+}
+
+.formInnerColumn {
+  display: flex;
+  gap: 20px;
+}
+.formInnerColumn__cont {
+  width: 50%;
+}
+.formInnerTitle {
+  display: block;
+  color: map-get($colors, lightGray02);
+  margin-bottom: 4px;
+}
+.formInnerInput,
+.formInnerTextarea {
+  background: map-get($colors, lightGray01);
+  border-color: map-get($colors, lightGray01);
+  color: map-get($colors, black01);
+}
+
+.formButton {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  border-radius: map-get($ui, radius);
+  padding: 10px 0;
+  background: map-get($colors, navy02);
   text-align: center;
+  color: map-get($colors, lightGray02);
 }

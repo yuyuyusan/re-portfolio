@@ -161,6 +161,15 @@
     background: linear-gradient(125deg, #fff, #b8d3ff 70%, #8fceff);
   }
 }
+.gridBottom__contact {
+  .link {
+    background: linear-gradient(
+      map-get($colors, navy02) 0%,
+      map-get($colors, navy01) 30%,
+      #8fceff 100%
+    );
+  }
+}
 .gridBottom__prev {
   .link {
     background: linear-gradient(125deg, #dce6ff, #5a87ff 70%, #5a87ff);
