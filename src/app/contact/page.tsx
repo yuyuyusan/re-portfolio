@@ -22,8 +22,8 @@ export default function StaticPage() {
     email: string,
     message: string
   ) => {
-    const portalId = process.env.HUBSPOT_PORTAL_ID;
-    const formGuid = process.env.HUBSPOT_FORM_GUID;
+    const portalId = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
+    const formGuid = process.env.NEXT_PUBLIC_HUBSPOT_FORM_ID;
 
     return await axios
       .post(
