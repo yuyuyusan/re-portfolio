@@ -164,8 +164,8 @@ button:disabled,
   cursor: default;
 }
 *:focus {
-  border-color: map-get($colors, red01);
-  outline: map-get($colors, red01) solid 3px;
+  border-color: map-get($colors, white01);
+  outline: map-get($colors, white01) solid 3px;
 }
 :-moz-focusring {
   outline: auto;
