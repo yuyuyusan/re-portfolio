@@ -163,6 +163,10 @@ button:disabled,
 [type='submit']:disabled {
   cursor: default;
 }
+*:focus {
+  border-color: map-get($colors, red01);
+  outline: map-get($colors, red01) solid 3px;
+}
 :-moz-focusring {
   outline: auto;
 }
@@ -212,13 +216,6 @@ details {
 }
 summary {
   display: list-item;
-}
-a:focus {
-  outline: auto;
-  background: #efefef;
-}
-[contenteditable]:focus {
-  outline: auto;
 }
 table {
   border-color: inherit;

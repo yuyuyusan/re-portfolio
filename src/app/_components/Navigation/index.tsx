@@ -11,9 +11,10 @@ type GnaviList = {
 
 const menus: GnaviList[] = [
   { label: 'HOME', path: '/' },
-  { label: 'WORKS', path: '/works' },
-  { label: 'ABOUT', path: '/about' },
-  { label: 'NOTES', path: '/notes' },
+  { label: 'WORKS', path: '/works/' },
+  { label: 'ABOUT', path: '/about/' },
+  { label: 'NOTES', path: '/notes/' },
+  { label: 'CONTACT', path: '/contact/' },
 ];
 
 export default function Navigation() {
