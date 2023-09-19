@@ -43,9 +43,6 @@
   @include glassmor;
   transition: 0.3s;
   color: map-get($colors, white01);
-  @include mq(tab) {
-    padding: 20px;
-  }
   &:hover {
     transition: 0.3s;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
@@ -179,7 +176,7 @@
 .titleMid__en {
   @include fontEn;
   font-weight: bold;
-  font-size: clamp(1rem, 0.679rem + 1.37vw, 1.5rem);
+  font-size: clamp(1.4rem, 0.679rem + 1.37vw, 1.6rem);
   line-height: 1.2;
 }
 
