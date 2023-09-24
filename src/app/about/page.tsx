@@ -1,21 +1,12 @@
 import ExperienceList from '@/app/_components/ExperienceList';
 import Skills from '@/app/_components/Skills';
 import styles from './index.module.scss';
-import Image from 'next/image';
+import Wakatime from '@/app/_components/Wakatime';
 
 export default function About() {
   return (
     <>
       <section className={`${styles.about} ${styles.aboutSkill}`}>
-        {/* <figure className={styles.icon}>
-          <Image
-            src="/yu.png"
-            alt="icon"
-            width={200}
-            height={200}
-            loading="eager"
-          />
-        </figure> */}
         <div className={styles.profile}>
           <dl className={styles.def}>
             <div className={styles.defInner}>
@@ -65,6 +56,7 @@ export default function About() {
               </dd>
             </div> */}
           </dl>
+          <Wakatime />
         </div>
         <div className={styles.skills}>
           <Skills />

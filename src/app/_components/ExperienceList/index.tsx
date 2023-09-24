@@ -26,7 +26,9 @@ const career: CareerFlow[] = [
     period: '2021/4 - 現在',
     description: [
       'HTML/CSS/JavaScript/PHPを使用したコーディングをメインに行っています。現在は。UI/UXの提案やデザインの修正などの業務も担当することがあります。',
-      'PHPのSmartyで開発されたローコードCMSのWebサイト制作が主な業務になります。WordPress、LP制作も行っており、LP制作はAstroを使用するようになりました。',
+      'PHPのSmartyで開発されたローコードCMSのWebサイト制作が主な業務になります。WordPress、LP制作も行っています。',
+      'FTP廃止、Figma導入、タスク管理ツールの導入、知識の共有などのチーム業務改善を行いました。',
+      'デザイナーなど全員退職し、現在は自分とディレクターでの業務になります。',
     ],
   },
 ];

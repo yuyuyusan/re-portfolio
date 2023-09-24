@@ -1,0 +1,34 @@
+@use 'variables.scss' as *;
+
+.modalBg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: map-get($colors, black02-transparent);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  .modalContent {
+    width: min(90%, 420px);
+    padding: 40px;
+    min-width: 320px;
+    background: map-get($colors, white01);
+    color: map-get($colors, black01);
+    border-radius: map-get($ui, radius);
+    .modalDesc {
+      margin-bottom: 20px;
+      @include fontEn($size: 16px);
+    }
+    .modalCloseButton {
+      display: block;
+      margin: 0 auto;
+      padding: 4px 20px;
+      @include fontEn($size: 18px, $weight: 500);
+      border-radius: map-get($ui, radius);
+      background: map-get($colors, navy01);
+      color: map-get($colors, white01);
+    }
+  }
+}
