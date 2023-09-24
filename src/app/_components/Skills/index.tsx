@@ -26,7 +26,7 @@ const languageSkills: Skills[] = [
   },
   {
     name: 'TypeScript',
-    level: 2,
+    level: 2.5,
     desc: '現在、メインで学習していて、フレームワークを使用しない場合は、Webpackで環境を構築し、TypeScriptで開発しています。',
   },
   {
@@ -64,7 +64,7 @@ const softSkills: Skills[] = [
   {
     name: 'GitHub',
     level: 3,
-    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作は問題なくできます。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。',
+    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作は問題なくできます。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。個人利用のみコマンドラインを使用しています。',
   },
   {
     name: 'Webpack',

@@ -61,7 +61,7 @@ export default function About() {
         <div className={styles.skills}>
           <Skills />
           <p className={styles.skillsNotes}>
-            スキルの目安は、「1: 軽く使用した程度」、「2:開発をしているが使用しているがもう少し習熟が必要」、「3:実務で使用できる」、「4:応用ができる」、「5:教育ができる」です。
+            スキルの目安は、「初級:開発をしているが使用しているがもう少し習熟が必要」、「中級:実務で使用できる」、「上級:応用・教育ができる」です。
           </p>
         </div>
       </section>
