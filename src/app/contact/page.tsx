@@ -1,9 +1,14 @@
 'use client';
+import type { Metadata } from 'next';
 import styles from './index.module.scss';
 import { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
+
+// export const metadata: Metadata = {
+//   title: 'CONTACT お問い合わせ',
+// };
 export default function StaticPage() {
   const router = useRouter();
   const [lastname, setLastname] = useState('');

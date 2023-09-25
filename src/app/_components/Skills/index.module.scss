@@ -23,8 +23,11 @@
     width: calc((100% - (30px * 4)) / 5);
     padding: 20px;
     @include glassmor;
-    background: #2b3047;
+    background: map-get($colors, navy02);
     cursor: pointer;
+    &:hover {
+      @include hoverScale;
+    }
     @include mq(tab) {
       width: calc((100% - (20px * 2)) / 3);
     }

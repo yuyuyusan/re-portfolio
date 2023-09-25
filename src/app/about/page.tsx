@@ -1,8 +1,12 @@
+import type { Metadata } from 'next';
 import ExperienceList from '@/app/_components/ExperienceList';
 import Skills from '@/app/_components/Skills';
 import styles from './index.module.scss';
 import Wakatime from '@/app/_components/Wakatime';
 
+export const metadata: Metadata = {
+  title: 'ABOUT 自己紹介',
+};
 export default function About() {
   return (
     <>

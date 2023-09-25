@@ -1,12 +1,16 @@
-import InfoList from '@/app/_components/BlogList';
+import type { Metadata } from 'next';
 import { getInfoList } from '@/app/_libs/microcms/client';
 import { BLOG_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
+import InfoList from '@/app/_components/BlogList';
 import ZennList from '@/app/_components/ZennList';
 import TabToggle from '@/app/_components/TabToggle';
 import styles from './index.module.scss';
 
 export const revalidate = 60;
+export const metadata: Metadata = {
+  title: 'NOTES 雑記',
+};
 const initialData = <ZennList />;
 
 export default async function staticPage() {

@@ -25,9 +25,9 @@
     place-content: center;
     transition: 0.3s;
     color: map-get($colors, white01);
-    background: linear-gradient(0deg, map-get($colors, orange01) 33%, map-get($colors, orange02) 100%);
+    background: linear-gradient(125deg, map-get($colors, orange01) 33%, map-get($colors, orange02) 100%);
     &:hover {
-      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+      @include hoverScale;
     }
   }
 }

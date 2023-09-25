@@ -1,11 +1,6 @@
 @use 'variables.scss' as *;
 
 .topBg {
-  // background: linear-gradient(
-  //   -45deg,
-  //   map-get($colors, navy01) 0%,
-  //   map-get($colors, gray01) 100%
-  // );
   background: map-get($colors, black02);
   min-height: 100vh;
   padding: 100px 0 20px;
@@ -44,8 +39,7 @@
   transition: 0.3s;
   color: map-get($colors, white01);
   &:hover {
-    transition: 0.3s;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    @include hoverScale;
   }
   img {
     width: 100%;
@@ -73,10 +67,10 @@
       }
     }
     .link {
-      background: linear-gradient(
-        map-get($colors, navy02) 0%,
-        map-get($colors, navy01) 30%,
-        #8fceff 100%
+      background: linear-gradient(-125deg,
+        map-get($colors, gray01) 0%,
+        #8fceff 30%,
+        map-get($colors, navy01) 100%
       );
     }
   }
@@ -161,9 +155,10 @@
 .gridBottom__contact {
   .link {
     background: linear-gradient(
-      map-get($colors, navy02) 0%,
-      map-get($colors, navy01) 30%,
-      #8fceff 100%
+      125deg,
+      #fff,
+      map-get($colors, orange01),
+      map-get($colors, orange02)
     );
   }
 }

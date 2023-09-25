@@ -115,15 +115,6 @@ export default function Home() {
                   </figure>
                 </a>
               </div>
-              <div className={`${styles.gridBox} ${styles.gridBottom__contact}`}>
-                <Link href="/contact/" className={styles.link}>
-                  <h2 className={styles.titleMid__en}>
-                    Contact
-                    <br />
-                    Form
-                  </h2>
-                </Link>
-              </div>
               <div className={`${styles.gridBox} ${styles.gridBottom__prev}`}>
                 <a
                   href="https://ys-portfolio-c98fe.web.app/"
@@ -138,6 +129,15 @@ export default function Home() {
                     Site
                   </h2>
                 </a>
+              </div>
+              <div className={`${styles.gridBox} ${styles.gridBottom__contact}`}>
+                <Link href="/contact/" className={styles.link}>
+                  <h2 className={styles.titleMid__en}>
+                    Contact
+                    <br />
+                    Form
+                  </h2>
+                </Link>
               </div>
             </div>
           </div>

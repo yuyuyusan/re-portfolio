@@ -17,9 +17,22 @@ const roboto = Roboto({
   display: 'swap',
 });
 
+
 export const metadata: Metadata = {
-  title: 'Portfolio | Yu',
-  description: 'Yuのポートフォリオサイトです。',
+  title: {
+    template: '%s | Yu Portfolio',
+    default: 'Yu Portfolio',
+  },
+  description:
+    'Web制作会社に勤めて3年目。マークアップエンジニアのポートフォリオサイトです。',
+  openGraph: {
+    title: 'Yu Portfolio',
+    description:
+      'Web制作会社に勤めて3年目。マークアップエンジニアのポートフォリオサイトです。',
+    type: 'website',
+    locale: 'ja_JP',
+    url: 'https://portfolio-yu.vercel.app/',
+  },
 };
 
 export default function RootLayout({
