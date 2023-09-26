@@ -17,7 +17,7 @@ const languageSkills: Skills[] = [
   {
     name: 'HTML/SCSS',
     level: 5,
-    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。cssはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。',
+    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。',
   },
   {
     name: 'JavaScript',
@@ -32,17 +32,17 @@ const languageSkills: Skills[] = [
   {
     name: 'React/Next',
     level: 3,
-    desc: 'Next13を使用しVercelと平行して使用することを前提に今はメインで学習しています。ヘッドレスCMSを使用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。全てではないですが、React hooksや、Reactのライブラリなどの構築は可能です。',
+    desc: 'Next13を使用しVercelと並行して使用することを前提にメインで学習しています。ヘッドレスCMSを使用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。全てではないですが、React hooksや、Reactのライブラリなどの構築は可能です。',
     },
   {
     name: 'Vue/Nuxt',
     level: 2,
-    desc: 'Vue2,Nuxt2のみ実装経験があります。',
+    desc: 'Vue2,のみ実装経験があり、Nuxtは自己学習で一度ヘッドレスCMSのサイトを作成しました。',
   },
   {
     name: 'Astro',
     level: 3,
-    desc: 'Nextともう一つの選択肢として使用しています。現在、Astroを利用したSSGのサイト構築も可能です。WordPressのAPIを使用したサイト構築も可能です。',
+    desc: 'Nextともう一つの選択肢として使用しています。Astroを利用したSSGのサイト構築も可能です。WordPressのAPIを使用したサイト構築も可能です。',
   },
   {
     name: 'PHP',
@@ -57,7 +57,7 @@ const languageSkills: Skills[] = [
   {
     name: 'Node/Express/EJS',
     level: 2,
-    desc: 'Expressを使用したサーバーサイドの開発経験があります。また、Firebaseを使用したサーバーレスの開発経験もあります。Expressを認証・認可の構築で利用経験があります。',
+    desc: 'Expressを使用したサーバーサイドの開発経験があります。認証・認可のスクラッチ構築で利用経験があります。',
   },
 ];
 const softSkills: Skills[] = [
@@ -79,12 +79,12 @@ const softSkills: Skills[] = [
   {
     name: 'Vercel',
     level: 3,
-    desc: 'ISRが利用できるためNext同時に学習しています。進化のスピードも早いため、サーバーサイドはVercelで学習しています。',
+    desc: 'ISRが利用できるためNextと同時に学習しています。進化のスピードも早いため、サーバーサイドはVercelで学習しています。',
   },
   {
     name: 'Firebase',
     level: 3,
-    desc: '基本的な操作は問題なくできます。Googleアナリティクス、Googleタグマネージャー、の設定も可能です。',
+    desc: 'ホスティングサービスとして使用経験があります。基本的な操作は問題なくでき、Googleアナリティクス、Googleタグマネージャー、の設定も可能です。',
   },
   {
     name: 'MongoDB',
@@ -101,17 +101,17 @@ const toolSkills: Skills[] = [
   {
     name: 'WordPress',
     level: 5,
-    desc: 'オリジナルテーマの作成ができます。基本的にプラグインはあまり使用しない方向で制作を心がけ、functionsを設定して制作しています。タクソノミー毎のOGP設定なども可能です。また、WordPressのAPIを使用したサイト構築も可能です。',
+    desc: '業務でクラシックテーマ開発をしています。基本的にプラグインは使用しないよう心がけ、functionsを設定して制作しています。タクソノミー毎のOGP設定なども可能です。また、REST APIを使用したヘッドレス構築も可能です。ハイブリットテーマ（theme.json）は知識はありますが、業務経験はありません。',
   },
   {
     name: 'OWLet',
     level: 5,
-    desc: 'ほぼすべての機能を使用できます。また、カスタマイズも可能です。',
+    desc: 'ほぼすべての機能を使用でき、カスタマイズも可能です。<br />https://owlet.guide/',
   },
   {
     name: 'MicroCMS',
     level: 3,
-    desc: 'メインのヘッドレスCMSで、利用しています。Next,AstroでのWebサイトの作成ができ、SSGのページネーションや、カスタムフィールドの作成も可能です。',
+    desc: 'メインのヘッドレスCMSで、利用しています。Next,AstroでのWebサイト制作ができ、SSGのページネーションや、動的ページの作成も可能です。',
   },
   {
     name: 'Shopify',
@@ -121,12 +121,12 @@ const toolSkills: Skills[] = [
   {
     name: 'Figma',
     level: 3,
-    desc: '現在個人的にメインで、使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。現在個人サイトのモックアップ作成をしています。',
+    desc: '現在メインで個人利用利用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
   },
   {
     name: 'XD',
     level: 3,
-    desc: '業務で利用しているので、使用できます。スマホのみモックアップ作成の実務経験があります。',
+    desc: '業務でメインで使用しています。スマホのみモックアップ作成の実務経験があります。',
   },
   {
     name: 'Photoshop',

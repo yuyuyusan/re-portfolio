@@ -3,7 +3,7 @@
 .modalBg {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   top: 0;
   left: 0;
   background: map-get($colors, black02-transparent);
@@ -11,20 +11,22 @@
   display: grid;
   place-items: center;
   .modalContent {
-    width: min(90%, 420px);
-    padding: 40px;
+    width: min(90%, 800px);
+    padding-block: 40px;
     min-width: 320px;
     background: map-get($colors, white01);
     color: map-get($colors, black01);
     border-radius: map-get($ui, radius);
     .modalDesc {
-      margin-bottom: 20px;
+      width: min(100% - 40px, 720px);
+      margin-inline: auto;
       @include fontEn($size: 16px);
     }
     .modalCloseButton {
       display: block;
-      margin: 0 auto;
-      padding: 4px 20px;
+      margin-inline: auto;
+      padding-block: 4px;
+      padding-inline: 20px;
       @include fontEn($size: 18px, $weight: 500);
       border-radius: map-get($ui, radius);
       background: map-get($colors, navy01);
