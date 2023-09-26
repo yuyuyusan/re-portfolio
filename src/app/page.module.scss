@@ -66,13 +66,6 @@
         margin-bottom: 0;
       }
     }
-    .link {
-      background: linear-gradient(-125deg,
-        map-get($colors, gray01) 0%,
-        #8fceff 30%,
-        map-get($colors, navy01) 100%
-      );
-    }
   }
 }
 .gridTop__works {
@@ -81,12 +74,24 @@
   @include mq(tab) {
     aspect-ratio: initial;
   }
+  .link {
+    background: linear-gradient(
+      125deg,
+      map-get($colors, navy01),
+      map-get($colors, navy01-transparent)
+    );
+  }
 }
 .gridTop__about {
   grid-area: 1 / 3 / 2 / 5;
   .link {
     display: flex;
     align-items: center;
+    background: linear-gradient(
+      125deg,
+      map-get($colors, green01),
+      map-get($colors, green01-transparent)
+    );
     @include mq(tab) {
       min-height: 120px;
     }
@@ -97,6 +102,11 @@
   .link {
     display: flex;
     align-items: center;
+    background: linear-gradient(
+      125deg,
+      map-get($colors, purple01),
+      map-get($colors, purple01-transparent)
+    );
     @include mq(tab) {
       min-height: 120px;
     }
@@ -144,27 +154,22 @@
 }
 .gridBottom__github {
   .link {
-    background: linear-gradient(125deg, #fff, #c3cbff 60%, #af99ff);
+    background: linear-gradient(125deg, #fff, #af99ff);
   }
 }
 .gridBottom__zenn {
   .link {
-    background: linear-gradient(125deg, #fff, #b8d3ff 70%, #8fceff);
+    background: linear-gradient(125deg, #fff, #3ea8ff);
   }
 }
 .gridBottom__contact {
   .link {
-    background: linear-gradient(
-      125deg,
-      #fff,
-      map-get($colors, orange01),
-      map-get($colors, orange02)
-    );
+    background: linear-gradient(125deg, map-get($colors, white01) ,map-get($colors, navy01));
   }
 }
 .gridBottom__prev {
   .link {
-    background: linear-gradient(125deg, #dce6ff, #5a87ff 70%, #5a87ff);
+    background: linear-gradient(125deg, #fff, #5a87ff);
   }
 }
 // title
@@ -173,6 +178,7 @@
   font-weight: bold;
   font-size: clamp(1.4rem, 0.679rem + 1.37vw, 1.6rem);
   line-height: 1.2;
+  color: map-get($colors, black01);
 }
 
 // icon

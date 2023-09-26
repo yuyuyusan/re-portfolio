@@ -25,7 +25,7 @@
     place-content: center;
     transition: 0.3s;
     color: map-get($colors, white01);
-    background: linear-gradient(125deg, map-get($colors, orange01) 33%, map-get($colors, orange02) 100%);
+    background: linear-gradient(125deg, map-get($colors, orange02), map-get($colors, orange01));
     &:hover {
       @include hoverScale;
     }
