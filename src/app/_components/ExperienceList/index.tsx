@@ -8,10 +8,17 @@ type CareerFlow = {
 
 const career: CareerFlow[] = [
   {
+    title: '無償インターンでPHPを学習',
+    period: '2016/7 - 2016/8 短期インターン',
+    description: [
+      '知識が0の状態で飛び込み環境構築などから始まりましたが、不採用で挫折。',
+    ],
+  },
+  {
     title: '職業訓練校 PC・スマホサイト デザイン科 入校',
     period: '2020/4 - 2020/9',
     description: [
-      'HTML/CSS/jQueryとデザインツールのPhotoshop/XDを用いたWebサイト制作の基礎を学習をしました。',
+      '再チャレンジを決意し、3ヶ月ほど自己学習をした後、入校。HTML/CSS/jQueryとデザインツールのPhotoshop/XDを用いたWebサイト制作の基礎を学習をしました。',
     ],
   },
   {
@@ -26,8 +33,8 @@ const career: CareerFlow[] = [
     period: '2021/4 - 現在',
     description: [
       'HTML/CSS/JavaScript/PHPを使用したコーディングをメインに行っています。完全分業ですが、レスポンシブのモックアップがないため、UI/UXの提案など、デザイナー業務も担当することもあります。',
-      'ローコードCMS（WPのブロックテーマ作成のようなCMS）のWebサイト制作が主な業務になります。その他、WordPress、LP制作になります。',
-      'FTP廃止、Git導入、Figma導入、タスク管理ツールの導入、知識の共有、制作ルール策定など制作業務改善を行っています。',
+      'ローコードCMS（WPのブロックテーマのようなCMS）のWebサイト制作が主な業務になります。その他、WordPress、LP制作になります。',
+      'FTP廃止、Git Figma タスク管理ツールの導入、知識の共有、制作プランの提案、制作ルール策定など制作業務の効率化、改善を行っています。',
     ],
   },
 ];

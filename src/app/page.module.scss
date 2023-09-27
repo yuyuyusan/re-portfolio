@@ -76,7 +76,8 @@
   }
   .link {
     background: linear-gradient(
-      125deg,
+      -125deg,
+      map-get($colors, white01) 1%,
       map-get($colors, navy01),
       map-get($colors, navy01-transparent)
     );
@@ -88,7 +89,8 @@
     display: flex;
     align-items: center;
     background: linear-gradient(
-      125deg,
+      -125deg,
+      map-get($colors, white01) 1%,
       map-get($colors, green01),
       map-get($colors, green01-transparent)
     );
@@ -103,7 +105,8 @@
     display: flex;
     align-items: center;
     background: linear-gradient(
-      125deg,
+      -125deg,
+      map-get($colors, white01) 1%,
       map-get($colors, purple01),
       map-get($colors, purple01-transparent)
     );
@@ -154,22 +157,38 @@
 }
 .gridBottom__github {
   .link {
-    background: linear-gradient(125deg, #fff, #af99ff);
+    background: linear-gradient(
+      -125deg,
+      map-get($colors, white01),
+      map-get($colors, purple01)
+    );
   }
 }
 .gridBottom__zenn {
   .link {
-    background: linear-gradient(125deg, #fff, #3ea8ff);
-  }
-}
-.gridBottom__contact {
-  .link {
-    background: linear-gradient(125deg, map-get($colors, white01) ,map-get($colors, navy01));
+    background: linear-gradient(
+      -125deg,
+      map-get($colors, white01),
+      map-get($colors, navy01)
+    );
   }
 }
 .gridBottom__prev {
   .link {
-    background: linear-gradient(125deg, #fff, #5a87ff);
+    background: linear-gradient(
+      -125deg,
+      map-get($colors, white01)1%,
+      map-get($colors, orange01)
+    );
+  }
+}
+.gridBottom__contact {
+  .link {
+    background: linear-gradient(
+      -125deg,
+      map-get($colors, white01)1%,
+      map-get($colors, green01)
+    );
   }
 }
 // title
@@ -178,7 +197,6 @@
   font-weight: bold;
   font-size: clamp(1.4rem, 0.679rem + 1.37vw, 1.6rem);
   line-height: 1.2;
-  color: map-get($colors, black01);
 }
 
 // icon

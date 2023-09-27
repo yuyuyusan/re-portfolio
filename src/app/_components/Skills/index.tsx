@@ -17,23 +17,23 @@ const languageSkills: Skills[] = [
   {
     name: 'HTML/SCSS',
     level: 5,
-    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。',
+    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。\※最近は、CSSに戻すことを検討しています。',
   },
   {
     name: 'JavaScript',
     level: 4,
-    desc: '基本的な操作は問題なくできます。また、ES6以降の文法を使用しています。',
+    desc: '基本的な操作は問題なくできます。自己学習でSPAサイトをVanilla JSで制作したことがあります。',
   },
   {
     name: 'TypeScript',
     level: 2.5,
-    desc: '現在、メインで学習していて、フレームワークを使用しない場合は、Webpackで環境を構築し、TypeScriptで開発しています。',
+    desc: '現在、メインで学習し、フレームワークを使用しない場合は、Webpackで環境を構築し、TypeScriptで開発しています。',
   },
   {
     name: 'React/Next',
     level: 3,
-    desc: 'Next13を使用しVercelと並行して使用することを前提にメインで学習しています。ヘッドレスCMSを使用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。全てではないですが、React hooksや、Reactのライブラリなどの構築は可能です。',
-    },
+    desc: 'Nextで品質が高いサイトの提供を目的で学習しています。Next App Routerを使用しVercelと並行して使用しています。ヘッドレスCMSを利用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。全てではないですが、React hooksや、Reactのライブラリなどの構築経験があります。',
+  },
   {
     name: 'Vue/Nuxt',
     level: 2,
@@ -42,7 +42,7 @@ const languageSkills: Skills[] = [
   {
     name: 'Astro',
     level: 3,
-    desc: 'Nextともう一つの選択肢として使用しています。Astroを利用したSSGのサイト構築も可能です。WordPressのAPIを使用したサイト構築も可能です。',
+    desc: 'Nextともう一つの選択肢として使用しています。Astroを利用したSSGのサイト構築が可能です。WordPressのAPIを使用したサイト構築も可能です。',
   },
   {
     name: 'PHP',
@@ -64,12 +64,12 @@ const softSkills: Skills[] = [
   {
     name: 'GitHub',
     level: 3,
-    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作は問題なくできます。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。個人利用のみコマンドラインを使用しています。',
+    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作は問題なくできます。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。good first issueでOSS活動に取り組見始めました。\n※個人利用のみコマンドラインを使用しています。',
   },
   {
     name: 'Webpack',
     level: 3,
-    desc: 'TypeScript、WordPressを使用するときの環境構築を行っています。',
+    desc: 'TypeScript、WordPressを使用時に環境構築を行っています。',
   },
   {
     name: 'Vite',
@@ -106,7 +106,7 @@ const toolSkills: Skills[] = [
   {
     name: 'OWLet',
     level: 5,
-    desc: 'ほぼすべての機能を使用でき、カスタマイズも可能です。<br />https://owlet.guide/',
+    desc: 'ほぼすべての機能を使用でき、カスタマイズも可能です。\nhttps://owlet.guide/',
   },
   {
     name: 'MicroCMS',
@@ -116,12 +116,12 @@ const toolSkills: Skills[] = [
   {
     name: 'Shopify',
     level: 3,
-    desc: 'テンプレートをカスタマイズすることができます。カート機能のカスタマイズ、配送先、お届け日時のカスタマイズ、Eコーマスの基本的な設定ができます。',
+    desc: 'テンプレートをカスタマイズが可能です。カート機能のカスタマイズ、配送先、お届け日時のカスタマイズ、Eコーマスの基本的な設定ができます。',
   },
   {
     name: 'Figma',
     level: 3,
-    desc: '現在メインで個人利用利用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
+    desc: '業務では無料プランなので、モックアップの編集はできないため、個人利用でメインで使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
   },
   {
     name: 'XD',
@@ -145,7 +145,7 @@ function SkillCircle({ num }: { num: number }) {
     const gradientStart = 0;
     const gradientEnd = (level / 5) * 100;
     return {
-      backgroundImage: `conic-gradient(#1abcfe ${gradientStart}% ${gradientEnd}%, #d2d2d2 ${gradientEnd}% 100%)`,
+      backgroundImage: `conic-gradient(hsla(207, 100%, 72%) ${gradientStart}% ${gradientEnd}%, hsla(0, 0%, 96%, 1) ${gradientEnd}% 100%)`,
     };
   };
   let levelText;
@@ -162,19 +162,37 @@ function SkillCircle({ num }: { num: number }) {
     </div>
   );
 }
-
+const modalOpenStyle = {
+  overflow: 'hidden', // 背景のスクロールを無効にする
+};
 function SkillList({ skills, title }: SkillListProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState<Skills | null>(null);
-
   const clickSkill = (skill: Skills) => {
     setSelectedSkill(skill);
     setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+    const listItems = document.querySelectorAll('li');
+    listItems.forEach((item) => {
+      item.setAttribute('tabindex', '-1');
+    });
   };
-
   const closeSkillModal = () => {
     setSelectedSkill(null);
     setIsOpen(false);
+    document.body.style.overflow = 'auto';
+    const listItems = document.querySelectorAll('li');
+    listItems.forEach((item) => {
+      item.removeAttribute('0');
+    });
+  };
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLLIElement>,
+    skill: Skills
+  ) => {
+    if (event.key === 'Enter') {
+      clickSkill(skill);
+    }
   };
 
   return (
@@ -187,6 +205,8 @@ function SkillList({ skills, title }: SkillListProps) {
               className={styles.skillItem}
               key={index}
               onClick={() => clickSkill(skill)}
+              onKeyDown={(e) => handleKeyDown(e, skill)}
+              tabIndex={0}
             >
               <div className={styles.skill__name}>{skill.name}</div>
               <SkillCircle num={skill.level} />

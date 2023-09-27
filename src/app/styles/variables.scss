@@ -16,7 +16,7 @@ $f-roboto: 'Roboto', sans-serif;
 // UI
 // -----
 $ui-radius: 15px;
-$ui-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+$ui-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
 // -----
 // Viewport Size
 // -----
@@ -26,29 +26,29 @@ $vp-tab: 768px;
 $vp-sp: 560px;
 
 $colors: (
-  black01: #111,
-  black02: #1a1e2e,
-  black02-transparent: rgba(26, 30, 46, 0.2),
-  gray01: #f4f4f4,
-  gray02: #c6c2c2,
-  gray01-transparent: rgba(210, 210, 210, 0.5),
-  lightGray01: #f1f5f9,
-  lightGray02: #cecece,
+  black01: hsla(0, 0%, 7%, 1),
+  black02: hsla(228, 28%, 14%, 1),
+  black02-transparent: hsla(228, 28%, 14%, 0.6),
+  gray01: hsla(0, 0%, 96%, 1),
+  gray02: rgb(211, 211, 211),
+  gray01-transparent: hsla(0, 0%, 96%, 0.6),
+  lightGray01: hsla(210, 40%, 96%, 1),
+  lightGray02: hsla(0, 0%, 81%, 1),
   white01: #fff,
-  green01: #0acf83,
-  green01-transparent: rgba(10, 207, 131, 0.6),
-  purple01:#A259FF,
-  purple01-transparent: rgba(162, 89, 255, 0.6),
-  navy01: #1abcfe,
-  navy01-transparent: rgba(26, 188, 254, 0.6),
-  navy02: #2b3047,
-  orange01: #f24e1e,
-  orange02: #ff7262,
+  green01: hsla(157, 91%, 72%, 1),
+  green01-transparent: hsla(157, 91%, 72%, 0.6),
+  purple01: hsla(266, 100%, 72%, 1),
+  purple01-transparent: hsla(266, 100%, 72%, .6),
+  navy01: hsla(207, 100%, 72%),
+  navy01-transparent: hsla(207, 100%, 72%, 0.6),
+  navy02: hsla(229, 25%, 22%, 1),
+  orange01: hsla(14, 89%, 72%, 1),
+  orange02: hsla(6, 100%, 72%, 1),
 );
 
 $ui: (
   radius: 15px,
-  shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+  shadow: 4px 4px 8px map-get($colors, black02-transparent),
 );
 
 $breakpoint: (

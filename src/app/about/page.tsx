@@ -60,7 +60,6 @@ export default function About() {
               </dd>
             </div> */}
           </dl>
-          <Wakatime />
         </div>
         <div className={styles.skills}>
           <Skills />

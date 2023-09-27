@@ -20,17 +20,28 @@
     .modalDesc {
       width: min(100% - 40px, 720px);
       margin-inline: auto;
+      margin-block-end: 20px;
       @include fontEn($size: 16px);
+      white-space: pre-line;
     }
     .modalCloseButton {
       display: block;
       margin-inline: auto;
       padding-block: 4px;
-      padding-inline: 20px;
+      padding-inline: 40px;
       @include fontEn($size: 18px, $weight: 500);
       border-radius: map-get($ui, radius);
       background: map-get($colors, navy01);
       color: map-get($colors, white01);
+      &:focus {
+        border-color: map-get($colors, orange01);
+        outline: map-get($colors, orange01) solid 2px;
+      }
     }
   }
+}
+
+.userSelectNone {
+  -webkit-user-select: none;
+  user-select: none;
 }
