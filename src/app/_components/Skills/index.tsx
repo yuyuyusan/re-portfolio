@@ -17,7 +17,7 @@ const languageSkills: Skills[] = [
   {
     name: 'HTML/SCSS',
     level: 5,
-    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。\※最近は、CSSに戻すことを検討しています。',
+    desc: '構造化を意識し、WAI-AREA AAに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。\※最近は、SCSSからCSSに戻すことを検討しています。',
   },
   {
     name: 'JavaScript',
@@ -32,7 +32,7 @@ const languageSkills: Skills[] = [
   {
     name: 'React/Next',
     level: 3,
-    desc: 'Nextで品質が高いサイトの提供を目的で学習しています。Next App Routerを使用しVercelと並行して使用しています。ヘッドレスCMSを利用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。全てではないですが、React hooksや、Reactのライブラリなどの構築経験があります。',
+    desc: 'Nextで品質が高いサイトの提供を目的で学習しています。Next App Routerを使用しVercelと並行して使用しています。ヘッドレスCMSを利用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。Reactのライブラリなどの構築経験があります。',
   },
   {
     name: 'Vue/Nuxt',
@@ -101,7 +101,7 @@ const toolSkills: Skills[] = [
   {
     name: 'WordPress',
     level: 5,
-    desc: '業務でクラシックテーマ開発をしています。基本的にプラグインは使用しないよう心がけ、functionsを設定して制作しています。タクソノミー毎のOGP設定なども可能です。また、REST APIを使用したヘッドレス構築も可能です。ハイブリットテーマ（theme.json）は知識はありますが、業務経験はありません。',
+    desc: '業務でクラシックテーマ開発をしています。基本的にプラグインは使用しないよう心がけ、functionsを設定して制作しています。タクソノミー毎のOGP設定なども可能です。また、REST APIを使用したヘッドレス構築も可能です。ハイブリットテーマは知識のみで、業務経験はなく、どのような状況で導入すべきかを検討中です。',
   },
   {
     name: 'OWLet',
@@ -121,7 +121,7 @@ const toolSkills: Skills[] = [
   {
     name: 'Figma',
     level: 3,
-    desc: '業務では無料プランなので、モックアップの編集はできないため、個人利用でメインで使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
+    desc: '個人利用でメインで使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
   },
   {
     name: 'XD',
@@ -163,7 +163,7 @@ function SkillCircle({ num }: { num: number }) {
   );
 }
 const modalOpenStyle = {
-  overflow: 'hidden', // 背景のスクロールを無効にする
+  overflow: 'hidden',
 };
 function SkillList({ skills, title }: SkillListProps) {
   const [isOpen, setIsOpen] = useState(false);

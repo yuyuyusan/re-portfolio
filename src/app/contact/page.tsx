@@ -141,7 +141,7 @@ export default function StaticPage() {
             </fieldset>
           </div>
           <button className={styles.formButton} type="submit">
-            送信する
+            Send Message
           </button>
         </form>
       </section>
