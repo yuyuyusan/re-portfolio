@@ -9,8 +9,15 @@
 .menuButton {
   display: none;
   padding: 5px;
+  background: linear-gradient(
+    -125deg,
+    map-get($colors, white01) 1%,
+    map-get($colors, orange01)
+  );
   border: none;
-  background: map-get( $colors, navy01 );
+  svg {
+    stroke: map-get($colors, black02);
+  }
   @include vp-tab {
     display: block;
     position: fixed;
@@ -21,23 +28,34 @@
 }
 
 .gnav {
-  padding: 40px 20px;
   width: 100%;
   min-height: 100vh;
-  background: rgba($c-navy01, 0.9);
+  padding-block: 40px;
+  padding-inline: 20px;
+  background: map-get($colors, navy02);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 11;
-  .gnavMain {
-    .gnavMainItem {
-      margin-bottom: 20px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      .gnavMainItem__link {
-        color: $c-white01;
-      }
+}
+.gnavMain {
+  margin-block-end: 40px;
+  .gnavMainItem {
+    margin-block-end: 20px;
+    &:last-child {
+      margin-block-end: 0;
     }
+    .gnavMainItem__link {
+      color: map-get($colors, white01);
+    }
+  }
+}
+.gnavSub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  .gnavSubItem {
+    width: 60px;
   }
 }

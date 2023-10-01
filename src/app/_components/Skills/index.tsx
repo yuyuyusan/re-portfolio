@@ -16,13 +16,13 @@ type SkillListProps = {
 const languageSkills: Skills[] = [
   {
     name: 'HTML/SCSS',
-    level: 5,
-    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。\※最近は、SCSSからCSSに戻すことを検討しています。',
+    level: 4.5,
+    desc: '構造化を意識し、アクセシビリティに配慮したセマンティックなHTMLが書けます。（適切なWAI-AREAを再度学習中）CSSはモジュール化していない構成の場合は、BEM設計を採用しています。また、最新のCSSのキャッチアップは怠らずFirefoxまで対応したものから採用しています。変更に強いマークアップを意識しています。※最近は、SCSSからCSSに戻すことを検討しています。',
   },
   {
     name: 'JavaScript',
     level: 4,
-    desc: '基本的な操作は問題なくできます。自己学習でSPAサイトをVanilla JSで制作したことがあります。',
+    desc: '基本的な操作は問題なくできます。自己学習でSPAサイトをVanilla JSで制作した経験があります。',
   },
   {
     name: 'TypeScript',
@@ -32,7 +32,7 @@ const languageSkills: Skills[] = [
   {
     name: 'React/Next',
     level: 3,
-    desc: 'Nextで品質が高いサイトの提供を目的で学習しています。Next App Routerを使用しVercelと並行して使用しています。ヘッドレスCMSを利用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があります。Reactのライブラリなどの構築経験があります。',
+    desc: 'Nextで品質が高いサイトの提供を目的で学習しています。Next App Routerを使用しVercelと並行して使用しています。ヘッドレスCMSを利用したサイト制作では、レンダリングをSSG,ISRの実装をしています。また、Reactのみでの個人開発経験があり、Reactのライブラリなどの構築経験があります。',
   },
   {
     name: 'Vue/Nuxt',
@@ -55,7 +55,7 @@ const languageSkills: Skills[] = [
     desc: '新規ファイル作成、入力項目、カート機能のカスタマイズ、APIの取得などができます。',
   },
   {
-    name: 'Node/Express/EJS',
+    name: 'Express/EJS',
     level: 2,
     desc: 'Expressを使用したサーバーサイドの開発経験があります。認証・認可のスクラッチ構築で利用経験があります。',
   },
@@ -64,7 +64,7 @@ const softSkills: Skills[] = [
   {
     name: 'GitHub',
     level: 3,
-    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作は問題なくできます。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。good first issueでOSS活動に取り組見始めました。\n※個人利用のみコマンドラインを使用しています。',
+    desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作、対策可能です。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。good first issueでOSS活動に取り組見始めました。\n※個人利用のみコマンドラインを使用しています。',
   },
   {
     name: 'Webpack',
@@ -83,7 +83,7 @@ const softSkills: Skills[] = [
   },
   {
     name: 'Firebase',
-    level: 3,
+    level: 2,
     desc: 'ホスティングサービスとして使用経験があります。基本的な操作は問題なくでき、Googleアナリティクス、Googleタグマネージャー、の設定も可能です。',
   },
   {
@@ -106,7 +106,7 @@ const toolSkills: Skills[] = [
   {
     name: 'OWLet',
     level: 5,
-    desc: 'ほぼすべての機能を使用でき、カスタマイズも可能です。\nhttps://owlet.guide/',
+    desc: 'ほぼすべての機能を使用でき、カスタマイズも可能です。',
   },
   {
     name: 'MicroCMS',
@@ -121,7 +121,7 @@ const toolSkills: Skills[] = [
   {
     name: 'Figma',
     level: 3,
-    desc: '個人利用でメインで使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップ作成中です。',
+    desc: '個人利用でメインで使用しているツールです。オートレイアウトや、状態を使用したり、プロトタイプの作成は可能ですが、まだまだ勉強中です。個人サイトのモックアップを作成中です。',
   },
   {
     name: 'XD',
@@ -131,7 +131,7 @@ const toolSkills: Skills[] = [
   {
     name: 'Photoshop',
     level: 3,
-    desc: '基本的な画像の加工、修正、作成ができます。ファビコン、OGP、ロゴの作成の実務経験があります。',
+    desc: '基本的な画像の加工、修正、作成ができます。ファビコン、OGP、ロゴ、名刺、画像作成の実務経験があります。',
   },
   {
     name: 'Illustrator',

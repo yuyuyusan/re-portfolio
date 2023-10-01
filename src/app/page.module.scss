@@ -39,7 +39,7 @@
   transition: 0.3s;
   color: map-get($colors, white01);
   @include mq(tab) {
-    padding: 20px 15px;
+    padding: 30px 20px;
   }
   &:hover {
     @include hoverScale;

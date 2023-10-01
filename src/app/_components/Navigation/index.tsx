@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import styles from './index.module.scss';
+import IconMenuOpen from '@/app/_components/icons/menuopen.svg';
+import IconMenuClose from '@/app/_components/icons/menuclose.svg';
 
 type GnaviList = {
   label: string;
@@ -42,15 +44,23 @@ export default function Navigation() {
         onClick={handleClick}
         aria-label={`${isOpen ? '閉じる' : 'メニュー'}ボタン`}
         aria-expanded={isOpen}
-        aria-controls='gnavi'
+        aria-controls="gnavi"
       >
-        <Image
-          src={isOpen ? '/close.svg' : '/menu.svg'}
-          alt={isOpen ? '閉じる' : 'メニュー'}
-          width={24}
-          height={24}
-          priority
-        />
+        {isOpen ? (
+          <IconMenuClose
+            width={24}
+            height={24}
+            prioritytitle="IconCalendar"
+            className={styles.iconImg}
+          />
+        ) : (
+          <IconMenuOpen
+            width={24}
+            height={24}
+            prioritytitle="IconCalendar"
+            className={styles.iconImg}
+          />
+        )}
       </button>
 
       {isOpen && (
@@ -58,11 +68,55 @@ export default function Navigation() {
           <ul className={styles.gnavMain}>
             {menus.map((menu, index) => (
               <li key={index} className={styles.gnavMainItem}>
-                <Link href={menu.path} className={styles.gnavMainItem__link} aria-current='page'>
+                <Link
+                  href={menu.path}
+                  className={styles.gnavMainItem__link}
+                  aria-current="page"
+                >
                   {menu.label}
                 </Link>
               </li>
             ))}
+          </ul>
+          <ul className={styles.gnavSub}>
+            <li className={styles.gnavSubItem}>
+              <a
+                href="https://github.com/yuyuyusan/"
+                target="_blank"
+                rel="norefferer noopenner"
+                className={styles.link}
+                aria-label="Githubへ"
+              >
+                <figure className={`${styles.icon} ${styles.iconGithub}`}>
+                  <Image
+                    src="/icon-github.svg"
+                    width={60}
+                    height={60}
+                    alt="Github"
+                    loading="eager"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li className={styles.gnavSubItem}>
+              <a
+                href="https://zenn.dev/yuyuyusan"
+                target="_blank"
+                rel="norefferer noopenner"
+                className={styles.link}
+                aria-label="Zennへ"
+              >
+                <figure className={`${styles.icon} ${styles.iconZenn}`}>
+                  <Image
+                    src="/icon-zenn.svg"
+                    width={100}
+                    height={60}
+                    alt=""
+                    loading="eager"
+                  />
+                </figure>
+              </a>
+            </li>
           </ul>
         </nav>
       )}

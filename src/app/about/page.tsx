@@ -18,11 +18,11 @@ export default function About() {
               <dd className={`${styles.defDesc} ${styles.jp}`}>
                 2021年4月から、Web制作会社でコーダーとしてWeb業界でのキャリアをスタートしました。
                 <br />
-                私の強みは自主性を持って行動できることと、自己解決能力があることです。
+                強みは自主性を持って行動できることと、自己解決能力があることです。
                 <br />
-                新しいものやトレンドのキャッチアップは怠らず、成長意欲が高いため、自己学習を続けることができています。
+                新しいものやトレンドのキャッチアップは怠らず、成長意欲が高いため、自己学習を続けることができ、ライフワークとして考えています。
                 <br />
-                現在はUI/UXの分野にも興味を抱き、同時に学習を進めています。そして、教育ができるUXエンジニアを目指しています。
+                現在は、UI/UXの分野にも興味を抱き、同時に学習を進めています。そして、教育ができるUXエンジニアを目指しています。
               </dd>
               {/* <dd className={`${styles.defDesc} ${styles.en}`}>
                 {`I started my career in the web industry as a coder in a web
@@ -64,7 +64,13 @@ export default function About() {
         <div className={styles.skills}>
           <Skills />
           <p className={styles.skillsNotes}>
-            スキルの目安は、「初級:開発をしているが使用しているがもう少し習熟が必要」、「中級:実務で使用できる」、「上級:応用・教育ができる」です。
+            スキルの目安
+            <br />
+            「初級:個人で使用しているがもう少し習熟が必要」
+            <br />
+            「中級:実務で使用できる」
+            <br />
+            「上級:応用・教育ができる」
           </p>
         </div>
       </section>

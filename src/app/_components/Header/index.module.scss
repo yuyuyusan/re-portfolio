@@ -17,14 +17,14 @@
   right: 20px;
   z-index: 100;
   .fixedMenu__link {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     @include fontEn($size: 14px, $weight: bold);
     @include glassmor;
     display: grid;
     place-content: center;
     transition: 0.3s;
-    color: map-get($colors, white01);
+    color: map-get($colors, black02);
     background: linear-gradient(
       -125deg,
       map-get($colors, white01) 1%,
