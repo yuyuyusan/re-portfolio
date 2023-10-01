@@ -1,0 +1,20 @@
+@use 'variables.scss' as *;
+.privacy {
+  .container {
+    @include contentsBody;
+    .title {
+      @include fontJp($size: 18px, $weight: bold);
+      margin-block-end: 10px;
+    }
+    .desc {
+      margin-block-end: 40px;
+      :last-child {
+        margin-block-end: 0;
+      }
+    }
+    .link {
+      color: map-get($colors, white01);
+      border-bottom: 1px solid map-get($colors, white01);
+    }
+  }
+}

@@ -5,8 +5,18 @@
   .container {
     text-align: center;
     .copy {
-      font-size: 10px;
+      @include fontEn($size: 10px);
       color: map-get($colors, white01);
+    }
+    .navi {
+      margin-block-end: 5px;
+      .link {
+        width: fit-content;
+        margin-inline: auto;
+        @include fontEn($size: 10px);
+        border-bottom: 1px solid map-get($colors, white01);
+        color: map-get($colors, white01);
+      }
     }
   }
 }

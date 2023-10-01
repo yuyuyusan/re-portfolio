@@ -4,6 +4,7 @@ import { getInfoDetail, getInfoList } from '@/app/_libs/microcms/client';
 import LinkButton from '@/app/_components/LinkButton';
 import GoodButton from '@/app/_components/GoodButton';
 import styles from './index.module.scss';
+import type { Metadata } from 'next';
 
 export const revalidate = 60;
 export async function generateStaticParams() {
@@ -26,6 +27,7 @@ export default async function StaticDetailPage({
   if (!post) {
     notFound();
   }
+
   return (
     <section className={`${styles.container} ${styles.blogDetail}`}>
       {(post.emoji && <span className={styles.emoji}>{post.emoji}</span>) || (

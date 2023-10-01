@@ -4,7 +4,7 @@ type CareerFlow = {
   title: string;
   period: string;
   description: string[];
-}
+};
 
 const career: CareerFlow[] = [
   {
@@ -32,9 +32,9 @@ const career: CareerFlow[] = [
     title: 'Web制作会社 コーダー→マークアップエンジニア',
     period: '2021/4 - 現在',
     description: [
-      'HTML/CSS/JavaScript/PHPを使用したコーディングをメインに行っています。完全分業ですが、レスポンシブのモックアップがないため、UI/UXの提案など、デザイナー業務も担当することもあります。',
+      'HTML/CSS/JavaScript/PHPを使用したコーディング、詳細設計をメインに行っています。完全分業ですが、レスポンシブのモックアップがないため、UI/UXの提案など、デザイナー業務も担当することもあります。',
       'ローコードCMS（WPのブロックテーマのようなCMS）のWebサイト制作が主な業務になります。その他、WordPress、LP制作になります。',
-      '社内業務では、FTP廃止、Git Figma タスク管理ツールの導入、Web知識についての教育、制作プランの提案、制作ルール策定など制作業務の効率化、改善を行っています。',
+      '社内では、FTP廃止、Git Figma タスク管理ツールの導入、Web知識についての教育、制作プランの提案、制作ルール策定など制作業務の効率化、改善も行っています。',
     ],
   },
 ];

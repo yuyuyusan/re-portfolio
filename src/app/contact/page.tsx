@@ -5,7 +5,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
-
 // export const metadata: Metadata = {
 //   title: 'CONTACT お問い合わせ',
 // };
