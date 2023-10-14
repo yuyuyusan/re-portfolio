@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './index.module.scss';
 
 type ModalProps = {
@@ -9,21 +9,6 @@ type ModalProps = {
 
 export default function ModalComponent({ modalDesc, onClose }: ModalProps) {
   const [isOpen, setIsOpen] = useState(true);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-  const handleEscapeKey = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      setIsOpen(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener('keydown', handleEscapeKey);
-    return () => {
-      window.removeEventListener('keydown', handleEscapeKey);
-    };
-  }, []);
   const closeModal = () => {
     setIsOpen(false);
     onClose();

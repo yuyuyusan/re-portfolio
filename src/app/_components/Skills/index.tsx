@@ -172,12 +172,11 @@ function SkillCircle({ num }: { num: number }) {
     </div>
   );
 }
-const modalOpenStyle = {
-  overflow: 'hidden',
-};
+
 function SkillList({ skills, title }: SkillListProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState<Skills | null>(null);
+
   const clickSkill = (skill: Skills) => {
     setSelectedSkill(skill);
     setIsOpen(true);
@@ -202,6 +201,8 @@ function SkillList({ skills, title }: SkillListProps) {
   ) => {
     if (event.key === 'Enter') {
       clickSkill(skill);
+    } else if (event.key === 'Escape') {
+      closeSkillModal();
     }
   };
 
