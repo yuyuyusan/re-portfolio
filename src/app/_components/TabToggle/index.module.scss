@@ -6,11 +6,13 @@
   gap: 40px;
   justify-content: center;
   width: min(100%, 560px);
-  margin: 0 auto 40px;
+  margin-inline: auto;
+  margin-block: 40px;
   .tabButton {
-    padding: 15px 40px;
+    padding-inline: 40px;
+    padding-block-end: 15px;
     letter-spacing: 0.1em;
-    border-radius: $ui-radius;
+    border-radius: map-get($ui, radius);
     background: linear-gradient(
       45deg,
       map-get($colors, orange01),
@@ -23,7 +25,7 @@
       display: block;
       inset: 2px;
       position: absolute;
-      border-radius: $ui-radius;
+      border-radius: map-get($ui, radius);
       background: map-get($colors, navy02);
     }
     .jp {

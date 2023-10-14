@@ -8,18 +8,19 @@
 
 .title {
   width: fit-content;
-  padding-bottom: 2px;
-  margin: 0 auto 20px;
-  border-bottom: 1px solid map-get($colors, white01);
+  padding-block-end: 2px;
+  margin-inline: auto;
+  margin-block-end: 20px;
+  border-block-end: 1px solid map-get($colors, white01);
   font-size: 22px;
   text-align: center;
 }
 .desc {
+  margin-block-end: 100px;
   text-align: center;
   font-size: 18px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 2.4;
-  margin-bottom: 100px;
 }
 .linkButton {
   text-align: center;

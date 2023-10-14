@@ -40,6 +40,11 @@ const languageSkills: Skills[] = [
     desc: 'Vue2,のみ実装経験があり、Nuxtは自己学習で一度ヘッドレスCMSのサイトを作成しました。',
   },
   {
+    name: 'Angular',
+    level: 2,
+    desc: '改修業務で経験があります。ng-if,ng-for,ng-class,ng-deepなどの基本的な操作は問題なくできます。',
+  },
+  {
     name: 'Astro',
     level: 3,
     desc: 'Nextともう一つの選択肢として使用しています。Astroを利用したSSGのサイト構築が可能です。WordPressのAPIを使用したサイト構築も可能です。',
@@ -65,6 +70,11 @@ const softSkills: Skills[] = [
     name: 'GitHub',
     level: 3,
     desc: 'チーム開発経験はありませんが、コンフリクト対策、org、merge、branchなどの基本的な操作、対策可能です。また、業務ではGitHubのActionsを使用したCI/CDを利用しています。これまでチーム開発経験がなかったためmain branchを今まで使用していましたが、現在はmain branchを使用せず、develop branchを使用しています。good first issueでOSS活動に取り組見始めました。\n※個人利用のみコマンドラインを使用しています。',
+  },
+  {
+    name: 'SVN',
+    level: 2,
+    desc: 'チーム開発で使用しています。まだ、個人利用に近い形でコミットまでしか使用していません。',
   },
   {
     name: 'Webpack',

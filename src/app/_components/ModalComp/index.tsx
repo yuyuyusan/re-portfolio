@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './index.module.scss';
 
 type ModalProps = {
@@ -10,6 +10,20 @@ type ModalProps = {
 export default function ModalComponent({ modalDesc, onClose }: ModalProps) {
   const [isOpen, setIsOpen] = useState(true);
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+  const handleEscapeKey = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setIsOpen(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('keydown', handleEscapeKey);
+    return () => {
+      window.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, []);
   const closeModal = () => {
     setIsOpen(false);
     onClose();
@@ -19,9 +33,14 @@ export default function ModalComponent({ modalDesc, onClose }: ModalProps) {
     <>
       {isOpen && (
         <div className={styles.modalBg} onClick={closeModal}>
-          <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
             <p className={styles.modalDesc}>{modalDesc}</p>
-            <button className={styles.modalCloseButton} onClick={closeModal}>CLOSE</button>
+            <button className={styles.modalCloseButton} onClick={closeModal}>
+              CLOSE
+            </button>
           </div>
         </div>
       )}

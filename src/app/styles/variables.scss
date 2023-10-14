@@ -1,30 +1,11 @@
 // -----
-// Color
-// -----
-$c-black01: #111;
-$c-white01: #fff;
-$c-navy01: #3667a0;
-$c-gray01: #f4f4f4;
-$c-red01: #d5525f;
-// -----
 // Font
 // -----
 $f-notoSans: 'Noto Sans JP', sans-serif;
 $f-roboto: 'Roboto', sans-serif;
-
 // -----
-// UI
+// Color
 // -----
-$ui-radius: 15px;
-$ui-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-// -----
-// Viewport Size
-// -----
-$vp-pc-m: 1200px;
-$vp-pc-s: 960px;
-$vp-tab: 768px;
-$vp-sp: 560px;
-
 $colors: (
   black01: hsla(0, 0%, 7%, 1),
   black02: hsla(228, 28%, 14%, 1),
@@ -46,11 +27,16 @@ $colors: (
   orange02: hsla(6, 100%, 72%, 1),
 );
 
+// -----
+// UI
+// -----
 $ui: (
   radius: 15px,
   shadow: 4px 4px 8px map-get($colors, black02-transparent),
 );
-
+// -----
+// Viewport Size
+// -----
 $breakpoint: (
   pc-m: 1200px,
   pc-s: 960px,
@@ -94,8 +80,8 @@ $breakpoint: (
   a {
     display: block;
     width: fit-content;
-    margin: 0 auto;
-    padding: 10px 0;
+    margin-inline: auto;
+    padding-block: 10px;
     min-width: 180px;
     text-align: center;
     border-radius: 15px;
@@ -119,31 +105,10 @@ $breakpoint: (
   }
 }
 
-@mixin vp-pc-m {
-  @media screen and (max-width: ($vp-pc-m)) {
-    @content;
-  }
-}
-@mixin vp-pc-s {
-  @media screen and (max-width: ($vp-pc-s)) {
-    @content;
-  }
-}
-@mixin vp-tab {
-  @media screen and (max-width: ($vp-tab)) {
-    @content;
-  }
-}
-@mixin vp-sp {
-  @media screen and (max-width: ($vp-sp)) {
-    @content;
-  }
-}
-
-@mixin contentsBody($mx: 32px, $width: $vp-tab) {
+@mixin contentsBody($mx: 32px, $width: map-get($breakpoint, tab)) {
   width: min(100% - $mx, $width);
-  margin: 0 auto;
-  @include vp-sp {
+  margin-inline: auto;
+  @include mq(sp) {
     width: min(100% - 32px, $width);
   }
 }

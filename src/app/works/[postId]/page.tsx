@@ -28,8 +28,8 @@ export default async function StaticDetailPage({
       <section className={styles.works}>
         <div className={styles.contentsBody}>
           <h2 className={styles.title}>{post.title}</h2>
-          <figure className={styles.thumbnail}>
-            {(post.mockup && (
+          {post.mockup && (
+            <figure className={styles.thumbnail}>
               <Image
                 src={post.mockup.url}
                 alt={post.title}
@@ -37,16 +37,8 @@ export default async function StaticDetailPage({
                 height={post.mockup.height}
                 className={styles.thumbnailImg}
               />
-            )) || (
-              <Image
-                src={post.image.url}
-                alt={post.title}
-                width={post.image.width}
-                height={post.image.height}
-                className={styles.thumbnailImg}
-              />
-            )}
-          </figure>
+            </figure>
+          )}
           <div className={styles.info}>
             <time
               dateTime={`${new Date(post.created).toLocaleDateString('ja-JP', {

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-block-start: 60px;
   gap: 10px;
   .pagenationItem {
     .num {
@@ -23,11 +23,11 @@
     .current {
       font-weight: bold;
       background: map-get($colors, navy01);
-      color: $c-white01;
+      color: map-get($colors, white01);
       border: none;
       &:hover {
         background: map-get($colors, navy01);
-        color: map-get($colors, white01)
+        color: map-get($colors, white01);
       }
     }
   }

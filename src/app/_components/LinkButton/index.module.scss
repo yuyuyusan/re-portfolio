@@ -4,20 +4,20 @@
   display: inline-block;
   padding: 10px 40px;
   color: map-get($colors, white01);
-  border-radius: $ui-radius;
+  border-radius: map-get($ui, radius);
   background: linear-gradient(
-      45deg,
-      map-get($colors, orange01),
-      map-get($colors, orange02) 100%
-    );
+    45deg,
+    map-get($colors, orange01),
+    map-get($colors, orange02) 100%
+  );
   transition: 0.3s;
   position: relative;
   &::after {
-    content: "";
+    content: '';
     display: block;
     inset: 2px;
     position: absolute;
-    border-radius: $ui-radius;
+    border-radius: map-get($ui, radius);
     background: map-get($colors, navy02);
   }
   .jp {

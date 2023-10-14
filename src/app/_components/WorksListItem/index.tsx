@@ -100,19 +100,22 @@ export default function WorksListItem({
           )}
         </figure>
       </Link>
-      <time
-        dateTime={`${new Date(works.created).toLocaleDateString('ja-JP', {
-          year: 'numeric',
-          month: 'numeric',
-        })}`}
-        className={styles.date}
-        suppressHydrationWarning={true}
-      >
-        {new Date(works.created).toLocaleDateString('ja-JP', {
-          year: 'numeric',
-          month: 'numeric',
-        })}
-      </time>
+      <div className={styles.infoTop}>
+        <time
+          dateTime={`${new Date(works.created).toLocaleDateString('ja-JP', {
+            year: 'numeric',
+            month: 'numeric',
+          })}`}
+          className={styles.date}
+          suppressHydrationWarning={true}
+        >
+          {new Date(works.created).toLocaleDateString('ja-JP', {
+            year: 'numeric',
+            month: 'numeric',
+          })}
+        </time>
+        <p className={styles.pf}>{works.platform}</p>
+      </div>
       <h3>{works.title}</h3>
       {works.url && (
         <a

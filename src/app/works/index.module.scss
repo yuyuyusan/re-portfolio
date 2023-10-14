@@ -1,8 +1,8 @@
 @use 'variables.scss' as *;
 .works {
-  margin-top: 100px;
+  margin-block-start: 100px;
 }
 
 .worksMain {
-  @include contentsBody($width: $vp-pc-s);
+  @include contentsBody($width: map-get($breakpoint, pc-s));
 }

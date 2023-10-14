@@ -1,12 +1,12 @@
 @use 'variables.scss' as *;
 .header {
-  padding: 0 40px;
-  margin: 0 auto;
+  padding-inline: 0 40px;
+  margin-inline: auto;
 }
 
 .headerTitle {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   font-family: $f-roboto;
   letter-spacing: 0.2em;
 }

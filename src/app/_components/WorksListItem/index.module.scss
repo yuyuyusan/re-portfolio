@@ -17,13 +17,13 @@
 }
 
 .thumbnailNone {
+  width: 100%;
+  height: 240px;
+  padding-block: 20px;
   transition: 0.3s;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 240px;
-  padding: 20px 0;
   opacity: 0;
   visibility: hidden;
   object-fit: contain;
@@ -31,9 +31,9 @@
   background: map-get($colors, white01);
 }
 .thumbnail {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   overflow: hidden;
-  border-radius: $ui-radius;
+  border-radius: map-get($ui, radius);
   border: 1px solid map-get($colors, gray01);
   .thumbnailImg {
     aspect-ratio: 3/2;
@@ -41,7 +41,7 @@
     height: 100%;
     object-fit: cover;
     transition: 0.3s;
-    border-radius: $ui-radius;
+    border-radius: map-get($ui, radius);
     filter: grayscale(70%);
     &:hover {
       transform: scale(1.05, 1.05);
@@ -53,25 +53,30 @@
 .cardItem {
   width: calc((100% - (40px * 1)) / 2);
   @include mq(tab) {
-    margin-bottom: 50px;
+    margin-block-end: 50px;
     @include mq(sp) {
       width: 100%;
     }
   }
   &:last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
+  }
+  .infoTop {
+    margin-block-end: 10px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @include fontEn($size: 12px, $weight: 400);
   }
   .title {
     @include fontJp($size: 18px, $weight: 500);
-    margin-bottom: 10px;
-  }
-  .date {
-    @include fontEn($size: 14px, $weight: 400);
   }
   .url {
     display: inline-block;
     @include fontEn($size: 10px, $weight: 400);
-    margin-top: 10px;
+    margin-block-start: 10px;
     color: map-get($colors, white01);
   }
 }
