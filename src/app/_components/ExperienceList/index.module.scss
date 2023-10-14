@@ -77,7 +77,8 @@
     margin-block-end: 10px;
     @include fontEn($size: 12px, $weight: bold);
   }
-  .desc {
+  .descItem {
     font-size: 14px;
+    line-height: 2;
   }
 }

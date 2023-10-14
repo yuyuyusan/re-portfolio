@@ -181,7 +181,7 @@ function SkillList({ skills, title }: SkillListProps) {
     setSelectedSkill(skill);
     setIsOpen(true);
     document.body.style.overflow = 'hidden';
-    const listItems = document.querySelectorAll('li');
+    const listItems = document.querySelectorAll('.skillItem');
     listItems.forEach((item) => {
       item.setAttribute('tabindex', '-1');
     });
@@ -190,7 +190,7 @@ function SkillList({ skills, title }: SkillListProps) {
     setSelectedSkill(null);
     setIsOpen(false);
     document.body.style.overflow = 'auto';
-    const listItems = document.querySelectorAll('li');
+    const listItems = document.querySelectorAll('.skillItem');
     listItems.forEach((item) => {
       item.removeAttribute('0');
     });

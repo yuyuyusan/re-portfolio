@@ -47,13 +47,11 @@ export default function ExperienceList() {
             <div className={styles.listItem__inner}>
               <h3 className={styles.title}>{career.title}</h3>
               <p className={styles.period}>{career.period}</p>
-              <ul className={styles.desc}>
-                {career.description.map((desc, index) => (
-                  <li className={styles.descItem} key={index}>
-                    <span className={styles.descText}>{desc}</span>
-                  </li>
-                ))}
-              </ul>
+              {career.description.map((desc, index) => (
+                <p className={styles.descItem} key={index}>
+                  {desc}
+                </p>
+              ))}
             </div>
           </li>
         ))}
