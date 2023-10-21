@@ -8,7 +8,7 @@ import { WorksArticle } from '@/app/_libs/microcms/client';
 import useClientOnly from '@/app/_hooks/useClientOnly';
 import styles from './index.module.scss';
 
-type Props = {
+type WorksProps = {
   works: WorksArticle;
   onClick?: () => void;
   isSelect?: boolean;
@@ -16,15 +16,18 @@ type Props = {
 
 export default function WorksListItem({
   works,
+  // クリックしたらViewTransitionを開始する
   onClick = () => {},
   isSelect = false,
-}: Props) {
+}: WorksProps) {
+  // クライアントサイドのみで実行する
   const isClient = useClientOnly();
+  // ホバー時の状態を管理する
   const [isHovered, setIsHovered] = useState(false);
-  const handleMouseEnter = () => {
+  const handleOnMouseEnter = () => {
     setIsHovered(true);
   };
-  const handleMouseLeave = () => {
+  const handleOnMouseLeave = () => {
     setIsHovered(false);
   };
   useEffect(() => {
@@ -39,6 +42,7 @@ export default function WorksListItem({
         className={styles.link}
         aria-label={`${works.title}の詳細ページに飛ぶ`}
       >
+        {/* ホバー時に表示する画像 */}
         {works.imagehover ? (
           <Image
             src={works.imagehover.url}
@@ -48,8 +52,8 @@ export default function WorksListItem({
             className={`${styles.thumbnailNone} ${
               isHovered ? styles.hovered : ''
             }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleOnMouseEnter}
+            onMouseLeave={handleOnMouseLeave}
           />
         ) : (
           <Image
@@ -60,8 +64,8 @@ export default function WorksListItem({
             className={`${styles.thumbnailNone} ${
               isHovered ? styles.hovered : ''
             }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleOnMouseEnter}
+            onMouseLeave={handleOnMouseLeave}
           />
         )}
         <figure className={styles.thumbnail}>
@@ -72,8 +76,8 @@ export default function WorksListItem({
               width={works.mockup.width}
               height={works.mockup.height}
               className={styles.thumbnailImg}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}
               style={
                 {
                   viewTransitionName: `thumbnail-${works.id}`,
@@ -88,8 +92,8 @@ export default function WorksListItem({
               width={works.image.width}
               height={works.image.height}
               className={styles.thumbnailImg}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleOnMouseEnter}
+              onMouseLeave={handleOnMouseLeave}
               style={
                 {
                   viewTransitionName: `thumbnail-${works.id}`,

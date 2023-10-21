@@ -2,12 +2,13 @@
 import React, { useState } from 'react';
 import styles from './index.module.scss';
 
+// タブのpropsの型定義
 type TabToggleProps = {
   openText: string;
   closeText: string;
   children?: React.ReactNode;
   initialData?: React.ReactNode;
-}
+};
 export default function TabToggle({
   openText,
   closeText,
@@ -21,7 +22,11 @@ export default function TabToggle({
   return (
     <>
       <div className={styles.tabList}>
-        <button onClick={handleTabToggle} className={styles.tabButton} aria-label={activeTab ? closeText : openText}>
+        <button
+          onClick={handleTabToggle}
+          className={styles.tabButton}
+          aria-label={activeTab ? closeText : openText}
+        >
           <span className={styles.jp}>{activeTab ? closeText : openText}</span>
         </button>
       </div>

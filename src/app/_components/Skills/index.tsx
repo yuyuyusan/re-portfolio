@@ -3,16 +3,18 @@ import { useState } from 'react';
 import styles from './index.module.scss';
 import ModalComponent from '@/app/_components/ModalComp';
 
+// スキルの型定義
 type Skills = {
   name: string;
   level: number;
   desc?: string | undefined;
 };
+// スキルのリストの型定義
 type SkillListProps = {
   skills: Skills[];
   title: string;
 };
-
+// スキルのリスト
 const languageSkills: Skills[] = [
   {
     name: 'HTML/SCSS',
@@ -47,7 +49,7 @@ const languageSkills: Skills[] = [
   {
     name: 'Astro',
     level: 3,
-    desc: 'Nextともう一つの選択肢として使用しています。Astroを利用したSSGのサイト構築が可能です。WordPressのAPIを使用したサイト構築も可能です。',
+    desc: 'Nextとはお客様への異なる選択肢として使用しています。Astroを利用したSSGのサイト構築が可能です。WordPressのAPIを使用したサイト構築も可能です。',
   },
   {
     name: 'PHP',
@@ -150,7 +152,9 @@ const toolSkills: Skills[] = [
   },
 ];
 
+// 各スタイルのレベルを円グラフで表示するコンポーネント
 function SkillCircle({ num }: { num: number }) {
+  // レベルに応じて色の円グラフを作成する
   const getGradientStyle = (level: number) => {
     const gradientStart = 0;
     const gradientEnd = (level / 5) * 100;
@@ -158,6 +162,7 @@ function SkillCircle({ num }: { num: number }) {
       backgroundImage: `conic-gradient(hsla(207, 100%, 72%) ${gradientStart}% ${gradientEnd}%, hsla(0, 0%, 96%, 1) ${gradientEnd}% 100%)`,
     };
   };
+  // レベルに応じて表示するテキストを変更する
   let levelText;
   if (num * 20 >= 80) {
     levelText = '上級';
@@ -166,26 +171,46 @@ function SkillCircle({ num }: { num: number }) {
   } else {
     levelText = '初級';
   }
+  // レベルに応じた色の円グラフを表示する
   return (
     <div className={styles.skill__circle} style={getGradientStyle(num)}>
       <span className={styles.num}>{levelText}</span>
     </div>
   );
 }
+// スキルのリストを表示するコンポーネントをエクスポート
+export default function Skills() {
+  return (
+    <>
+      <SkillList skills={languageSkills} title="Language Skill" />
+      <SkillList skills={softSkills} title="Soft Skill" />
+      <SkillList skills={toolSkills} title="Tool Skill" />
+    </>
+  );
+}
 
+// スキルのリストを表示するコンポーネント
 function SkillList({ skills, title }: SkillListProps) {
+  // スキルの初期状態を定義
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState<Skills | null>(null);
 
-  const clickSkill = (skill: Skills) => {
+  // モーダルを開く処理
+  const openSkillModal = (skill: Skills) => {
+    // スキルの詳細をモーダルで表示する
     setSelectedSkill(skill);
+    // モーダルを開く
     setIsOpen(true);
+    // モーダルが開いたときに、スキルリストのフォーカスを外すstyleをあてる
     document.body.style.overflow = 'hidden';
+    // モーダルが開いたときに、スキルリストのフォーカスを外す
     const listItems = document.querySelectorAll('.skillItem');
     listItems.forEach((item) => {
+      // tabindex属性を-1にすることで、フォーカスを外す
       item.setAttribute('tabindex', '-1');
     });
   };
+  // モーダルを閉じる処理
   const closeSkillModal = () => {
     setSelectedSkill(null);
     setIsOpen(false);
@@ -195,12 +220,13 @@ function SkillList({ skills, title }: SkillListProps) {
       item.removeAttribute('0');
     });
   };
+  // モーダルを開いたときに、キーボードでの閉じる処理
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLLIElement>,
     skill: Skills
   ) => {
     if (event.key === 'Enter') {
-      clickSkill(skill);
+      openSkillModal(skill);
     } else if (event.key === 'Escape') {
       closeSkillModal();
     }
@@ -215,7 +241,7 @@ function SkillList({ skills, title }: SkillListProps) {
             <li
               className={styles.skillItem}
               key={index}
-              onClick={() => clickSkill(skill)}
+              onClick={() => openSkillModal(skill)}
               onKeyDown={(e) => handleKeyDown(e, skill)}
               tabIndex={0}
             >
@@ -232,15 +258,5 @@ function SkillList({ skills, title }: SkillListProps) {
         ))}
       </ul>
     </div>
-  );
-}
-
-export default function Skills() {
-  return (
-    <>
-      <SkillList skills={languageSkills} title="Language Skill" />
-      <SkillList skills={softSkills} title="Soft Skill" />
-      <SkillList skills={toolSkills} title="Tool Skill" />
-    </>
   );
 }

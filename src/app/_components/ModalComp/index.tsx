@@ -2,13 +2,16 @@
 import { useState } from 'react';
 import styles from './index.module.scss';
 
+// モーダルのpropsの型定義
 type ModalProps = {
   modalDesc: string;
   onClose: () => void;
 };
 
+// モーダルのコンポーネント propsで受け取った説明文を表示する
 export default function ModalComponent({ modalDesc, onClose }: ModalProps) {
   const [isOpen, setIsOpen] = useState(true);
+  // モーダルを閉じる
   const closeModal = () => {
     setIsOpen(false);
     onClose();
