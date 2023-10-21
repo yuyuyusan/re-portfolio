@@ -23,6 +23,8 @@ export default function About() {
                 新しいものやトレンドのキャッチアップは怠らず、成長意欲が高いため、自己学習を続けることができ、ライフワークとして考えています。
                 <br />
                 現在は、UI/UXの分野にも興味を抱き、同時に学習を進めています。そして、教育ができるUXエンジニアを目指しています。
+                <br />
+                BtoC向けが得意と現時点では思っています。
               </dd>
               {/* <dd className={`${styles.defDesc} ${styles.en}`}>
                 {`I started my career in the web industry as a coder in a web
