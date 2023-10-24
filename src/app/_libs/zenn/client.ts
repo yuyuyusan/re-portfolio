@@ -1,7 +1,9 @@
 import Parser from 'rss-parser';
 import dayjs from 'dayjs';
 
+// ZennのRSSフィードを取得する
 export const getZennRssFeed = async () => {
+  // RSSフィードを取得する
   const feed = await new Parser().parseURL(
     'https://zenn.dev/yuyuyusan/feed?all=1'
   );

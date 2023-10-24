@@ -8,7 +8,9 @@ import type { Metadata } from 'next';
 
 export const revalidate = 60;
 export async function generateStaticParams() {
+  // 記事の一覧を取得する
   const { contents } = await getInfoList();
+  // 記事の一覧から記事のIDを取得する
   const paths = contents.map((post) => {
     return {
       postId: post.id,
@@ -22,8 +24,8 @@ export default async function StaticDetailPage({
 }: {
   params: { postId: string };
 }) {
+  // 記事の詳細を取得する
   const post = await getInfoDetail(postId);
-  const time = new Date().toLocaleString();
   if (!post) {
     notFound();
   }

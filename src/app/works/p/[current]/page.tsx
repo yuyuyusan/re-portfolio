@@ -3,11 +3,14 @@ import { WORKS_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
 import styles from '../../index.module.scss';
+
+// ページのpropsの型定義
 type Props = {
   params: {
     current: string;
   };
 };
+// ページの再生成時間
 export const revalidate = 60;
 
 export default async function Page({ params }: Props) {

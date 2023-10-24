@@ -16,6 +16,7 @@ export default function TabToggle({
   children,
 }: TabToggleProps) {
   const [activeTab, setActiveTab] = useState(false);
+  // タブを開く
   const handleTabToggle = () => {
     setActiveTab(!activeTab);
   };

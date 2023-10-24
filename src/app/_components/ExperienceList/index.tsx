@@ -1,11 +1,13 @@
 import styles from './index.module.scss';
 
+// 職歴の型定義
 type CareerFlow = {
   title: string;
   period: string;
   description: string[];
 };
 
+// 職歴のデータ
 const career: CareerFlow[] = [
   {
     title: '無償インターンでPHPを学習',

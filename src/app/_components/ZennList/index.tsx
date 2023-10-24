@@ -7,9 +7,11 @@ export const revalidate = 60;
 export default async function staticPage() {
   const zennFeed = await getZennRssFeed();
 
-  const formatDate = (date:string) => {
+  // 日付をフォーマットする
+  const formatDate = (date: string) => {
     const now = new Date();
     const postDate = new Date(date);
+    // 投稿日と現在日の差分を求める
     const timeDifference = now.getTime() - postDate.getTime();
     const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const monthsAgo = Math.floor(daysAgo / 30);

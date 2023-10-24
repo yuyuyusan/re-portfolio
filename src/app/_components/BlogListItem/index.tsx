@@ -2,11 +2,13 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 import { InfoArticle } from '@/app/_libs/microcms/client';
 
+// 記事の型定義
 type Props = {
   article: InfoArticle;
 };
 
 export default function staticPage({ article }: Props) {
+  // 記事の作成日から経過時間を計算する
   const createdAt = new Date(article.createdAt);
   const currentDate = new Date();
   const timeDifference = currentDate.getTime() - createdAt.getTime();

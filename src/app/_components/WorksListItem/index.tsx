@@ -8,6 +8,7 @@ import { WorksArticle } from '@/app/_libs/microcms/client';
 import useClientOnly from '@/app/_hooks/useClientOnly';
 import styles from './index.module.scss';
 
+// 記事の型定義
 type WorksProps = {
   works: WorksArticle;
   onClick?: () => void;

@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 import IconMenuOpen from '@/app/_components/icons/menuopen.svg';
 import IconMenuClose from '@/app/_components/icons/menuclose.svg';
 
+// ナビゲーションの型定義
 type GnaviList = {
   label: string;
   path: string;
@@ -22,14 +23,17 @@ const menus: GnaviList[] = [
 export default function Navigation() {
   const [isOpen, setOpen] = useState<boolean>(false);
 
+  // メニューを開く
   const handleClick = () => {
     setOpen(!isOpen);
   };
+  // エスケープキーを押したらメニューを閉じる
   const handleEscapeKey = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       setOpen(false);
     }
   };
+  // エスケープキーのイベントを追加する
   useEffect(() => {
     window.addEventListener('keydown', handleEscapeKey);
     return () => {

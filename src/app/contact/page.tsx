@@ -15,6 +15,7 @@ export default function StaticPage() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  // フォームの送信
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     await submit_hubspot_form(firstname, lastname, email, message);
@@ -26,9 +27,11 @@ export default function StaticPage() {
     email: string,
     message: string
   ) => {
+    //  HubSpotのAPI
     const portalId = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID;
     const formGuid = process.env.NEXT_PUBLIC_HUBSPOT_FORM_ID;
 
+    // HubSpotのAPIに送信するデータ
     return await axios
       .post(
         `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formGuid}`,
