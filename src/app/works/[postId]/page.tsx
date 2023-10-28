@@ -6,6 +6,7 @@ import IconCalendar from '@/app/_components/icons/calendar.svg';
 import IconLink from '@/app/_components/icons/link.svg';
 import IconPlat from '@/app/_components/icons/plat.svg';
 import IconCode from '@/app/_components/icons/code.svg';
+
 export const revalidate = 60;
 
 export async function generateStaticParams() {
