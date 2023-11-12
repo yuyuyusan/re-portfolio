@@ -4,19 +4,18 @@ import '@/app/styles/globals.scss';
 import styles from '@/app/layout.module.scss';
 
 const notojp = Noto_Sans_JP({
-  weight: ['400', '500', '700', '900'],
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
   variable: '--font-notojp',
   display: 'swap',
 });
 
 const roboto = Roboto({
-  weight: ['400', '500', '700', '900'],
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
   variable: '--font-roboto',
   display: 'swap',
 });
-
 
 export const metadata: Metadata = {
   title: {
