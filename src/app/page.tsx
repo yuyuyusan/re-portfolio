@@ -12,9 +12,9 @@ export default function Home() {
     <div className={styles.topBg}>
       <Header />
       <main>
-      <Suspense fallback={<Loding />}>
-        <ParticleBg />
-      </Suspense>
+        <Suspense fallback={<Loding />}>
+          <ParticleBg />
+        </Suspense>
         <section className={styles.topContainer}>
           <div className={`${styles.contentsBody}`}>
             <div className={styles.titleBox}>
@@ -25,7 +25,7 @@ export default function Home() {
                 <Link
                   href="/works/"
                   className={styles.link}
-                  aria-label="実績一覧へ"
+                  aria-label="Works / 実績一覧へ"
                 >
                   <h2 className={styles.titleLarge__en}>Works</h2>
                   <figure className={`${styles.icon} ${styles.iconWorks}`}>
@@ -43,7 +43,7 @@ export default function Home() {
                 <Link
                   href="/about/"
                   className={styles.link}
-                  aria-label="自己紹介ページへ"
+                  aria-label="About / 自己紹介ページへ"
                 >
                   <h2 className={styles.titleLarge__en}>About</h2>
                   <figure className={`${styles.icon} ${styles.iconAbout}`}>
@@ -61,7 +61,7 @@ export default function Home() {
                 <Link
                   href="/notes/"
                   className={styles.link}
-                  aria-label="ブログ一覧へ"
+                  aria-label="Notes / ブログ一覧へ"
                 >
                   <h2 className={styles.titleLarge__en}>Notes</h2>
                   <figure className={`${styles.icon} ${styles.iconBlog}`}>
@@ -102,7 +102,7 @@ export default function Home() {
                   target="_blank"
                   rel="norefferer noopenner"
                   className={styles.link}
-                  aria-label="Zennへ"
+                  aria-label="Zenn"
                 >
                   <figure className={`${styles.icon} ${styles.iconZenn}`}>
                     <Image
@@ -121,7 +121,7 @@ export default function Home() {
                   target="_blank"
                   rel="norefferer noopenner"
                   className={styles.link}
-                  aria-label="旧サイトへ"
+                  aria-label="Previous Site / 旧サイトへ"
                 >
                   <h2 className={styles.titleMid__en}>
                     Previous
@@ -130,7 +130,9 @@ export default function Home() {
                   </h2>
                 </a>
               </div>
-              <div className={`${styles.gridBox} ${styles.gridBottom__contact}`}>
+              <div
+                className={`${styles.gridBox} ${styles.gridBottom__contact}`}
+              >
                 <Link href="/contact/" className={styles.link}>
                   <h2 className={styles.titleMid__en}>
                     Contact
