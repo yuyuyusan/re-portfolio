@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import ExperienceList from '@/app/_components/ExperienceList';
 import Skills from '@/app/_components/Skills';
 import styles from './index.module.scss';
-import Wakatime from '@/app/_components/Wakatime';
 
 export const metadata: Metadata = {
   title: 'ABOUT 自己紹介',
@@ -22,7 +21,7 @@ export default function About() {
                 <br />
                 強みは自主性を持って行動できること、自己解決能力があることです。
                 <br />
-                性格が、誰かのためになることが好きで喜びを感じるタイプなので、toC領域が得意です。
+                誰かのためになることが好きな性格です。
               </dd>
             </div>
           </dl>

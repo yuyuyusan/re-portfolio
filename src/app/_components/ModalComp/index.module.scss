@@ -23,6 +23,7 @@
       margin-block-end: 20px;
       @include fontEn($size: 16px);
       white-space: pre-line;
+      line-height: 2;
     }
     .modalCloseButton {
       display: block;

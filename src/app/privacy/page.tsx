@@ -15,9 +15,9 @@ export default function About() {
           </p>
           <h3 className={styles.title}>個人情報の利用目的</h3>
           <p className={styles.desc}>
-            当サイトでは、書籍予約特典のお申し込みやお問い合わせを受けた際に、お名前、メールアドレス等の個人情報をご登録いただきます。
+            当サイトでは、お問い合わせを受けた際に、お名前、メールアドレス等の個人情報をご登録いただきます。
             <br />
-            これらの個人情報は特典の情報送付やご質問に対する回答などを電子メールでご連絡する場合に利用させていただくものであり、個人情報をご提供いただく際の目的以外では利用いたしません。特典以外での無料セミナーのご案内なども行いません。
+            これらの個人情報はご質問に対する回答などを電子メールでご連絡する場合に利用させていただくものであり、個人情報をご提供いただく際の目的以外では利用いたしません。
           </p>
           <h3 className={styles.title}>個人情報の第三者への開示</h3>
           <p className={styles.desc}>
@@ -31,12 +31,12 @@ export default function About() {
           <p className={styles.desc}>
             ご本人からの個人データの開示、訂正、追加、削除、利用停止のご希望の場合には、ご本人であることを確認させていただいた上、速やかに対応させていただきます。
           </p>
-          <h3 className={styles.title}>Cookie（クッキー</h3>
+          {/* <h3 className={styles.title}>Cookie（クッキー）</h3>
           <p className={styles.desc}>
             当サイトでは、コンテンツの情報の収集にCookieを使用しています。Cookieは、ユーザーがサイトを訪れた際に、そのユーザーのコンピュータ内に記録されます。
             <br />
             ただし、記録される情報には、ユーザー名やメールアドレスなど、個人を特定するものは一切含まれません。また、当サイトではユーザーの方々がどのようなサービスに興味をお持ちなのかを分析したり、ウェブ上での効果的な広告の配信のためにこれらを利用させていただく場合があります。
-          </p>
+          </p> */}
           <h3 className={styles.title}>
             当サイトが使用しているアクセス解析ツールについて
           </h3>
@@ -54,7 +54,7 @@ export default function About() {
             </a>
             をご参照ください。
           </p>
-          <h3 className={styles.title}>当サイトの広告について</h3>
+          {/* <h3 className={styles.title}>当サイトの広告について</h3>
           <p className={styles.desc}>
             当サイトでは「Amazonアソシエイト」などのアフィリエイトプログラムや第三者配信広告サービス「GoogleAdsense」を利用しています。
             <br />
@@ -70,7 +70,7 @@ export default function About() {
               こちら
             </a>
             をご参照ください。
-          </p>
+          </p> */}
           <h3 className={styles.title}>著作権について</h3>
           <p className={styles.desc}>
             当サイトに掲載されている情報についての著作権は放棄しておりません。
@@ -85,12 +85,12 @@ export default function About() {
             <br />
             当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
           </p>
-          <h3 className={styles.title}>プライバシーポリシーの変更について</h3>
+          {/* <h3 className={styles.title}>プライバシーポリシーの変更について</h3>
           <p className={styles.desc}>
             当サイトは、個人情報に関して適用される日本の法令を遵守するとともに、本ポリシーの内容を適宜見直しその改善に努めます。
             <br />
             修正された最新のプライバシーポリシーは常に本ページにて開示されます。
-          </p>
+          </p> */}
         </div>
       </section>
     </>

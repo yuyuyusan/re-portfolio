@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Web制作会社に勤めて3年目。マークアップエンジニアのポートフォリオサイトです。',
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://portfolio-yu.vercel.app/',
+    url: 'https://s-yu-portfolio.vercel.app/',
   },
 };
 
