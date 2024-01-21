@@ -5,7 +5,7 @@ import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
 import styles from './index.module.scss';
 import { Suspense } from 'react';
-import CardSkeleton from '../../_components/ui/skeletons';
+import CardSkeleton from '../_components/ui/skeletons';
 
 export const revalidate = 60;
 export const metadata: Metadata = {

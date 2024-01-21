@@ -2,7 +2,7 @@ import { getWorksList } from '@/app/_libs/microcms/client';
 import { WORKS_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import WorksList from '@/app/_components/WorksList';
-import styles from '../../index.module.scss';
+import styles from '@/app/works/index.module.scss';
 
 // ページのpropsの型定義
 type Props = {
