@@ -1,0 +1,54 @@
+@use 'variables.scss' as *;
+.skeletonBox {
+  margin-block-start: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.thumbnail {
+  animation: skeleton-loading 1s linear infinite alternate;
+  margin-block-end: 20px;
+  overflow: hidden;
+  border-radius: map-get($ui, radius);
+  .thumbnailImg {
+    aspect-ratio: 3/2;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: map-get($colors, gray01);
+  }
+  100% {
+    background-color: map-get($colors, gray01-transparent);
+  }
+}
+
+.cardItem {
+  width: calc((100% - (40px * 1)) / 2);
+  @include mq(tab) {
+    margin-block-end: 50px;
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+  &:last-child {
+    margin-block-end: 0;
+  }
+  .infoTop {
+    animation: skeleton-loading 1s linear infinite alternate;
+    display: block;
+    margin-block-end: 10px;
+    height: 14px;
+    background: map-get($colors, gray01);
+  }
+  .url {
+    animation: skeleton-loading 1s linear infinite alternate;
+    display: block;
+    margin-block-start: 10px;
+    height: 14px;
+    background: map-get($colors, gray01);
+  }
+}
