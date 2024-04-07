@@ -10,14 +10,18 @@ type Props = {
 };
 
 export default function GoodButton({ article }: Props) {
+  // goodの初期状態を設定ヘッドレスCMSから取得する
   const [good, setGood] = useState(article.goodButton);
-  const [canLike, setCanLike] = useState(true);
+  // いいねボタンの連打を防ぐためのフラグ
+  const [likeFlg, setLikeFlg] = useState(true);
 
   useEffect(() => {
-    // いいねの数を取得する
+    // ローカルストレージからいいねの数を取得する
     const savedLikes = localStorage.getItem(`like_${article.id}`);
+    // いいねの数が保存されている場合実行
     if (savedLikes) {
       const parsedLikes = parseInt(savedLikes, 10);
+      // not a numberじゃない場合、いいねの数を更新する
       if (!isNaN(parsedLikes)) {
         setGood(parsedLikes);
       }
@@ -26,25 +30,27 @@ export default function GoodButton({ article }: Props) {
 
   // いいねの数を更新する
   const handleCount = async () => {
-    if (!canLike) {
+    if (!likeFlg) {
       return;
     }
     try {
+      // いいねの数を取得する falsyの場合は0を返す
       const likes = parseInt(
         localStorage.getItem(`like_${article.id}`) || '0',
         10
       );
-      // いいねの上限は2回まで
+      // not a number の場合は何もしない
       if (isNaN(likes)) {
         return;
       }
+      // いいねの上限は2回まで
       if (likes >= 2) {
         console.log('いいねの上限になりました。');
         return;
       }
       // いいねの数を更新する
       setGood(good + 1);
-      setCanLike(false);
+      setLikeFlg(false);
       localStorage.setItem(`like_${article.id}`, (likes + 1).toString());
       // クライアント側でいいねの数を更新する
       const response = await fetch(
@@ -62,13 +68,13 @@ export default function GoodButton({ article }: Props) {
         }
       );
       if (!response.ok) {
-        setCanLike(true);
+        setLikeFlg(true);
         setGood(good);
         console.error('いいねの送信に失敗しました。');
       }
     } catch (error) {
       console.error('いいねの送信時にエラーが発生しました。', error);
-      setCanLike(true);
+      setLikeFlg(true);
     }
   };
   return (
@@ -78,7 +84,7 @@ export default function GoodButton({ article }: Props) {
         className={styles.goodButton}
         type="button"
         aria-label="いいね"
-        disabled={!canLike}
+        disabled={!likeFlg}
       >
         <p className={styles.goodButtonContents}>
           <span className={styles.goodButtonContents__emoji}>👍</span>
