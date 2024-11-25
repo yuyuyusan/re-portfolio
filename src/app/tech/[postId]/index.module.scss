@@ -1,0 +1,72 @@
+@use 'variables.scss' as *;
+
+// -----
+// blogDetail
+// -----
+.blogDetail {
+  width: min(100% - 40px, map-get($breakpoint, tab));
+  margin-inline: auto;
+  .emoji {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    margin-block-end: 20px;
+    font-size: 100px;
+    text-align: center;
+  }
+  .title {
+    margin-block-end: 40px;
+    padding-block-end: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .date {
+    display: block;
+    margin-block-end: 20px;
+    @include fontEn($weight: 500);
+    text-align: right;
+  }
+  .contents {
+    margin-block-end: 100px;
+    p {
+      line-height: 2;
+      letter-spacing: 0.1em;
+    }
+    img {
+      margin-inline: auto;
+      margin-block-end: 30px;
+    }
+    a {
+      padding-block-end: 2px;
+      border-block-end: 1px solid map-get($colors, lightGray01);
+      position: relative;
+      color: map-get($colors, white01);
+      border-block-end: 1px solid map-get($colors, white01);
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: map-get($colors, navy01);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+      }
+      &:hover::after {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+  }
+  .linkButton {
+    text-align: center;
+  }
+}
+
+.goodButton {
+  margin-block-end: 60px;
+}
+.linkButton {
+  text-align: center;
+}

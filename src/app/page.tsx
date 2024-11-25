@@ -59,11 +59,11 @@ export default function Home() {
               </div>
               <div className={`${styles.gridBox} ${styles.gridTop__blog}`}>
                 <Link
-                  href="/notes/"
+                  href="/tech/"
                   className={styles.link}
-                  aria-label="Notes / ブログ一覧へ"
+                  aria-label="Tech / テックブログへ"
                 >
-                  <h2 className={styles.titleLarge__en}>Notes</h2>
+                  <h2 className={styles.titleLarge__en}>Tech</h2>
                   <figure className={`${styles.icon} ${styles.iconBlog}`}>
                     <Image
                       src="/icon-notes.svg"
@@ -133,12 +133,8 @@ export default function Home() {
               <div
                 className={`${styles.gridBox} ${styles.gridBottom__contact}`}
               >
-                <Link href="/contact/" className={styles.link}>
-                  <h2 className={styles.titleMid__en}>
-                    Contact
-                    <br />
-                    Form
-                  </h2>
+                <Link href="/notes/" className={styles.link}>
+                  <h2 className={styles.titleMid__en}>Notes</h2>
                 </Link>
               </div>
             </div>

@@ -1,0 +1,8 @@
+@use 'variables.scss' as *;
+.container {
+  @include contentsBody($width: map-get($breakpoint, pc-s));
+}
+
+.jp {
+  display: none;
+}

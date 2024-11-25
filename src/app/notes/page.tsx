@@ -7,7 +7,7 @@ import ZennList from '@/app/_components/ZennList';
 import TabToggle from '@/app/_components/TabToggle';
 import styles from './index.module.scss';
 
-export const revalidate = 60;
+export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'NOTES 雑記',
 };

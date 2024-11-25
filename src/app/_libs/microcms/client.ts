@@ -1,6 +1,5 @@
-import { client, client2 } from './api';
+import { client, client2, client3 } from './api';
 import { notFound } from 'next/navigation';
-
 
 import type {
   MicroCMSQueries,
@@ -17,14 +16,20 @@ export type Blog = {
   eyecatch?: MicroCMSImage;
 } & MicroCMSDate;
 
-
 // 雑記の型定義
 export type Info = {
   id: string;
   emoji: string;
   title: string;
   content: string;
-  goodButton: number
+  goodButton: number;
+} & MicroCMSDate;
+
+// テックブログの型定義
+export type Tech = {
+  id: string;
+  title: string;
+  content: string;
 } & MicroCMSDate;
 
 // 実績の型定義
@@ -50,7 +55,7 @@ export type Category = {
 export type InfoArticle = Info & MicroCMSDate;
 export type BlogArticle = Blog & MicroCMSDate;
 export type WorksArticle = Works & MicroCMSDate;
-
+export type TechArticle = Tech & MicroCMSDate;
 
 // 雑記一覧を取得する関数
 export const getInfoList = async (queries?: MicroCMSQueries) => {
@@ -77,9 +82,7 @@ export const getInfoDetail = async (
 };
 
 // 雑記の詳細をいいねボタンで編集
-export const updateInfoArticle = async (
-  contentId: string,
-) => {
+export const updateInfoArticle = async (contentId: string) => {
   const detailData = await client.update<Info>({
     endpoint: 'info',
     contentId,
@@ -88,9 +91,7 @@ export const updateInfoArticle = async (
     },
   });
   return detailData;
-};  
-
-
+};
 
 // ブログ一覧を取得する関数
 export const getBlogList = async (queries?: MicroCMSQueries) => {
@@ -116,35 +117,41 @@ export const getBlogDetail = async (
   return detailData;
 };
 
-// ブログ一覧を取得する関数
-export const getCategoryList = async (queries?: MicroCMSQueries) => {
-  const listData = await client2
-    .getList<Blog>({
-      endpoint: 'categories',
+// テックブログを取得する関数
+export const getTechList = async (queries?: MicroCMSQueries) => {
+  const listData = await client3
+    .getList<Tech>({
+      endpoint: 'tech',
       queries,
     })
     .catch(notFound);
   return listData;
 };
 
+// テックブログの詳細を取得
+export const getTechDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client3.getListDetail<Tech>({
+    endpoint: 'tech',
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
 // 実績一覧を取得する関数
 export const getWorksList = async (queries?: MicroCMSQueries) => {
-  const listData = await client.getList<Works>({
+  const listData = await client
+    .getList<Works>({
       endpoint: 'works',
       queries,
     })
     .catch(notFound);
   return listData;
 };
-// export const getWorksList = async (queries?: MicroCMSQueries) => {
-//   const listData = await client
-//     .getList<Works>({
-//       endpoint: 'works',
-//       queries,
-//     })
-//     .catch(notFound);
-//   return listData;
-// };
+
 // 実績の詳細を取得
 export const getWorksDetail = async (
   contentId: string,
