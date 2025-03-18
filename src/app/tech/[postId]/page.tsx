@@ -24,7 +24,8 @@ export default async function StaticDetailPage({
 }) {
   // 記事の詳細を取得する
   const post = await getTechDetail(postId);
-  if (!post) {
+  console.log(post); // ここで取得データを確認
+  if (!post || !post.content) {
     notFound();
   }
 
