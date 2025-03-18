@@ -8,4 +8,4 @@ export const TOP_WORKS_LIMIT = 3;
 export const BLOG_LIST_LIMIT = 18;
 
 // テックブログの最大表示数
-export const TECH_LIST_LIMIT = 30;
+export const TECH_LIST_LIMIT = 60;
